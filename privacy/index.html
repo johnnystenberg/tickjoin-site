@@ -39,7 +39,7 @@
   <ul>
     <li><strong>Kalenderdata lämnar aldrig telefonen.</strong> Appen anropar Microsoft Graph direkt från enheten. Ingen server hos oss tar emot tokens eller mötesinnehåll.</li>
     <li><strong>Bara läsbehörighet.</strong> Tickjoin skapar, ändrar eller svarar aldrig på möten och har ingen åtkomst till e-post eller filer.</li>
-    <li><strong>Ingen analys eller spårning.</strong> Appen innehåller inga analys- eller reklam-SDK:er.</li>
+    <li><strong>Ingen analys eller spårning.</strong> Appen innehåller inga analys- eller reklam-SDK:er. Microsoft Intune App SDK finns med för organisationer som använder app protection.</li>
   </ul>
 
   <h2>Behörigheter som begärs</h2>
@@ -48,6 +48,7 @@
     <tr><td><code>Calendars.Read</code></td><td>Läsa användarens möten för de kommande sju dagarna: tid, titel, plats, möteslänk och svarsstatus. Mötesbeskrivningen läses bara för att hitta möteslänken; själva texten sparas inte.</td></tr>
     <tr><td><code>offline_access</code></td><td>Hålla kalendern uppdaterad utan att användaren behöver logga in på nytt.</td></tr>
     <tr><td><code>User.Read</code></td><td>Visa vilket konto som är kopplat (namn och e-postadress).</td></tr>
+    <tr><td><code>DeviceManagementManagedApps.ReadWrite</code> (Microsoft Mobile Application Management)</td><td>Låta Intune registrera appen och leverera organisationens app protection-princip.</td></tr>
   </table>
   <p>Appen begär inga programbehörigheter (application permissions) och inga skrivbehörigheter.</p>
 
@@ -68,6 +69,15 @@
     <tr><td>Program-ID (klient)</td><td><code>4709166b-a086-432b-8873-63cfa4703b52</code></td></tr>
     <tr><td>Utgivare</td><td>JMS Software &amp; Consulting</td></tr>
   </table>
+
+  <h2>App protection (Intune)</h2>
+  <p>Tickjoin har Microsoft Intune App SDK och kan skyddas med en app protection-princip, även när Conditional Access kräver <em>Require app protection policy</em>.</p>
+  <ul>
+    <li>Lägg till Tickjoin som <strong>anpassad app</strong> med bundle-ID <code>com.tickjoin.app</code> i en app protection-princip för iOS (Intune admin center → Appar → Skydd). En princip för <em>All Apps</em> omfattar inte Tickjoin.</li>
+    <li>Godkänn även behörigheten <em>Microsoft Mobile Application Management</em> (DeviceManagementManagedApps.ReadWrite) när du ger admin consent.</li>
+    <li>När ett jobbkonto är registrerat gäller principen hela appen. Selektiv rensning tar bort jobbkontots inloggning, möten och alarm från telefonen.</li>
+    <li>Intunes telemetri är avstängd. För registrering och policy skickar Intune App SDK konto- och enhetsuppgifter till Microsofts tjänst för Intune, enligt <a href="https://go.microsoft.com/fwlink/?LinkId=521839">Microsofts sekretesspolicy</a>.</li>
+  </ul>
 
   <h2>Återkalla åtkomsten</h2>
   <ul>
@@ -95,6 +105,7 @@
       <tr><td><code>Calendars.Read</code></td><td>Read the user's meetings for the next seven days: time, title, location, meeting link and response status. The meeting body is only read to find the meeting link; the text itself is not stored.</td></tr>
       <tr><td><code>offline_access</code></td><td>Keep the calendar up to date without the user signing in again.</td></tr>
       <tr><td><code>User.Read</code></td><td>Show which account is connected (name and email address).</td></tr>
+      <tr><td><code>DeviceManagementManagedApps.ReadWrite</code> (Microsoft Mobile Application Management)</td><td>Let Intune enroll the app and deliver the organization's app protection policy.</td></tr>
     </table>
     <p>The app requests no application permissions and no write permissions.</p>
 
@@ -115,6 +126,15 @@
       <tr><td>Application (client) ID</td><td><code>4709166b-a086-432b-8873-63cfa4703b52</code></td></tr>
       <tr><td>Publisher</td><td>JMS Software &amp; Consulting</td></tr>
     </table>
+
+    <h2>App protection (Intune)</h2>
+    <p>Tickjoin integrates the Microsoft Intune App SDK and can be protected by an app protection policy, including when Conditional Access requires <em>Require app protection policy</em>.</p>
+    <ul>
+      <li>Add Tickjoin as a <strong>custom app</strong> with bundle ID <code>com.tickjoin.app</code> to an iOS app protection policy (Intune admin center → Apps → Protection). A policy targeting <em>All Apps</em> does not include Tickjoin.</li>
+      <li>Also approve the <em>Microsoft Mobile Application Management</em> permission (DeviceManagementManagedApps.ReadWrite) when granting admin consent.</li>
+      <li>Once a work account is enrolled, the policy applies to the whole app. A selective wipe removes the work account's sign-in, meetings and alarms from the phone.</li>
+      <li>Intune telemetry is turned off. For enrollment and policy, the Intune App SDK sends account and device information to Microsoft's Intune service, as described in <a href="https://go.microsoft.com/fwlink/?LinkId=521839">Microsoft's privacy statement</a>.</li>
+    </ul>
 
     <h2>Revoking access</h2>
     <ul>
