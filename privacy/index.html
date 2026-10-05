@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tickjoin – integritet och information för IT</title>
+  <meta name="description" content="Vilka behörigheter Tickjoin begär, vad som lagras var och hur man återkallar åtkomsten.">
+  <style>
+    :root { --bg: #F2F2F7; --card: #FFFFFF; --ink: #000000; --ink2: rgba(60,60,67,.66); --sep: rgba(60,60,67,.14); --tint: #007AFF; }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg: #000000; --card: #1C1C1E; --ink: #FFFFFF; --ink2: rgba(235,235,245,.62); --sep: rgba(84,84,88,.6); --tint: #0A84FF; }
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+    main { max-width: 720px; margin: 0 auto; padding: 48px 16px 72px; }
+    h1 { font-size: 34px; line-height: 1.15; margin: 0 0 8px; }
+    h2 { font-size: 22px; margin: 40px 0 8px; }
+    p, li { color: var(--ink2); }
+    strong { color: var(--ink); }
+    a { color: var(--tint); }
+    table { width: 100%; border-collapse: collapse; background: var(--card); border-radius: 16px; overflow: hidden; margin: 12px 0; }
+    th, td { text-align: left; padding: 12px 14px; border-bottom: 1px solid var(--sep); vertical-align: top; font-size: 15px; }
+    th { color: var(--ink); }
+    td { color: var(--ink2); }
+    tr:last-child td { border-bottom: 0; }
+    code { font: 13px/1.5 ui-monospace, SFMono-Regular, Menlo, monospace; word-break: break-all; }
+    .lang { margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--sep); }
+    nav { font-size: 15px; margin-bottom: 32px; }
+  </style>
+</head>
+<body>
+<main>
+  <nav><a href="/">Tickjoin</a> · <a href="#english">English</a></nav>
+
+  <h1>Integritet och information för IT</h1>
+  <p>Den här sidan beskriver vilka behörigheter Tickjoin begär i Microsoft 365, vad appen gör med kalenderdata och hur en organisation återkallar åtkomsten. Senast uppdaterad 5 oktober 2026.</p>
+
+  <h2>Kort sagt</h2>
+  <ul>
+    <li><strong>Kalenderdata lämnar aldrig telefonen.</strong> Appen anropar Microsoft Graph direkt från enheten. Ingen server hos oss tar emot tokens eller mötesinnehåll.</li>
+    <li><strong>Bara läsbehörighet.</strong> Tickjoin skapar, ändrar eller svarar aldrig på möten och har ingen åtkomst till e-post eller filer.</li>
+    <li><strong>Ingen analys eller spårning.</strong> Appen innehåller inga analys- eller reklam-SDK:er.</li>
+  </ul>
+
+  <h2>Behörigheter som begärs</h2>
+  <table>
+    <tr><th>Behörighet (delegerad)</th><th>Varför</th></tr>
+    <tr><td><code>Calendars.Read</code></td><td>Läsa användarens möten för de kommande sju dagarna: tid, titel, plats, möteslänk och svarsstatus. Mötesbeskrivningen läses bara för att hitta möteslänken; själva texten sparas inte.</td></tr>
+    <tr><td><code>offline_access</code></td><td>Hålla kalendern uppdaterad utan att användaren behöver logga in på nytt.</td></tr>
+    <tr><td><code>User.Read</code></td><td>Visa vilket konto som är kopplat (namn och e-postadress).</td></tr>
+  </table>
+  <p>Appen begär inga programbehörigheter (application permissions) och inga skrivbehörigheter.</p>
+
+  <h2>Vad som lagras och var</h2>
+  <ul>
+    <li><strong>Möten</strong> för de kommande sju dagarna lagras i en lokal databas på telefonen, skyddad av iOS dataskydd.</li>
+    <li><strong>Inloggningstokens</strong> hanteras av Microsofts inloggningsbibliotek (MSAL) och lagras i iOS nyckelring.</li>
+    <li><strong>Inget</strong> skickas till JMS Software &amp; Consulting eller till tredje part.</li>
+    <li>När användaren loggar ut ur ett konto i appen raderas tokens, möten och schemalagda alarm för kontot från telefonen.</li>
+  </ul>
+
+  <h2>Godkänna appen för organisationen</h2>
+  <p>I många organisationer kräver Microsofts standardinställning att en administratör godkänner appar som läser kalendrar. En administratör kan godkänna Tickjoin för hela organisationen med den här länken:</p>
+  <p><code>https://login.microsoftonline.com/organizations/adminconsent?client_id=4709166b-a086-432b-8873-63cfa4703b52</code></p>
+  <table>
+    <tr><th>Uppgift</th><th>Värde</th></tr>
+    <tr><td>Appens namn</td><td>Tickjoin</td></tr>
+    <tr><td>Program-ID (klient)</td><td><code>4709166b-a086-432b-8873-63cfa4703b52</code></td></tr>
+    <tr><td>Utgivare</td><td>JMS Software &amp; Consulting</td></tr>
+  </table>
+
+  <h2>Återkalla åtkomsten</h2>
+  <ul>
+    <li><strong>Användare:</strong> logga ut kontot i Tickjoin under Inställningar, eller ta bort appen under <a href="https://myapps.microsoft.com">myapps.microsoft.com</a> (jobbkonton) respektive <a href="https://account.live.com/consent/Manage">account.live.com/consent/Manage</a> (personliga konton).</li>
+    <li><strong>Administratör:</strong> i Microsoft Entra administrationscenter under Företagsprogram → Tickjoin → Behörigheter går det att återkalla godkännandet eller ta bort appen helt.</li>
+  </ul>
+
+  <h2>Kontakt</h2>
+  <p>Frågor om säkerhet och integritet: <a href="mailto:support@tickjoin.com">support@tickjoin.com</a></p>
+
+  <section class="lang" id="english" lang="en">
+    <h1>Privacy and information for IT</h1>
+    <p>This page describes the Microsoft 365 permissions Tickjoin requests, what the app does with calendar data and how an organization revokes access. Last updated 5 October 2026.</p>
+
+    <h2>In short</h2>
+    <ul>
+      <li><strong>Calendar data never leaves the phone.</strong> The app calls Microsoft Graph directly from the device. No server of ours receives tokens or meeting content.</li>
+      <li><strong>Read-only.</strong> Tickjoin never creates, changes or responds to meetings and has no access to mail or files.</li>
+      <li><strong>No analytics or tracking.</strong> The app contains no analytics or advertising SDKs.</li>
+    </ul>
+
+    <h2>Requested permissions</h2>
+    <table>
+      <tr><th>Permission (delegated)</th><th>Why</th></tr>
+      <tr><td><code>Calendars.Read</code></td><td>Read the user's meetings for the next seven days: time, title, location, meeting link and response status. The meeting body is only read to find the meeting link; the text itself is not stored.</td></tr>
+      <tr><td><code>offline_access</code></td><td>Keep the calendar up to date without the user signing in again.</td></tr>
+      <tr><td><code>User.Read</code></td><td>Show which account is connected (name and email address).</td></tr>
+    </table>
+    <p>The app requests no application permissions and no write permissions.</p>
+
+    <h2>What is stored and where</h2>
+    <ul>
+      <li><strong>Meetings</strong> for the next seven days are stored in a local database on the phone, protected by iOS Data Protection.</li>
+      <li><strong>Sign-in tokens</strong> are handled by Microsoft's authentication library (MSAL) and stored in the iOS keychain.</li>
+      <li><strong>Nothing</strong> is sent to JMS Software &amp; Consulting or to any third party.</li>
+      <li>Signing out of an account in the app deletes its tokens, meetings and scheduled alarms from the phone.</li>
+    </ul>
+
+    <h2>Approving the app for your organization</h2>
+    <p>In many organizations, Microsoft's default settings require an administrator to approve apps that read calendars. An administrator can approve Tickjoin for the whole organization with this link:</p>
+    <p><code>https://login.microsoftonline.com/organizations/adminconsent?client_id=4709166b-a086-432b-8873-63cfa4703b52</code></p>
+    <table>
+      <tr><th>Item</th><th>Value</th></tr>
+      <tr><td>App name</td><td>Tickjoin</td></tr>
+      <tr><td>Application (client) ID</td><td><code>4709166b-a086-432b-8873-63cfa4703b52</code></td></tr>
+      <tr><td>Publisher</td><td>JMS Software &amp; Consulting</td></tr>
+    </table>
+
+    <h2>Revoking access</h2>
+    <ul>
+      <li><strong>Users:</strong> sign the account out in Tickjoin under Settings, or remove the app at <a href="https://myapps.microsoft.com">myapps.microsoft.com</a> (work accounts) or <a href="https://account.live.com/consent/Manage">account.live.com/consent/Manage</a> (personal accounts).</li>
+      <li><strong>Administrators:</strong> in the Microsoft Entra admin center under Enterprise applications → Tickjoin → Permissions you can revoke consent or delete the app.</li>
+    </ul>
+
+    <h2>Contact</h2>
+    <p>Security and privacy questions: <a href="mailto:support@tickjoin.com">support@tickjoin.com</a></p>
+  </section>
+</main>
+</body>
+</html>
