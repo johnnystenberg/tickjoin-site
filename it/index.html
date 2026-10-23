@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tickjoin – för IT</title>
+  <meta name="description" content="Tickjoins appregistrering i Microsoft Entra, hur appen godkänns för organisationen och hur den skyddas med Intune.">
+  <style>
+    :root { --bg: #F2F2F7; --card: #FFFFFF; --ink: #000000; --ink2: rgba(60,60,67,.66); --sep: rgba(60,60,67,.14); --tint: #007AFF; }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg: #000000; --card: #1C1C1E; --ink: #FFFFFF; --ink2: rgba(235,235,245,.62); --sep: rgba(84,84,88,.6); --tint: #0A84FF; }
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+    main { max-width: 720px; margin: 0 auto; padding: 48px 16px 72px; }
+    h1 { font-size: 34px; line-height: 1.15; margin: 0 0 8px; }
+    h2 { font-size: 22px; margin: 40px 0 8px; }
+    h3 { font-size: 18px; margin: 24px 0 6px; }
+    p, li { color: var(--ink2); }
+    strong { color: var(--ink); }
+    a { color: var(--tint); }
+    table { width: 100%; border-collapse: collapse; background: var(--card); border-radius: 16px; overflow: hidden; margin: 12px 0; }
+    th, td { text-align: left; padding: 12px 14px; border-bottom: 1px solid var(--sep); vertical-align: top; font-size: 15px; }
+    th { color: var(--ink); }
+    td { color: var(--ink2); }
+    tr:last-child td { border-bottom: 0; }
+    code { font: 13px/1.5 ui-monospace, SFMono-Regular, Menlo, monospace; word-break: break-all; }
+    .lang { margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--sep); }
+    nav { font-size: 15px; margin-bottom: 32px; }
+  </style>
+</head>
+<body>
+<main>
+  <nav><a href="/">Tickjoin</a> · <a href="/privacy/">Integritet</a> · <a href="#english">English</a></nav>
+
+  <h1>Information för IT</h1>
+  <p>Tickjoin visar användarens nästa möte, påminner före det och ansluter till Teams, Zoom, Meet eller Webex med ett tryck. Den här sidan beskriver appens registrering i Microsoft Entra, hur den godkänns för organisationen och hur den skyddas med Intune. Hur kalenderdata hanteras står på <a href="/privacy/">integritetssidan</a>. Senast uppdaterad 23 oktober 2026.</p>
+
+  <h2 id="registrering">Appregistreringen i Microsoft Entra</h2>
+  <table>
+    <tr><th>Uppgift</th><th>Värde</th></tr>
+    <tr><td>Appens namn</td><td>Tickjoin</td></tr>
+    <tr><td>Program-ID (klient)</td><td><code>4709166b-a086-432b-8873-63cfa4703b52</code></td></tr>
+    <tr><td>Utgivare</td><td>JMS Software &amp; Consulting, utgivardomän <code>tickjoin.com</code> (verifierad)</td></tr>
+    <tr><td>Kontotyper</td><td>Jobb- och skolkonton i alla Entra ID-organisationer samt personliga Microsoft-konton</td></tr>
+    <tr><td>Plattform</td><td>iOS, bundle-ID <code>com.tickjoin.app</code>, redirect-URI <code>msauth.com.tickjoin.app://auth</code></td></tr>
+    <tr><td>Klienttyp</td><td>Publik mobilklient utan klienthemlighet. Inloggningen sker med Microsoft Authenticator som broker.</td></tr>
+  </table>
+
+  <h3>Behörigheter</h3>
+  <table>
+    <tr><th>Behörighet (delegerad)</th><th>Varför</th></tr>
+    <tr><td>Microsoft Graph: <code>Calendars.Read</code></td><td>Läsa användarens möten för de kommande sju dagarna.</td></tr>
+    <tr><td>Microsoft Graph: <code>User.Read</code></td><td>Visa vilket konto som är kopplat.</td></tr>
+    <tr><td>Microsoft Graph: <code>offline_access</code></td><td>Hålla kalendern uppdaterad utan ny inloggning.</td></tr>
+    <tr><td>Microsoft Mobile Application Management: <code>DeviceManagementManagedApps.ReadWrite</code></td><td>Används bara av Intune App SDK när organisationen kräver appskydd: registrera appen och hämta skyddsprincipen.</td></tr>
+  </table>
+  <p>Appen begär inga programbehörigheter (application permissions) och inga skrivbehörigheter i kalendern.</p>
+
+  <h2 id="godkanna">Godkänna appen för organisationen</h2>
+  <p>I många organisationer kräver Microsofts standardinställning att en administratör godkänner appar som läser kalendrar. Användaren ser då &quot;Behöver godkännande av administratör&quot; och Tickjoin hjälper användaren att skicka en förfrågan till IT. En global administratör, eller en administratör för molnprogram, godkänner Tickjoin för hela organisationen med den här länken:</p>
+  <p><code>https://login.microsoftonline.com/organizations/adminconsent?client_id=4709166b-a086-432b-8873-63cfa4703b52</code></p>
+  <ul>
+    <li>Efter godkännandet finns appen under <strong>Microsoft Entra administrationscenter → Företagsprogram → Tickjoin</strong>.</li>
+    <li>Vill ni begränsa vilka som får använda appen: slå på <strong>Tilldelning krävs</strong> under <strong>Egenskaper</strong> och tilldela användare eller grupper under <strong>Användare och grupper</strong>.</li>
+    <li>Använder ni arbetsflödet för administratörsgodkännande (admin consent workflow) kommer användarens förfrågan till er där.</li>
+  </ul>
+  <h2 id="intune">Appskydd med Intune</h2>
+  <p>Tickjoin har Microsoft Intune App SDK och kan skyddas med en appskyddsprincip (MAM), med eller utan att telefonen är registrerad i Intune. Kräver organisationen appskydd via villkorsstyrd åtkomst (<em>Require app protection policy</em>) behöver Tickjoin läggas till som en <strong>anpassad app</strong>. Annars kan jobbkontot inte kopplas.</p>
+
+  <h3>1. Godkänn appen</h3>
+  <p>Godkänn Tickjoin för organisationen med länken under <a href="#godkanna">Godkänna appen för organisationen</a>. Godkännandet omfattar behörigheten för Microsoft Mobile Application Management som Intune behöver.</p>
+
+  <h3>2. Lägg till Tickjoin i en appskyddsprincip</h3>
+  <ol>
+    <li>Öppna <a href="https://intune.microsoft.com">Microsoft Intune administrationscenter</a> → <strong>Appar</strong> → <strong>Skydd</strong> → <strong>Skapa princip</strong> → <strong>iOS/iPadOS</strong>.</li>
+    <li>Under <strong>Appar</strong>: välj <strong>Rikta princip till: Valda appar</strong>, sedan <strong>Välj anpassade appar</strong>, och ange bundle-ID <code>com.tickjoin.app</code>.</li>
+    <li>Ställ in dataskydd, åtkomstkrav (t.ex. PIN eller Face ID) och villkorsstyrd start som för era andra appar.</li>
+    <li>Tilldela principen till samma användare eller grupper som era övriga appskyddsprinciper.</li>
+  </ol>
+  <p><strong>Viktigt:</strong> en princip som riktas mot <em>Alla appar</em> eller <em>Alla Microsoft-appar</em> omfattar inte Tickjoin. Den gäller bara Microsofts appar och listade partnerappar, och anpassade appar kan inte väljas i samma princip. Gör därför en separat princip för Tickjoin, eller lägg till den i en princip som redan riktas mot valda appar.</p>
+
+  <h3>3. Undanta MAM-tjänsten i villkorsstyrd åtkomst</h3>
+  <p>Om en princip för villkorsstyrd åtkomst med <em>Require app protection policy</em> gäller <em>Alla resurser</em>: undanta <strong>Microsoft Mobile Application Management</strong> och <strong>Microsoft Mobile Application Management Backend</strong> under <strong>Målresurser → Exkludera</strong>. Intune App SDK hämtar sin token mot MAM-tjänsten innan appen är registrerad, och utan undantaget blockeras registreringen av appar som inte är Microsofts med meddelandet att klientappen inte är tillgänglig för användning med appskyddsprinciper. Microsofts egna appar påverkas inte av undantaget.</p>
+
+  <h3>4. Användarna</h3>
+  <ul>
+    <li>Användarna behöver en Intune-licens och Microsoft Authenticator på telefonen.</li>
+    <li>I Tickjoin: <strong>Inställningar → Lägg till konto → Microsoft 365</strong>. Appen registreras hos Intune vid inloggningen och kan starta om en gång.</li>
+    <li>Intune tillåter i dag bara ett hanterat jobbkonto per telefon, i alla appar. Kräver ett andra jobbkonto också appskydd visar Tickjoin ett meddelande i stället för att koppla det.</li>
+    <li>När ett jobbkonto är registrerat gäller principen hela appen, eftersom Nästa och Agenda visar möten från alla konton tillsammans.</li>
+    <li>Selektiv rensning från Intune loggar ut jobbkontot och tar bort dess möten och alarm från telefonen.</li>
+  </ul>
+
+  <h3>Felsökning</h3>
+  <p>I Tickjoin under <strong>Inställningar → Debug → Inloggningslogg</strong> finns rader som börjar med <code>Intune:</code>. Vanliga statuskoder:</p>
+  <table>
+    <tr><th>Status</th><th>Betyder</th><th>Åtgärd</th></tr>
+    <tr><td>203</td><td>Intune App SDK fick ingen token för MAM-tjänsten.</td><td>Undanta MAM-tjänsten i villkorsstyrd åtkomst (steg 3) och kontrollera att appen är godkänd (steg 1).</td></tr>
+    <tr><td>225</td><td>Användaren har Intune-licens men ingen appskyddsprincip omfattar Tickjoin.</td><td>Lägg till <code>com.tickjoin.app</code> som anpassad app i en princip som tilldelas användaren (steg 2).</td></tr>
+  </table>
+
+
+  <h2>Återkalla godkännandet</h2>
+  <p>I Microsoft Entra administrationscenter under <strong>Företagsprogram → Tickjoin → Behörigheter</strong> går det att återkalla godkännandet, eller ta bort appen helt under <strong>Egenskaper</strong>. Tickjoin slutar då synka jobbkontot på användarnas telefoner.</p>
+
+  <h2>Kontakt</h2>
+  <p>Frågor från IT: <a href="mailto:support@tickjoin.com">support@tickjoin.com</a></p>
+
+  <section class="lang" id="english" lang="en">
+    <h1>Information for IT</h1>
+    <p>Tickjoin shows the user's next meeting, reminds them before it starts and joins Teams, Zoom, Meet or Webex with one tap. This page describes the app's registration in Microsoft Entra, how to approve it for your organization and how to protect it with Intune. How calendar data is handled is described on the <a href="/privacy/#english">privacy page</a>. Last updated 23 October 2026.</p>
+
+    <h2 id="registration">App registration in Microsoft Entra</h2>
+    <table>
+      <tr><th>Item</th><th>Value</th></tr>
+      <tr><td>App name</td><td>Tickjoin</td></tr>
+      <tr><td>Application (client) ID</td><td><code>4709166b-a086-432b-8873-63cfa4703b52</code></td></tr>
+      <tr><td>Publisher</td><td>JMS Software &amp; Consulting, publisher domain <code>tickjoin.com</code> (verified)</td></tr>
+      <tr><td>Supported account types</td><td>Work and school accounts in any Entra ID organization, and personal Microsoft accounts</td></tr>
+      <tr><td>Platform</td><td>iOS, bundle ID <code>com.tickjoin.app</code>, redirect URI <code>msauth.com.tickjoin.app://auth</code></td></tr>
+      <tr><td>Client type</td><td>Public mobile client without a client secret. Sign-in uses Microsoft Authenticator as broker.</td></tr>
+    </table>
+
+    <h3>Permissions</h3>
+    <table>
+      <tr><th>Permission (delegated)</th><th>Why</th></tr>
+      <tr><td>Microsoft Graph: <code>Calendars.Read</code></td><td>Read the user's meetings for the next seven days.</td></tr>
+      <tr><td>Microsoft Graph: <code>User.Read</code></td><td>Show which account is connected.</td></tr>
+      <tr><td>Microsoft Graph: <code>offline_access</code></td><td>Keep the calendar up to date without signing in again.</td></tr>
+      <tr><td>Microsoft Mobile Application Management: <code>DeviceManagementManagedApps.ReadWrite</code></td><td>Only used by the Intune App SDK when the organization requires app protection: register the app and fetch the protection policy.</td></tr>
+    </table>
+    <p>The app requests no application permissions and no calendar write permissions.</p>
+
+    <h2 id="approve">Approving the app for your organization</h2>
+    <p>In many organizations, Microsoft's default settings require an administrator to approve apps that read calendars. The user then sees &quot;Need admin approval&quot;, and Tickjoin helps them send a request to IT. A Global Administrator or Cloud Application Administrator approves Tickjoin for the whole organization with this link:</p>
+    <p><code>https://login.microsoftonline.com/organizations/adminconsent?client_id=4709166b-a086-432b-8873-63cfa4703b52</code></p>
+    <ul>
+      <li>After approval, the app appears under <strong>Microsoft Entra admin center → Enterprise applications → Tickjoin</strong>.</li>
+      <li>To limit who can use the app: turn on <strong>Assignment required</strong> under <strong>Properties</strong> and assign users or groups under <strong>Users and groups</strong>.</li>
+      <li>If you use the admin consent workflow, the user's request reaches you there.</li>
+    </ul>
+    <h2 id="intune-en">App protection with Intune</h2>
+    <p>Tickjoin includes the Microsoft Intune App SDK and can be protected with an app protection policy (MAM), with or without the device enrolled in Intune. If your organization requires app protection through Conditional Access (<em>Require app protection policy</em>), Tickjoin must be added as a <strong>custom app</strong>. Otherwise the work account can't be connected.</p>
+
+    <h3>1. Approve the app</h3>
+    <p>Approve Tickjoin for your organization with the link under <a href="#approve">Approving the app for your organization</a>. The approval includes the Microsoft Mobile Application Management permission that Intune needs.</p>
+
+    <h3>2. Add Tickjoin to an app protection policy</h3>
+    <ol>
+      <li>Open the <a href="https://intune.microsoft.com">Microsoft Intune admin center</a> → <strong>Apps</strong> → <strong>Protection</strong> → <strong>Create policy</strong> → <strong>iOS/iPadOS</strong>.</li>
+      <li>Under <strong>Apps</strong>: choose <strong>Target policy to: Selected apps</strong>, then <strong>Select custom apps</strong>, and enter the bundle ID <code>com.tickjoin.app</code>.</li>
+      <li>Configure data protection, access requirements (e.g. PIN or Face ID) and conditional launch as for your other apps.</li>
+      <li>Assign the policy to the same users or groups as your other app protection policies.</li>
+    </ol>
+    <p><strong>Important:</strong> a policy targeted to <em>All apps</em> or <em>All Microsoft apps</em> does not cover Tickjoin. It only applies to Microsoft's apps and listed partner apps, and custom apps can't be selected in the same policy. Create a separate policy for Tickjoin, or add it to a policy that already targets selected apps.</p>
+
+    <h3>3. Exclude the MAM service in Conditional Access</h3>
+    <p>If a Conditional Access policy with <em>Require app protection policy</em> applies to <em>All resources</em>: exclude <strong>Microsoft Mobile Application Management</strong> and <strong>Microsoft Mobile Application Management Backend</strong> under <strong>Target resources → Exclude</strong>. The Intune App SDK requests its token for the MAM service before the app is registered, and without the exclusion, registration of non-Microsoft apps is blocked with a message that the client app isn't available for use with app protection policies. Microsoft's own apps are not affected by the exclusion.</p>
+
+    <h3>4. Users</h3>
+    <ul>
+      <li>Users need an Intune license and Microsoft Authenticator on the phone.</li>
+      <li>In Tickjoin: <strong>Settings → Add Account → Microsoft 365</strong>. The app registers with Intune when signing in and may restart once.</li>
+      <li>Intune currently allows only one managed work account per phone, across all apps. If a second work account also requires app protection, Tickjoin shows a message instead of connecting it.</li>
+      <li>Once a work account is registered, the policy applies to the whole app, because Next and Agenda show meetings from all accounts together.</li>
+      <li>A selective wipe from Intune signs the work account out and removes its meetings and alarms from the phone.</li>
+    </ul>
+
+    <h3>Troubleshooting</h3>
+    <p>In Tickjoin under <strong>Settings → Debug → Sign-in Log</strong>, lines starting with <code>Intune:</code> show registration and policy status. Common status codes:</p>
+    <table>
+      <tr><th>Status</th><th>Meaning</th><th>Action</th></tr>
+      <tr><td>203</td><td>The Intune App SDK got no token for the MAM service.</td><td>Exclude the MAM service in Conditional Access (step 3) and check that the app is approved (step 1).</td></tr>
+      <tr><td>225</td><td>The user has an Intune license, but no app protection policy covers Tickjoin.</td><td>Add <code>com.tickjoin.app</code> as a custom app in a policy assigned to the user (step 2).</td></tr>
+    </table>
+
+
+    <h2>Revoking approval</h2>
+    <p>In the Microsoft Entra admin center under <strong>Enterprise applications → Tickjoin → Permissions</strong> you can revoke consent, or delete the app under <strong>Properties</strong>. Tickjoin then stops syncing the work account on users' phones.</p>
+
+    <h2>Contact</h2>
+    <p>Questions from IT: <a href="mailto:support@tickjoin.com">support@tickjoin.com</a></p>
+  </section>
+</main>
+</body>
+</html>

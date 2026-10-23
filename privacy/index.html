@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Tickjoin – integritet och information för IT</title>
+  <title>Tickjoin – integritet</title>
   <meta name="description" content="Vilka behörigheter Tickjoin begär i Microsoft 365 och Google, vad som lagras var och hur man återkallar åtkomsten.">
   <style>
     :root { --bg: #F2F2F7; --card: #FFFFFF; --ink: #000000; --ink2: rgba(60,60,67,.66); --sep: rgba(60,60,67,.14); --tint: #007AFF; }
@@ -15,6 +15,7 @@
     main { max-width: 720px; margin: 0 auto; padding: 48px 16px 72px; }
     h1 { font-size: 34px; line-height: 1.15; margin: 0 0 8px; }
     h2 { font-size: 22px; margin: 40px 0 8px; }
+    h3 { font-size: 18px; margin: 24px 0 6px; }
     p, li { color: var(--ink2); }
     strong { color: var(--ink); }
     a { color: var(--tint); }
@@ -30,9 +31,9 @@
 </head>
 <body>
 <main>
-  <nav><a href="/">Tickjoin</a> · <a href="#english">English</a></nav>
+  <nav><a href="/">Tickjoin</a> · <a href="/it/">För IT</a> · <a href="#english">English</a></nav>
 
-  <h1>Integritet och information för IT</h1>
+  <h1>Integritet</h1>
   <p>Den här sidan beskriver vilka behörigheter Tickjoin begär i Microsoft 365 och Google, vad appen gör med kalenderdata och hur åtkomsten återkallas. Senast uppdaterad 23 oktober 2026.</p>
 
   <h2>Kort sagt</h2>
@@ -48,6 +49,7 @@
     <tr><td><code>Calendars.Read</code></td><td>Läsa användarens möten för de kommande sju dagarna: tid, titel, plats, möteslänk och svarsstatus. Mötesbeskrivningen läses bara för att hitta möteslänken; själva texten sparas inte.</td></tr>
     <tr><td><code>offline_access</code></td><td>Hålla kalendern uppdaterad utan att användaren behöver logga in på nytt.</td></tr>
     <tr><td><code>User.Read</code></td><td>Visa vilket konto som är kopplat (namn och e-postadress).</td></tr>
+    <tr><td>Microsoft Mobile Application Management: <code>DeviceManagementManagedApps.ReadWrite</code></td><td>Används bara av Intune App SDK när organisationen kräver appskydd: registrera appen hos Intune och hämta organisationens skyddsprincip. Se <a href="/it/">Appskydd med Intune</a>.</td></tr>
   </table>
   <p>Appen begär inga programbehörigheter (application permissions) och inga skrivbehörigheter.</p>
 
@@ -76,15 +78,8 @@
     <li>När användaren loggar ut ur ett konto i appen raderas tokens, möten och schemalagda alarm för kontot från telefonen. För Google-konton återkallas dessutom behörigheten hos Google.</li>
   </ul>
 
-  <h2>Godkänna appen för organisationen</h2>
-  <p>I många organisationer kräver Microsofts standardinställning att en administratör godkänner appar som läser kalendrar. En administratör kan godkänna Tickjoin för hela organisationen med den här länken:</p>
-  <p><code>https://login.microsoftonline.com/organizations/adminconsent?client_id=4709166b-a086-432b-8873-63cfa4703b52</code></p>
-  <table>
-    <tr><th>Uppgift</th><th>Värde</th></tr>
-    <tr><td>Appens namn</td><td>Tickjoin</td></tr>
-    <tr><td>Program-ID (klient)</td><td><code>4709166b-a086-432b-8873-63cfa4703b52</code></td></tr>
-    <tr><td>Utgivare</td><td>JMS Software &amp; Consulting</td></tr>
-  </table>
+  <h2>Information för IT-administratörer</h2>
+  <p>Hur Tickjoin godkänns för organisationen, appens registrering i Microsoft Entra och appskydd med Intune finns på <a href="/it/">tickjoin.com/it</a>.</p>
 
   <h2>Återkalla åtkomsten</h2>
   <ul>
@@ -96,7 +91,7 @@
   <p>Frågor om säkerhet och integritet: <a href="mailto:support@tickjoin.com">support@tickjoin.com</a></p>
 
   <section class="lang" id="english" lang="en">
-    <h1>Privacy and information for IT</h1>
+    <h1>Privacy</h1>
     <p>This page describes the Microsoft 365 and Google permissions Tickjoin requests, what the app does with calendar data and how access is revoked. Last updated 23 October 2026.</p>
 
     <h2>In short</h2>
@@ -112,6 +107,7 @@
       <tr><td><code>Calendars.Read</code></td><td>Read the user's meetings for the next seven days: time, title, location, meeting link and response status. The meeting body is only read to find the meeting link; the text itself is not stored.</td></tr>
       <tr><td><code>offline_access</code></td><td>Keep the calendar up to date without the user signing in again.</td></tr>
       <tr><td><code>User.Read</code></td><td>Show which account is connected (name and email address).</td></tr>
+      <tr><td>Microsoft Mobile Application Management: <code>DeviceManagementManagedApps.ReadWrite</code></td><td>Only used by the Intune App SDK when the organization requires app protection: register the app with Intune and fetch the organization's protection policy. See <a href="/it/#english">App protection with Intune</a>.</td></tr>
     </table>
     <p>The app requests no application permissions and no write permissions.</p>
 
@@ -140,15 +136,8 @@
       <li>Signing out of an account in the app deletes its tokens, meetings and scheduled alarms from the phone. For Google accounts, access is also revoked at Google.</li>
     </ul>
 
-    <h2>Approving the app for your organization</h2>
-    <p>In many organizations, Microsoft's default settings require an administrator to approve apps that read calendars. An administrator can approve Tickjoin for the whole organization with this link:</p>
-    <p><code>https://login.microsoftonline.com/organizations/adminconsent?client_id=4709166b-a086-432b-8873-63cfa4703b52</code></p>
-    <table>
-      <tr><th>Item</th><th>Value</th></tr>
-      <tr><td>App name</td><td>Tickjoin</td></tr>
-      <tr><td>Application (client) ID</td><td><code>4709166b-a086-432b-8873-63cfa4703b52</code></td></tr>
-      <tr><td>Publisher</td><td>JMS Software &amp; Consulting</td></tr>
-    </table>
+    <h2>Information for IT administrators</h2>
+    <p>How to approve Tickjoin for your organization, the app's registration in Microsoft Entra and app protection with Intune are described at <a href="/it/#english">tickjoin.com/it</a>.</p>
 
     <h2>Revoking access</h2>
     <ul>
