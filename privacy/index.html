@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Tickjoin – integritet och information för IT</title>
-  <meta name="description" content="Vilka behörigheter Tickjoin begär, vad som lagras var och hur man återkallar åtkomsten.">
+  <meta name="description" content="Vilka behörigheter Tickjoin begär i Microsoft 365 och Google, vad som lagras var och hur man återkallar åtkomsten.">
   <style>
     :root { --bg: #F2F2F7; --card: #FFFFFF; --ink: #000000; --ink2: rgba(60,60,67,.66); --sep: rgba(60,60,67,.14); --tint: #007AFF; }
     @media (prefers-color-scheme: dark) {
@@ -33,16 +33,16 @@
   <nav><a href="/">Tickjoin</a> · <a href="#english">English</a></nav>
 
   <h1>Integritet och information för IT</h1>
-  <p>Den här sidan beskriver vilka behörigheter Tickjoin begär i Microsoft 365, vad appen gör med kalenderdata och hur en organisation återkallar åtkomsten. Senast uppdaterad 5 oktober 2026.</p>
+  <p>Den här sidan beskriver vilka behörigheter Tickjoin begär i Microsoft 365 och Google, vad appen gör med kalenderdata och hur åtkomsten återkallas. Senast uppdaterad 23 oktober 2026.</p>
 
   <h2>Kort sagt</h2>
   <ul>
-    <li><strong>Kalenderdata lämnar aldrig telefonen.</strong> Appen anropar Microsoft Graph direkt från enheten. Ingen server hos oss tar emot tokens eller mötesinnehåll.</li>
+    <li><strong>Kalenderdata lämnar aldrig telefonen.</strong> Appen anropar Microsoft Graph och Google Calendar API direkt från enheten. Ingen server hos oss tar emot tokens eller mötesinnehåll.</li>
     <li><strong>Bara läsbehörighet.</strong> Tickjoin skapar, ändrar eller svarar aldrig på möten och har ingen åtkomst till e-post eller filer.</li>
     <li><strong>Ingen analys eller spårning.</strong> Appen innehåller inga analys- eller reklam-SDK:er.</li>
   </ul>
 
-  <h2>Behörigheter som begärs</h2>
+  <h2>Behörigheter som begärs i Microsoft 365</h2>
   <table>
     <tr><th>Behörighet (delegerad)</th><th>Varför</th></tr>
     <tr><td><code>Calendars.Read</code></td><td>Läsa användarens möten för de kommande sju dagarna: tid, titel, plats, möteslänk och svarsstatus. Mötesbeskrivningen läses bara för att hitta möteslänken; själva texten sparas inte.</td></tr>
@@ -51,12 +51,29 @@
   </table>
   <p>Appen begär inga programbehörigheter (application permissions) och inga skrivbehörigheter.</p>
 
+  <h2>Behörigheter som begärs i Google</h2>
+  <table>
+    <tr><th>Scope</th><th>Varför</th></tr>
+    <tr><td><code>https://www.googleapis.com/auth/calendar.readonly</code></td><td>Läsa vilka kalendrar användaren har och mötena i dem för de kommande sju dagarna: tid, titel, plats, möteslänk och svarsstatus. Mötesbeskrivningen läses bara för att hitta möteslänken; själva texten sparas inte. Kontots e-postadress hämtas från den primära kalendern för att visa vilket konto som är kopplat.</td></tr>
+  </table>
+  <p>Inga andra Google-behörigheter begärs. Appen har ingen åtkomst till Gmail, Drive eller kontakter.</p>
+
+  <h2>Användning av data från Google</h2>
+  <p>Tickjoins användning och överföring av information som tas emot från Googles API:er följer <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, inklusive kraven på begränsad användning (Limited Use). Det innebär att data från Google:</p>
+  <ul>
+    <li>bara används för att visa användarens möten och påminna om dem i appen,</li>
+    <li>aldrig överförs till JMS Software &amp; Consulting eller till tredje part,</li>
+    <li>aldrig används för reklam och aldrig säljs,</li>
+    <li>aldrig läses av människor,</li>
+    <li>aldrig används för att träna AI- eller maskininlärningsmodeller.</li>
+  </ul>
+
   <h2>Vad som lagras och var</h2>
   <ul>
     <li><strong>Möten</strong> för de kommande sju dagarna lagras i en lokal databas på telefonen, skyddad av iOS dataskydd.</li>
-    <li><strong>Inloggningstokens</strong> hanteras av Microsofts inloggningsbibliotek (MSAL) och lagras i iOS nyckelring.</li>
+    <li><strong>Inloggningstokens</strong> hanteras av Microsofts inloggningsbibliotek (MSAL) och lagras i iOS nyckelring. För Google lagras en refresh-token i iOS nyckelring; åtkomsttoken finns bara i minnet.</li>
     <li><strong>Inget</strong> skickas till JMS Software &amp; Consulting eller till tredje part.</li>
-    <li>När användaren loggar ut ur ett konto i appen raderas tokens, möten och schemalagda alarm för kontot från telefonen.</li>
+    <li>När användaren loggar ut ur ett konto i appen raderas tokens, möten och schemalagda alarm för kontot från telefonen. För Google-konton återkallas dessutom behörigheten hos Google.</li>
   </ul>
 
   <h2>Godkänna appen för organisationen</h2>
@@ -71,7 +88,7 @@
 
   <h2>Återkalla åtkomsten</h2>
   <ul>
-    <li><strong>Användare:</strong> logga ut kontot i Tickjoin under Inställningar, eller ta bort appen under <a href="https://myapps.microsoft.com">myapps.microsoft.com</a> (jobbkonton) respektive <a href="https://account.live.com/consent/Manage">account.live.com/consent/Manage</a> (personliga konton).</li>
+    <li><strong>Användare:</strong> logga ut kontot i Tickjoin under Inställningar, eller ta bort appen under <a href="https://myapps.microsoft.com">myapps.microsoft.com</a> (jobbkonton) respektive <a href="https://account.live.com/consent/Manage">account.live.com/consent/Manage</a> (personliga konton). Google-konton tas bort under <a href="https://myaccount.google.com/connections">myaccount.google.com/connections</a>.</li>
     <li><strong>Administratör:</strong> i Microsoft Entra administrationscenter under Företagsprogram → Tickjoin → Behörigheter går det att återkalla godkännandet eller ta bort appen helt.</li>
   </ul>
 
@@ -80,16 +97,16 @@
 
   <section class="lang" id="english" lang="en">
     <h1>Privacy and information for IT</h1>
-    <p>This page describes the Microsoft 365 permissions Tickjoin requests, what the app does with calendar data and how an organization revokes access. Last updated 5 October 2026.</p>
+    <p>This page describes the Microsoft 365 and Google permissions Tickjoin requests, what the app does with calendar data and how access is revoked. Last updated 23 October 2026.</p>
 
     <h2>In short</h2>
     <ul>
-      <li><strong>Calendar data never leaves the phone.</strong> The app calls Microsoft Graph directly from the device. No server of ours receives tokens or meeting content.</li>
+      <li><strong>Calendar data never leaves the phone.</strong> The app calls Microsoft Graph and the Google Calendar API directly from the device. No server of ours receives tokens or meeting content.</li>
       <li><strong>Read-only.</strong> Tickjoin never creates, changes or responds to meetings and has no access to mail or files.</li>
       <li><strong>No analytics or tracking.</strong> The app contains no analytics or advertising SDKs.</li>
     </ul>
 
-    <h2>Requested permissions</h2>
+    <h2>Requested Microsoft 365 permissions</h2>
     <table>
       <tr><th>Permission (delegated)</th><th>Why</th></tr>
       <tr><td><code>Calendars.Read</code></td><td>Read the user's meetings for the next seven days: time, title, location, meeting link and response status. The meeting body is only read to find the meeting link; the text itself is not stored.</td></tr>
@@ -98,12 +115,29 @@
     </table>
     <p>The app requests no application permissions and no write permissions.</p>
 
+    <h2>Requested Google permissions</h2>
+    <table>
+      <tr><th>Scope</th><th>Why</th></tr>
+      <tr><td><code>https://www.googleapis.com/auth/calendar.readonly</code></td><td>Read the user's calendar list and their meetings for the next seven days: time, title, location, meeting link and response status. The event description is only read to find the meeting link; the text itself is not stored. The account's email address is taken from the primary calendar to show which account is connected.</td></tr>
+    </table>
+    <p>No other Google permissions are requested. The app has no access to Gmail, Drive or contacts.</p>
+
+    <h2>Use of Google user data</h2>
+    <p>Tickjoin's use and transfer to any other app of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements. Data from Google:</p>
+    <ul>
+      <li>is only used to show the user's meetings and remind them about them in the app,</li>
+      <li>is never transferred to JMS Software &amp; Consulting or to any third party,</li>
+      <li>is never used for advertising and never sold,</li>
+      <li>is never read by humans,</li>
+      <li>is never used to train AI or machine learning models.</li>
+    </ul>
+
     <h2>What is stored and where</h2>
     <ul>
       <li><strong>Meetings</strong> for the next seven days are stored in a local database on the phone, protected by iOS Data Protection.</li>
-      <li><strong>Sign-in tokens</strong> are handled by Microsoft's authentication library (MSAL) and stored in the iOS keychain.</li>
+      <li><strong>Sign-in tokens</strong> are handled by Microsoft's authentication library (MSAL) and stored in the iOS keychain. For Google, a refresh token is stored in the iOS keychain; the access token is only kept in memory.</li>
       <li><strong>Nothing</strong> is sent to JMS Software &amp; Consulting or to any third party.</li>
-      <li>Signing out of an account in the app deletes its tokens, meetings and scheduled alarms from the phone.</li>
+      <li>Signing out of an account in the app deletes its tokens, meetings and scheduled alarms from the phone. For Google accounts, access is also revoked at Google.</li>
     </ul>
 
     <h2>Approving the app for your organization</h2>
@@ -118,7 +152,7 @@
 
     <h2>Revoking access</h2>
     <ul>
-      <li><strong>Users:</strong> sign the account out in Tickjoin under Settings, or remove the app at <a href="https://myapps.microsoft.com">myapps.microsoft.com</a> (work accounts) or <a href="https://account.live.com/consent/Manage">account.live.com/consent/Manage</a> (personal accounts).</li>
+      <li><strong>Users:</strong> sign the account out in Tickjoin under Settings, or remove the app at <a href="https://myapps.microsoft.com">myapps.microsoft.com</a> (work accounts) or <a href="https://account.live.com/consent/Manage">account.live.com/consent/Manage</a> (personal accounts). Google accounts are removed at <a href="https://myaccount.google.com/connections">myaccount.google.com/connections</a>.</li>
       <li><strong>Administrators:</strong> in the Microsoft Entra admin center under Enterprise applications → Tickjoin → Permissions you can revoke consent or delete the app.</li>
     </ul>
 
