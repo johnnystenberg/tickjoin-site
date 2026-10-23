@@ -1,0 +1,123 @@
+{
+  "lang": "sv",
+  "path": "/sv/",
+  "name": "Svenska",
+  "title": "Tickjoin – Missa aldrig ett möte igen",
+  "description": "Tickjoin ger ett alarm strax före mötet – även i tyst läge – och ansluter till Teams, Zoom, Meet eller Webex med ett tryck. För iPhone.",
+  "badge": "Kommer snart till iPhone",
+  "hero_title": "Missa aldrig ett möte igen.",
+  "hero_text": "Tickjoin ger ett alarm strax före mötet – även i tyst läge – och ansluter dig till Teams, Zoom, Meet eller Webex med ett tryck.",
+  "hero_note": "Fungerar med Microsoft 365, Google Kalender och kalendrarna på din iPhone.",
+  "cta_more": "Se hur det fungerar",
+  "pillars": [
+    [
+      "alarm",
+      "Ett alarm som når fram",
+      "En notis är lätt att missa. Tickjoin ringer ett riktigt alarm 1 minut före möten med länk – även i tyst läge och fokusläge."
+    ],
+    [
+      "join",
+      "Anslut med ett tryck",
+      "Möteslänken hittas åt dig, i inbjudningar från Teams, Zoom, Google Meet och Webex. Anslut från appen, alarmet, en widget eller låsskärmen."
+    ],
+    [
+      "calendar",
+      "Alla dina kalendrar",
+      "Jobb och privat sida vid sida: Microsoft 365 – även Intune-skyddade jobbkonton – Google Kalender och iCloud."
+    ]
+  ],
+  "gallery_title": "Gjord för dagar när mötena hopar sig",
+  "gallery_text": "Se vad som är nästa på ett ögonblick, upptäck krockar innan de händer och bli påmind så som varje möte förtjänar.",
+  "screens": [
+    [
+      "next",
+      "Nästa möte",
+      "Nedräkning till nästa möte, med det som krockar och en stor Anslut-knapp."
+    ],
+    [
+      "alarm",
+      "Alarmet",
+      "Ringer även i tyst läge. Anslut direkt från alarmet."
+    ],
+    [
+      "agenda",
+      "Agenda",
+      "Veckan som lista eller kalender, med krockar sida vid sida."
+    ],
+    [
+      "health",
+      "Hälsokoll",
+      "Visar om något kan stoppa en påminnelse – och hur du åtgärdar det."
+    ]
+  ],
+  "features_title": "Allt runt mötet",
+  "features": [
+    [
+      "Krockar på ett ögonblick",
+      "Dubbelbokad? Du ser vilka möten som krockar och kan ansluta till vilket som helst."
+    ],
+    [
+      "Påminnelseprofiler",
+      "Standard, Lugn eller Säker – välj hur långt innan och om det blir notis eller alarm."
+    ],
+    [
+      "Widgetar och Live Activity",
+      "Nedräkning och Anslut på hemskärmen, låsskärmen och i Dynamic Island."
+    ],
+    [
+      "Dölj det som inte spelar roll",
+      "Preliminära block och fokustid? Dölj dem och se när det viktiga mötet börjar."
+    ],
+    [
+      "Ljud som passar",
+      "Välj alarmljud, eller låt det börja tyst och stiga – för öppna kontor."
+    ],
+    [
+      "Siri och Kontrollcenter",
+      "”Anslut till nästa möte” – med Siri, Genvägar eller en kontroll i Kontrollcenter."
+    ]
+  ],
+  "privacy_title": "Din kalender stannar på telefonen",
+  "privacy_points": [
+    [
+      "Bara läsning",
+      "Tickjoin kan inte ändra, acceptera eller avböja möten, och läser aldrig din e-post."
+    ],
+    [
+      "Inga servrar emellan",
+      "Appen pratar direkt med Microsoft och Google. Vi tar aldrig emot dina möten eller inloggningar."
+    ],
+    [
+      "Ingen spårning",
+      "Ingen analys, ingen reklam, ingen data som säljs. Aldrig."
+    ]
+  ],
+  "privacy_link": "Läs integritetspolicyn",
+  "pricing_title": "Gratis att börja. Pro när du behöver det.",
+  "free_name": "Gratis",
+  "free_price": "0 kr",
+  "free_points": [
+    "Ett kalenderkonto",
+    "Notiser med Anslut",
+    "Widget på hemskärmen"
+  ],
+  "pro_name": "Pro",
+  "pro_price": "199 kr / år",
+  "pro_alt": "eller 29 kr / månad · 399 kr en gång",
+  "pro_trial": "14 dagar gratis",
+  "pro_points": [
+    "Alarm som bryter igenom tyst läge",
+    "Obegränsat med konton – jobb, privat, kunder",
+    "Live Activity och alla widgetar",
+    "Egna påminnelseprofiler"
+  ],
+  "it_title": "Ska ni införa det på jobbet?",
+  "it_text": "Tickjoin stöder admin consent och appskydd med Intune. Allt er IT-avdelning behöver finns på en sida.",
+  "it_link": "Information för IT",
+  "footer_privacy": "Integritet",
+  "footer_it": "För IT",
+  "language": "Språk",
+  "shot_alt": "Skärmbild från Tickjoin:",
+  "cta_notify": "Få besked vid lansering",
+  "notify_subject": "Meddela mig när Tickjoin släpps"
+}

@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tickjoin – Missa aldrig ett möte igen</title>
+  <meta name="description" content="Tickjoin ger ett alarm strax före mötet – även i tyst läge – och ansluter till Teams, Zoom, Meet eller Webex med ett tryck. För iPhone.">
+  <meta property="og:title" content="Tickjoin – Missa aldrig ett möte igen">
+  <meta property="og:description" content="Tickjoin ger ett alarm strax före mötet – även i tyst läge – och ansluter till Teams, Zoom, Meet eller Webex med ett tryck. För iPhone.">
+  <meta property="og:image" content="https://tickjoin.com/assets/icon-512.png">
+  <link rel="icon" href="../assets/icon-180.png">
+  <link rel="apple-touch-icon" href="../assets/icon-180.png">
+  <link rel="alternate" hreflang="en" href="https://tickjoin.com/">
+  <link rel="alternate" hreflang="sv" href="https://tickjoin.com/sv/">
+  <link rel="alternate" hreflang="x-default" href="https://tickjoin.com/">
+  <script>
+    // Första besöket i roten: svensk webbläsare går till /sv/. Ett eget val i språkväljaren sparas.
+    (function () {
+      var key = "tickjoin-lang";
+      try {
+        if (false && !localStorage.getItem(key) && /^sv\b/i.test(navigator.language || "")) location.replace("/sv/");
+        document.addEventListener("click", function (event) {
+          var link = event.target.closest && event.target.closest("[data-lang]");
+          if (link) localStorage.setItem(key, link.getAttribute("data-lang"));
+        });
+      } catch (e) {}
+    })();
+  </script>
+  <style>
+    :root {
+      --bg: #F2F2F7; --card: #FFFFFF; --ink: #000000; --ink2: rgba(60,60,67,.66); --sep: rgba(60,60,67,.14);
+      --tint: #007AFF; --join: #15803D; --join-soft: rgba(21,128,61,.10); --alarm: #C2410C; --alarm-soft: rgba(194,65,12,.10);
+      --shadow: 0 24px 60px rgba(0,0,0,.18);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #000000; --card: #1C1C1E; --ink: #FFFFFF; --ink2: rgba(235,235,245,.62); --sep: rgba(84,84,88,.6);
+        --tint: #0A84FF; --join: #30D158; --join-soft: rgba(48,209,88,.14); --alarm: #FF8A45; --alarm-soft: rgba(255,138,69,.16);
+        --shadow: 0 24px 60px rgba(0,0,0,.6);
+      }
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.5 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif; -webkit-font-smoothing: antialiased; }
+    a { color: var(--tint); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 16px; }
+    header.top { display: flex; align-items: center; justify-content: space-between; padding: 20px 0; }
+    .brand { display: flex; align-items: center; gap: 10px; color: var(--ink); font-weight: 700; font-size: 19px; }
+    .brand img { width: 34px; height: 34px; border-radius: 8px; }
+    .brand:hover { text-decoration: none; }
+    .langs { font-size: 15px; color: var(--ink2); }
+    .langs [aria-current] { color: var(--ink); font-weight: 600; pointer-events: none; }
+
+    .hero { display: grid; grid-template-columns: 1.1fr .9fr; gap: 48px; align-items: center; padding: 40px 0 72px; }
+    .badge { display: inline-block; background: var(--join-soft); color: var(--join); font-weight: 600; font-size: 15px; padding: 6px 12px; border-radius: 999px; margin-bottom: 16px; }
+    h1 { font-size: clamp(40px, 6vw, 64px); line-height: 1.04; letter-spacing: -1.5px; margin: 0 0 20px; }
+    .lead { font-size: 21px; color: var(--ink2); margin: 0 0 12px; max-width: 34em; }
+    .note { font-size: 15px; color: var(--ink2); margin: 0 0 28px; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .button { display: inline-block; padding: 14px 22px; border-radius: 999px; font-weight: 600; font-size: 17px; }
+    .button.primary { background: var(--join); color: #fff; }
+    .button.secondary { background: var(--card); color: var(--ink); }
+    .button:hover { text-decoration: none; filter: brightness(1.05); }
+    @media (prefers-color-scheme: dark) { .button.primary { color: #000; } }
+
+    .phone { background: #0B0B0C; border-radius: 52px; padding: 10px; box-shadow: var(--shadow); max-width: 300px; margin: 0 auto; }
+    .phone img { display: block; width: 100%; height: auto; border-radius: 42px; background: var(--bg); }
+    .hero-phone { max-width: 330px; transform: rotate(2deg); }
+
+    section { padding: 64px 0; }
+    h2 { font-size: clamp(30px, 4vw, 42px); line-height: 1.1; letter-spacing: -.8px; margin: 0 0 12px; }
+    .section-lead { color: var(--ink2); font-size: 19px; max-width: 40em; margin: 0 0 36px; }
+    h3 { font-size: 19px; margin: 12px 0 6px; }
+    .card, .pillar, .feature { background: var(--card); border-radius: 24px; padding: 24px; }
+    .pillars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .pillar p, .feature p { color: var(--ink2); margin: 0; font-size: 16px; }
+    .icon { width: 30px; height: 30px; color: var(--join); }
+    .pillar:first-child .icon { color: var(--alarm); }
+
+    .gallery { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(230px, 1fr); gap: 24px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 8px 16px 32px; margin: 0 -16px; }
+    .gallery figure { margin: 0; scroll-snap-align: center; }
+    .gallery .phone { max-width: 250px; border-radius: 44px; padding: 8px; }
+    .gallery .phone img { border-radius: 36px; }
+    figcaption { font-size: 15px; color: var(--ink2); text-align: center; margin-top: 18px; padding: 0 8px; }
+    figcaption strong { display: block; color: var(--ink); font-size: 17px; }
+
+    .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .feature h3 { margin-top: 0; }
+
+    .privacy { background: var(--card); border-radius: 32px; padding: 40px; display: grid; grid-template-columns: .9fr 1.1fr; gap: 32px; align-items: start; }
+    .privacy ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 18px; }
+    .privacy li { color: var(--ink2); padding-left: 36px; position: relative; }
+    .privacy li::before { content: "✓"; position: absolute; left: 0; top: 0; width: 24px; height: 24px; border-radius: 50%; background: var(--join-soft); color: var(--join); font-weight: 700; font-size: 14px; display: grid; place-items: center; }
+    .privacy li strong { display: block; color: var(--ink); }
+
+    .plans { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; max-width: 820px; }
+    .plan { background: var(--card); border-radius: 28px; padding: 28px; }
+    .plan.pro { outline: 2px solid var(--join); }
+    .plan .name { font-weight: 700; font-size: 20px; display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+    .plan .trial { background: var(--join-soft); color: var(--join); font-size: 13px; font-weight: 600; padding: 4px 10px; border-radius: 999px; }
+    .plan .price { font-size: 32px; font-weight: 700; letter-spacing: -.5px; margin: 10px 0 2px; }
+    .plan .alt { color: var(--ink2); font-size: 15px; min-height: 1.5em; }
+    .plan ul { margin: 18px 0 0; padding-left: 20px; color: var(--ink2); }
+    .plan li { margin: 6px 0; }
+
+    .it { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; }
+    .it p { color: var(--ink2); margin: 6px 0 0; max-width: 40em; }
+
+    footer { padding: 40px 0 64px; font-size: 14px; color: var(--ink2); display: flex; flex-wrap: wrap; gap: 12px 24px; justify-content: space-between; border-top: 1px solid var(--sep); }
+
+    @media (max-width: 860px) {
+      .hero { grid-template-columns: 1fr; gap: 40px; padding-top: 16px; }
+      .hero-phone { transform: none; max-width: 280px; }
+      .pillars, .features { grid-template-columns: 1fr; }
+      .privacy { grid-template-columns: 1fr; padding: 28px; }
+      .plans { grid-template-columns: 1fr; }
+      section { padding: 48px 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="top">
+      <a class="brand" href="../"><img src="../assets/icon-180.png" alt="" width="34" height="34">Tickjoin</a>
+      <nav class="langs" aria-label="Språk"><a href="/" lang="en" data-lang="en">English</a> · <a href="/sv/" lang="sv" data-lang="sv" aria-current="page">Svenska</a></nav>
+    </header>
+
+    <main>
+      <div class="hero">
+        <div>
+          <span class="badge">Kommer snart till iPhone</span>
+          <h1>Missa aldrig ett möte igen.</h1>
+          <p class="lead">Tickjoin ger ett alarm strax före mötet – även i tyst läge – och ansluter dig till Teams, Zoom, Meet eller Webex med ett tryck.</p>
+          <p class="note">Fungerar med Microsoft 365, Google Kalender och kalendrarna på din iPhone.</p>
+          <div class="actions">
+            <a class="button primary" href="mailto:support@tickjoin.com?subject=Meddela%20mig%20när%20Tickjoin%20släpps">Få besked vid lansering</a>
+            <a class="button secondary" href="#how">Se hur det fungerar</a>
+          </div>
+        </div>
+        <div class="phone hero-phone"><img src="../assets/screens/sv/next.webp" alt="Skärmbild från Tickjoin: Nästa möte" width="590" height="1280" fetchpriority="high" decoding="async"></div>
+      </div>
+
+      <div class="pillars">
+<article class="pillar"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7v5l3 2"/><circle cx="12" cy="13" r="8"/><path d="M5 3 2 6M19 3l3 3"/></svg><h3>Ett alarm som når fram</h3><p>En notis är lätt att missa. Tickjoin ringer ett riktigt alarm 1 minut före möten med länk – även i tyst läge och fokusläge.</p></article>
+<article class="pillar"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="6" width="13" height="12" rx="3"/><path d="m15.5 10.5 6-3.5v10l-6-3.5"/></svg><h3>Anslut med ett tryck</h3><p>Möteslänken hittas åt dig, i inbjudningar från Teams, Zoom, Google Meet och Webex. Anslut från appen, alarmet, en widget eller låsskärmen.</p></article>
+<article class="pillar"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="16" rx="3"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4"/></svg><h3>Alla dina kalendrar</h3><p>Jobb och privat sida vid sida: Microsoft 365 – även Intune-skyddade jobbkonton – Google Kalender och iCloud.</p></article>
+      </div>
+
+      <section id="how">
+        <h2>Gjord för dagar när mötena hopar sig</h2>
+        <p class="section-lead">Se vad som är nästa på ett ögonblick, upptäck krockar innan de händer och bli påmind så som varje möte förtjänar.</p>
+        <div class="gallery">
+<figure><div class="phone"><img src="../assets/screens/sv/next.webp" alt="Skärmbild från Tickjoin: Nästa möte" width="590" height="1280" loading="lazy" decoding="async"></div><figcaption><strong>Nästa möte</strong>Nedräkning till nästa möte, med det som krockar och en stor Anslut-knapp.</figcaption></figure>
+<figure><div class="phone"><img src="../assets/screens/sv/alarm.webp" alt="Skärmbild från Tickjoin: Alarmet" width="590" height="1280" loading="lazy" decoding="async"></div><figcaption><strong>Alarmet</strong>Ringer även i tyst läge. Anslut direkt från alarmet.</figcaption></figure>
+<figure><div class="phone"><img src="../assets/screens/sv/agenda.webp" alt="Skärmbild från Tickjoin: Agenda" width="590" height="1280" loading="lazy" decoding="async"></div><figcaption><strong>Agenda</strong>Veckan som lista eller kalender, med krockar sida vid sida.</figcaption></figure>
+<figure><div class="phone"><img src="../assets/screens/sv/health.webp" alt="Skärmbild från Tickjoin: Hälsokoll" width="590" height="1280" loading="lazy" decoding="async"></div><figcaption><strong>Hälsokoll</strong>Visar om något kan stoppa en påminnelse – och hur du åtgärdar det.</figcaption></figure>
+        </div>
+      </section>
+
+      <section>
+        <h2>Allt runt mötet</h2>
+        <div class="features" style="margin-top: 28px">
+<article class="feature"><h3>Krockar på ett ögonblick</h3><p>Dubbelbokad? Du ser vilka möten som krockar och kan ansluta till vilket som helst.</p></article>
+<article class="feature"><h3>Påminnelseprofiler</h3><p>Standard, Lugn eller Säker – välj hur långt innan och om det blir notis eller alarm.</p></article>
+<article class="feature"><h3>Widgetar och Live Activity</h3><p>Nedräkning och Anslut på hemskärmen, låsskärmen och i Dynamic Island.</p></article>
+<article class="feature"><h3>Dölj det som inte spelar roll</h3><p>Preliminära block och fokustid? Dölj dem och se när det viktiga mötet börjar.</p></article>
+<article class="feature"><h3>Ljud som passar</h3><p>Välj alarmljud, eller låt det börja tyst och stiga – för öppna kontor.</p></article>
+<article class="feature"><h3>Siri och Kontrollcenter</h3><p>”Anslut till nästa möte” – med Siri, Genvägar eller en kontroll i Kontrollcenter.</p></article>
+        </div>
+      </section>
+
+      <section>
+        <div class="privacy">
+          <div>
+            <h2>Din kalender stannar på telefonen</h2>
+            <p><a href="/privacy/">Läs integritetspolicyn ›</a></p>
+          </div>
+          <ul>
+<li><strong>Bara läsning</strong>Tickjoin kan inte ändra, acceptera eller avböja möten, och läser aldrig din e-post.</li>
+<li><strong>Inga servrar emellan</strong>Appen pratar direkt med Microsoft och Google. Vi tar aldrig emot dina möten eller inloggningar.</li>
+<li><strong>Ingen spårning</strong>Ingen analys, ingen reklam, ingen data som säljs. Aldrig.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h2>Gratis att börja. Pro när du behöver det.</h2>
+        <div class="plans" style="margin-top: 28px">
+          <div class="plan">
+            <div class="name">Gratis</div>
+            <div class="price">0 kr</div>
+            <div class="alt"></div>
+            <ul>
+<li>Ett kalenderkonto</li>
+<li>Notiser med Anslut</li>
+<li>Widget på hemskärmen</li>
+            </ul>
+          </div>
+          <div class="plan pro">
+            <div class="name">Pro <span class="trial">14 dagar gratis</span></div>
+            <div class="price">199 kr / år</div>
+            <div class="alt">eller 29 kr / månad · 399 kr en gång</div>
+            <ul>
+<li>Alarm som bryter igenom tyst läge</li>
+<li>Obegränsat med konton – jobb, privat, kunder</li>
+<li>Live Activity och alla widgetar</li>
+<li>Egna påminnelseprofiler</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="card it">
+          <div>
+            <h2 style="font-size: 26px; margin: 0">Ska ni införa det på jobbet?</h2>
+            <p>Tickjoin stöder admin consent och appskydd med Intune. Allt er IT-avdelning behöver finns på en sida.</p>
+          </div>
+          <a class="button secondary" style="background: var(--bg)" href="/it/">Information för IT ›</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>© 2026 JMS Software &amp; Consulting · <a href="/privacy/">Integritet</a> · <a href="/it/">För IT</a> · <a href="mailto:support@tickjoin.com">support@tickjoin.com</a></span>
+      <span>Språk: <a href="/" lang="en" data-lang="en">English</a> · <a href="/sv/" lang="sv" data-lang="sv" aria-current="page">Svenska</a></span>
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,123 @@
+{
+  "lang": "en",
+  "path": "/",
+  "name": "English",
+  "title": "Tickjoin – Never miss a meeting again",
+  "description": "Tickjoin sounds an alarm right before your meeting – even in Silent Mode – and joins Teams, Zoom, Meet or Webex with one tap. For iPhone.",
+  "badge": "Coming soon to iPhone",
+  "hero_title": "Never miss a meeting again.",
+  "hero_text": "Tickjoin sounds an alarm right before your meeting – even in Silent Mode – and joins Teams, Zoom, Meet or Webex with one tap.",
+  "hero_note": "Works with Microsoft 365, Google Calendar and the calendars on your iPhone.",
+  "cta_more": "See how it works",
+  "pillars": [
+    [
+      "alarm",
+      "An alarm that gets through",
+      "Notifications are easy to miss. Tickjoin rings a real alarm 1 minute before meetings with a link – even in Silent Mode and Focus."
+    ],
+    [
+      "join",
+      "Join with one tap",
+      "The meeting link is found for you, in Teams, Zoom, Google Meet and Webex invites. Join from the app, the alarm, a widget or the Lock Screen."
+    ],
+    [
+      "calendar",
+      "All your calendars",
+      "Work and personal side by side: Microsoft 365 – including Intune-protected work accounts – Google Calendar and iCloud."
+    ]
+  ],
+  "gallery_title": "Made for days when meetings pile up",
+  "gallery_text": "See what's next at a glance, spot overlaps before they happen and get reminded the way each meeting deserves.",
+  "screens": [
+    [
+      "next",
+      "Next meeting",
+      "A countdown to your next meeting, with what overlaps it and a big Join button."
+    ],
+    [
+      "alarm",
+      "The alarm",
+      "Rings even in Silent Mode. Join straight from the alarm."
+    ],
+    [
+      "agenda",
+      "Agenda",
+      "The week as a list or a calendar, with overlaps side by side."
+    ],
+    [
+      "health",
+      "Health Check",
+      "Shows if anything could stop a reminder – and how to fix it."
+    ]
+  ],
+  "features_title": "Everything around the meeting",
+  "features": [
+    [
+      "Overlaps at a glance",
+      "Double-booked? You see which meetings collide and can join either one."
+    ],
+    [
+      "Reminder profiles",
+      "Standard, Calm or Safe – choose how far ahead and whether you get a notification or an alarm."
+    ],
+    [
+      "Widgets and Live Activity",
+      "Countdown and Join on the Home Screen, Lock Screen and in the Dynamic Island."
+    ],
+    [
+      "Hide what doesn't matter",
+      "Tentative blocks and focus time? Hide them and see when the important meeting starts."
+    ],
+    [
+      "Sounds that fit",
+      "Pick an alarm sound, or let it start quiet and rise – for open offices."
+    ],
+    [
+      "Siri and Control Center",
+      "\"Join my next meeting\" – from Siri, Shortcuts or a control in Control Center."
+    ]
+  ],
+  "privacy_title": "Your calendar stays on your phone",
+  "privacy_points": [
+    [
+      "Read-only",
+      "Tickjoin can't change, accept or decline meetings, and never reads your email."
+    ],
+    [
+      "No servers in between",
+      "The app talks directly to Microsoft and Google. We never receive your meetings or sign-in tokens."
+    ],
+    [
+      "No tracking",
+      "No analytics, no ads, no data sold. Ever."
+    ]
+  ],
+  "privacy_link": "Read the privacy policy",
+  "pricing_title": "Free to start. Pro when you need it.",
+  "free_name": "Free",
+  "free_price": "$0",
+  "free_points": [
+    "One calendar account",
+    "Notifications with Join",
+    "Home Screen widget"
+  ],
+  "pro_name": "Pro",
+  "pro_price": "$19.99 / year",
+  "pro_alt": "or $2.99 / month · $39.99 one-time",
+  "pro_trial": "14 days free",
+  "pro_points": [
+    "Alarms that break through Silent Mode",
+    "Unlimited accounts – work, personal, clients",
+    "Live Activity and all widgets",
+    "Custom reminder profiles"
+  ],
+  "it_title": "Rolling out at work?",
+  "it_text": "Tickjoin supports admin consent and Intune app protection. Everything your IT department needs is on one page.",
+  "it_link": "Information for IT",
+  "footer_privacy": "Privacy",
+  "footer_it": "For IT",
+  "language": "Language",
+  "shot_alt": "Tickjoin screenshot:",
+  "cta_notify": "Get notified at launch",
+  "notify_subject": "Tell me when Tickjoin launches"
+}
