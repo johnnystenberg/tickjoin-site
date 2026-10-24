@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tickjoin – 再也不錯過任何會議</title>
+  <meta name="description" content="Tickjoin 會在會議開始前響起鬧鐘，即使在靜音模式下也一樣，點一下就能加入 Teams、Zoom、Meet 或 Webex。適用於 iPhone。">
+  <meta property="og:title" content="Tickjoin – 再也不錯過任何會議">
+  <meta property="og:description" content="Tickjoin 會在會議開始前響起鬧鐘，即使在靜音模式下也一樣，點一下就能加入 Teams、Zoom、Meet 或 Webex。適用於 iPhone。">
+  <meta property="og:image" content="https://tickjoin.com/assets/icon-512.png">
+  <link rel="icon" href="../assets/icon-180.png">
+  <link rel="apple-touch-icon" href="../assets/icon-180.png">
+  <link rel="alternate" hreflang="en" href="https://tickjoin.com/">
+  <link rel="alternate" hreflang="da" href="https://tickjoin.com/da/">
+  <link rel="alternate" hreflang="de" href="https://tickjoin.com/de/">
+  <link rel="alternate" hreflang="es" href="https://tickjoin.com/es/">
+  <link rel="alternate" hreflang="fi" href="https://tickjoin.com/fi/">
+  <link rel="alternate" hreflang="fr" href="https://tickjoin.com/fr/">
+  <link rel="alternate" hreflang="it" href="https://tickjoin.com/it-it/">
+  <link rel="alternate" hreflang="ja" href="https://tickjoin.com/ja/">
+  <link rel="alternate" hreflang="ko" href="https://tickjoin.com/ko/">
+  <link rel="alternate" hreflang="nb" href="https://tickjoin.com/nb/">
+  <link rel="alternate" hreflang="nl" href="https://tickjoin.com/nl/">
+  <link rel="alternate" hreflang="pl" href="https://tickjoin.com/pl/">
+  <link rel="alternate" hreflang="pt-BR" href="https://tickjoin.com/pt-br/">
+  <link rel="alternate" hreflang="sv" href="https://tickjoin.com/sv/">
+  <link rel="alternate" hreflang="zh-Hant" href="https://tickjoin.com/zh-hant/">
+  <link rel="alternate" hreflang="x-default" href="https://tickjoin.com/">
+  <script>
+    // Första besöket i roten: webbläsarens språk väljer sida om det finns. Ett eget val i språkväljaren sparas.
+    (function () {
+      var key = "tickjoin-lang", paths = {"da":"/da/","de":"/de/","es":"/es/","fi":"/fi/","fr":"/fr/","it":"/it-it/","ja":"/ja/","ko":"/ko/","nb":"/nb/","nl":"/nl/","pl":"/pl/","pt-br":"/pt-br/","sv":"/sv/","zh-hant":"/zh-hant/","pt":"/pt-br/"};
+      try {
+        if (false && !localStorage.getItem(key)) {
+          var wanted = navigator.languages || [navigator.language || ""];
+          for (var i = 0; i < wanted.length; i++) {
+            var tag = wanted[i].toLowerCase();
+            if (/^zh-(hant|tw|hk|mo)/.test(tag)) tag = "zh-hant";
+            else if (/^(no|nn)\b/.test(tag)) tag = "nb";
+            else if (!paths[tag]) tag = tag.split("-")[0];
+            if (tag === "en") break;
+            if (paths[tag]) { location.replace(paths[tag]); break; }
+          }
+        }
+        document.addEventListener("click", function (event) {
+          var link = event.target.closest && event.target.closest("[data-lang]");
+          if (link) localStorage.setItem(key, link.getAttribute("data-lang"));
+        });
+      } catch (e) {}
+    })();
+  </script>
+  <style>
+    :root {
+      --bg: #F2F2F7; --card: #FFFFFF; --ink: #000000; --ink2: rgba(60,60,67,.66); --sep: rgba(60,60,67,.14);
+      --tint: #007AFF; --join: #15803D; --join-soft: rgba(21,128,61,.10); --alarm: #C2410C; --alarm-soft: rgba(194,65,12,.10);
+      --shadow: 0 24px 60px rgba(0,0,0,.18);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #000000; --card: #1C1C1E; --ink: #FFFFFF; --ink2: rgba(235,235,245,.62); --sep: rgba(84,84,88,.6);
+        --tint: #0A84FF; --join: #30D158; --join-soft: rgba(48,209,88,.14); --alarm: #FF8A45; --alarm-soft: rgba(255,138,69,.16);
+        --shadow: 0 24px 60px rgba(0,0,0,.6);
+      }
+    }
+    * { box-sizing: border-box; }
+    /* Japanska och koreanska bryts mellan fraser, inte mitt i ord. */
+    :lang(ja) h1, :lang(ja) h2, :lang(ja) h3 { word-break: auto-phrase; }
+    :lang(ko) { word-break: keep-all; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.5 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif; -webkit-font-smoothing: antialiased; }
+    a { color: var(--tint); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 16px; }
+    header.top { display: flex; align-items: center; justify-content: space-between; padding: 20px 0; }
+    .brand { display: flex; align-items: center; gap: 10px; color: var(--ink); font-weight: 700; font-size: 19px; }
+    .brand img { width: 34px; height: 34px; border-radius: 8px; }
+    .brand:hover { text-decoration: none; }
+    .langs { position: relative; font-size: 15px; }
+    .langs summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 6px; color: var(--ink2); padding: 6px 10px; border-radius: 999px; }
+    .langs summary::-webkit-details-marker { display: none; }
+    .langs summary:hover, .langs[open] summary { background: var(--card); color: var(--ink); }
+    .langs summary svg { width: 18px; height: 18px; }
+    .langs .menu { position: absolute; right: 0; top: calc(100% + 6px); z-index: 10; background: var(--card); border-radius: 14px; box-shadow: var(--shadow); padding: 6px; display: grid; grid-template-columns: repeat(2, minmax(120px, 1fr)); min-width: 260px; }
+    .langs .menu a { padding: 8px 12px; border-radius: 8px; color: var(--ink); }
+    .langs .menu a:hover { background: var(--bg); text-decoration: none; }
+    footer [aria-current], .langs [aria-current] { color: var(--ink); font-weight: 600; pointer-events: none; }
+
+    .hero { display: grid; grid-template-columns: 1.1fr .9fr; gap: 48px; align-items: center; padding: 40px 0 72px; }
+    .badge { display: inline-block; background: var(--join-soft); color: var(--join); font-weight: 600; font-size: 15px; padding: 6px 12px; border-radius: 999px; margin-bottom: 16px; }
+    h1 { font-size: clamp(40px, 6vw, 64px); line-height: 1.04; letter-spacing: -1.5px; margin: 0 0 20px; }
+    .lead { font-size: 21px; color: var(--ink2); margin: 0 0 12px; max-width: 34em; }
+    .note { font-size: 15px; color: var(--ink2); margin: 0 0 28px; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .button { display: inline-block; padding: 14px 22px; border-radius: 999px; font-weight: 600; font-size: 17px; }
+    .button.primary { background: var(--join); color: #fff; }
+    .button.secondary { background: var(--card); color: var(--ink); }
+    .button:hover { text-decoration: none; filter: brightness(1.05); }
+    @media (prefers-color-scheme: dark) { .button.primary { color: #000; } }
+
+    .phone { background: #0B0B0C; border-radius: 52px; padding: 10px; box-shadow: var(--shadow); max-width: 300px; margin: 0 auto; }
+    .phone img { display: block; width: 100%; height: auto; border-radius: 42px; background: var(--bg); }
+    .hero-phone { max-width: 330px; transform: rotate(2deg); }
+
+    section { padding: 64px 0; }
+    h2 { font-size: clamp(30px, 4vw, 42px); line-height: 1.1; letter-spacing: -.8px; margin: 0 0 12px; }
+    .section-lead { color: var(--ink2); font-size: 19px; max-width: 40em; margin: 0 0 36px; }
+    h3 { font-size: 19px; margin: 12px 0 6px; }
+    .card, .pillar, .feature { background: var(--card); border-radius: 24px; padding: 24px; }
+    .pillars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .pillar p, .feature p { color: var(--ink2); margin: 0; font-size: 16px; }
+    .icon { width: 30px; height: 30px; color: var(--join); }
+    .pillar:first-child .icon { color: var(--alarm); }
+
+    .gallery { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(230px, 1fr); gap: 24px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 8px 16px 32px; margin: 0 -16px; }
+    .gallery figure { margin: 0; scroll-snap-align: center; }
+    .gallery .phone { max-width: 250px; border-radius: 44px; padding: 8px; }
+    .gallery .phone img { border-radius: 36px; }
+    figcaption { font-size: 15px; color: var(--ink2); text-align: center; margin-top: 18px; padding: 0 8px; }
+    figcaption strong { display: block; color: var(--ink); font-size: 17px; }
+
+    .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .feature h3 { margin-top: 0; }
+
+    .privacy { background: var(--card); border-radius: 32px; padding: 40px; display: grid; grid-template-columns: .9fr 1.1fr; gap: 32px; align-items: start; }
+    .privacy ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 18px; }
+    .privacy li { color: var(--ink2); padding-left: 36px; position: relative; }
+    .privacy li::before { content: "✓"; position: absolute; left: 0; top: 0; width: 24px; height: 24px; border-radius: 50%; background: var(--join-soft); color: var(--join); font-weight: 700; font-size: 14px; display: grid; place-items: center; }
+    .privacy li strong { display: block; color: var(--ink); }
+
+    .plans { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; max-width: 820px; }
+    .plan { background: var(--card); border-radius: 28px; padding: 28px; }
+    .plan.pro { outline: 2px solid var(--join); }
+    .plan .name { font-weight: 700; font-size: 20px; display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+    .plan .trial { background: var(--join-soft); color: var(--join); font-size: 13px; font-weight: 600; padding: 4px 10px; border-radius: 999px; }
+    .plan .price { font-size: 32px; font-weight: 700; letter-spacing: -.5px; margin: 10px 0 2px; }
+    .plan .alt { color: var(--ink2); font-size: 15px; min-height: 1.5em; }
+    .plan ul { margin: 18px 0 0; padding-left: 20px; color: var(--ink2); }
+    .plan li { margin: 6px 0; }
+
+    .it { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; }
+    .it p { color: var(--ink2); margin: 6px 0 0; max-width: 40em; }
+
+    footer { padding: 40px 0 64px; font-size: 14px; color: var(--ink2); display: flex; flex-wrap: wrap; gap: 12px 24px; justify-content: space-between; border-top: 1px solid var(--sep); }
+
+    @media (max-width: 860px) {
+      .hero { grid-template-columns: 1fr; gap: 40px; padding-top: 16px; }
+      .hero-phone { transform: none; max-width: 280px; }
+      .pillars, .features { grid-template-columns: 1fr; }
+      .privacy { grid-template-columns: 1fr; padding: 28px; }
+      .plans { grid-template-columns: 1fr; }
+      section { padding: 48px 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="top">
+      <a class="brand" href="../"><img src="../assets/icon-180.png" alt="" width="34" height="34">Tickjoin</a>
+      <details class="langs">
+        <summary aria-label="語言"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg>繁體中文</summary>
+        <nav class="menu" aria-label="語言"><a href="/" lang="en" data-lang="en">English</a><a href="/da/" lang="da" data-lang="da">Dansk</a><a href="/de/" lang="de" data-lang="de">Deutsch</a><a href="/es/" lang="es" data-lang="es">Español</a><a href="/fi/" lang="fi" data-lang="fi">Suomi</a><a href="/fr/" lang="fr" data-lang="fr">Français</a><a href="/it-it/" lang="it" data-lang="it">Italiano</a><a href="/ja/" lang="ja" data-lang="ja">日本語</a><a href="/ko/" lang="ko" data-lang="ko">한국어</a><a href="/nb/" lang="nb" data-lang="nb">Norsk</a><a href="/nl/" lang="nl" data-lang="nl">Nederlands</a><a href="/pl/" lang="pl" data-lang="pl">Polski</a><a href="/pt-br/" lang="pt-BR" data-lang="pt-BR">Português (Brasil)</a><a href="/sv/" lang="sv" data-lang="sv">Svenska</a><a href="/zh-hant/" lang="zh-Hant" data-lang="zh-Hant" aria-current="page">繁體中文</a></nav>
+      </details>
+    </header>
+
+    <main>
+      <div class="hero">
+        <div>
+          <span class="badge">即將登陸 iPhone</span>
+          <h1>再也不錯過任何會議。</h1>
+          <p class="lead">Tickjoin 會在會議開始前響起鬧鐘，即使在靜音模式下也一樣，點一下就能加入 Teams、Zoom、Meet 或 Webex。</p>
+          <p class="note">支援 Microsoft 365、Google 日曆，以及你 iPhone 上的行事曆。</p>
+          <div class="actions">
+            <a class="button primary" href="mailto:support@tickjoin.com?subject=Tickjoin%20上市時請通知我">上市時通知我</a>
+            <a class="button secondary" href="#how">看看如何運作</a>
+          </div>
+        </div>
+        <div class="phone hero-phone"><img src="../assets/screens/zh-Hant/next.webp" alt="Tickjoin 截圖： 下一場會議" width="590" height="1280" fetchpriority="high" decoding="async"></div>
+      </div>
+
+      <div class="pillars">
+<article class="pillar"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7v5l3 2"/><circle cx="12" cy="13" r="8"/><path d="M5 3 2 6M19 3l3 3"/></svg><h3>一定叫得醒你的鬧鐘</h3><p>通知很容易被忽略。Tickjoin 會在附有連結的會議前 1 分鐘響起真正的鬧鐘，即使在靜音模式和專注模式下也一樣。</p></article>
+<article class="pillar"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="6" width="13" height="12" rx="3"/><path d="m15.5 10.5 6-3.5v10l-6-3.5"/></svg><h3>點一下就加入</h3><p>自動從 Teams、Zoom、Google Meet 和 Webex 的邀請中找出會議連結。從 App、鬧鐘、小工具或鎖定畫面都能直接加入。</p></article>
+<article class="pillar"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="16" rx="3"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4"/></svg><h3>所有行事曆集中一處</h3><p>工作與私人行程並列：Microsoft 365（包括受 Intune 保護的工作帳號）、Google 日曆和 iCloud。</p></article>
+      </div>
+
+      <section id="how">
+        <h2>專為會議接連不斷的日子打造</h2>
+        <p class="section-lead">一眼看清接下來的行程，在衝突發生前就察覺重疊，並依每場會議的需要收到提醒。</p>
+        <div class="gallery">
+<figure><div class="phone"><img src="../assets/screens/zh-Hant/next.webp" alt="Tickjoin 截圖： 下一場會議" width="590" height="1280" loading="lazy" decoding="async"></div><figcaption><strong>下一場會議</strong>倒數下一場會議，顯示與之重疊的行程，還有一個大大的「加入」按鈕。</figcaption></figure>
+<figure><div class="phone"><img src="../assets/screens/en/alarm.webp" alt="Tickjoin 截圖： 鬧鐘" width="590" height="1280" loading="lazy" decoding="async"></div><figcaption><strong>鬧鐘</strong>即使在靜音模式下也會響。直接從鬧鐘加入會議。</figcaption></figure>
+<figure><div class="phone"><img src="../assets/screens/zh-Hant/agenda.webp" alt="Tickjoin 截圖： 議程" width="590" height="1280" loading="lazy" decoding="async"></div><figcaption><strong>議程</strong>以列表或行事曆檢視整週，重疊的會議並排顯示。</figcaption></figure>
+<figure><div class="phone"><img src="../assets/screens/zh-Hant/health.webp" alt="Tickjoin 截圖： 狀態檢查" width="590" height="1280" loading="lazy" decoding="async"></div><figcaption><strong>狀態檢查</strong>顯示是否有任何設定可能讓提醒失效，以及如何修正。</figcaption></figure>
+        </div>
+      </section>
+
+      <section>
+        <h2>會議前後，一應俱全</h2>
+        <div class="features" style="margin-top: 28px">
+<article class="feature"><h3>重疊一目了然</h3><p>重複預約了？你會看到哪些會議撞期，並可選擇加入任一場。</p></article>
+<article class="feature"><h3>提醒設定檔</h3><p>標準、平靜或安全：選擇要提前多久提醒，以及要用通知還是鬧鐘。</p></article>
+<article class="feature"><h3>小工具與即時動態</h3><p>在主畫面、鎖定畫面和動態島上顯示倒數與「加入」按鈕。</p></article>
+<article class="feature"><h3>隱藏不重要的行程</h3><p>暫定的時段和專注時間？把它們隱藏起來，就能看清重要會議何時開始。</p></article>
+<article class="feature"><h3>合適的提示音</h3><p>挑選鬧鐘聲音，或讓它從小聲開始逐漸變大，適合開放式辦公室。</p></article>
+<article class="feature"><h3>Siri 與控制中心</h3><p>「加入下一場會議」——透過 Siri、捷徑或控制中心的控制項目。</p></article>
+        </div>
+      </section>
+
+      <section>
+        <div class="privacy">
+          <div>
+            <h2>你的行事曆只留在手機上</h2>
+            <p><a href="/privacy/#english">閱讀隱私權政策 ›</a></p>
+          </div>
+          <ul>
+<li><strong>唯讀</strong>Tickjoin 無法變更、接受或拒絕會議，也從不讀取你的電子郵件。</li>
+<li><strong>沒有中間伺服器</strong>App 直接與 Microsoft 和 Google 連線。我們絕不會收到你的會議或登入權杖。</li>
+<li><strong>不追蹤</strong>沒有分析、沒有廣告、不販售資料。永遠不會。</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h2>免費開始，需要時再升級 Pro。</h2>
+        <div class="plans" style="margin-top: 28px">
+          <div class="plan">
+            <div class="name">免費</div>
+            <div class="price">NT$0</div>
+            <div class="alt"></div>
+            <ul>
+<li>一個行事曆帳號</li>
+<li>附「加入」按鈕的通知</li>
+<li>主畫面小工具</li>
+            </ul>
+          </div>
+          <div class="plan pro">
+            <div class="name">Pro <span class="trial">免費試用 14 天</span></div>
+            <div class="price">NT$690 / 年</div>
+            <div class="alt">或 NT$90 / 月 · 終身 NT$1,290（一次付清）</div>
+            <ul>
+<li>突破靜音模式的鬧鐘</li>
+<li>不限帳號數量：工作、私人、客戶</li>
+<li>即時動態與所有小工具</li>
+<li>自訂提醒設定檔</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="card it">
+          <div>
+            <h2 style="font-size: 26px; margin: 0">要在公司導入嗎？</h2>
+            <p>Tickjoin 支援管理員核准與 Intune App 保護。IT 部門需要的所有資訊都整理在同一頁。</p>
+          </div>
+          <a class="button secondary" style="background: var(--bg)" href="/it/#english">給 IT 管理員的資訊 ›</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>© 2026 JMS Software &amp; Consulting · <a href="/privacy/#english">隱私權</a> · <a href="/it/#english">IT 專區</a> · <a href="mailto:support@tickjoin.com">support@tickjoin.com</a></span>
+      <span>語言: <a href="/" lang="en" data-lang="en">English</a> · <a href="/da/" lang="da" data-lang="da">Dansk</a> · <a href="/de/" lang="de" data-lang="de">Deutsch</a> · <a href="/es/" lang="es" data-lang="es">Español</a> · <a href="/fi/" lang="fi" data-lang="fi">Suomi</a> · <a href="/fr/" lang="fr" data-lang="fr">Français</a> · <a href="/it-it/" lang="it" data-lang="it">Italiano</a> · <a href="/ja/" lang="ja" data-lang="ja">日本語</a> · <a href="/ko/" lang="ko" data-lang="ko">한국어</a> · <a href="/nb/" lang="nb" data-lang="nb">Norsk</a> · <a href="/nl/" lang="nl" data-lang="nl">Nederlands</a> · <a href="/pl/" lang="pl" data-lang="pl">Polski</a> · <a href="/pt-br/" lang="pt-BR" data-lang="pt-BR">Português (Brasil)</a> · <a href="/sv/" lang="sv" data-lang="sv">Svenska</a> · <a href="/zh-hant/" lang="zh-Hant" data-lang="zh-Hant" aria-current="page">繁體中文</a></span>
+    </footer>
+  </div>
+</body>
+</html>

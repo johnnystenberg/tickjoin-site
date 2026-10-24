@@ -1,0 +1,123 @@
+{
+  "lang": "pl",
+  "path": "/pl/",
+  "name": "Polski",
+  "title": "Tickjoin – Już nigdy nie przegapisz spotkania",
+  "description": "Tickjoin włącza alarm tuż przed spotkaniem – nawet w trybie cichym – i jednym stuknięciem dołącza do Teams, Zoom, Meet lub Webex. Na iPhone’a.",
+  "badge": "Wkrótce na iPhone’a",
+  "hero_title": "Już nigdy nie przegapisz spotkania.",
+  "hero_text": "Tickjoin włącza alarm tuż przed spotkaniem – nawet w trybie cichym – i jednym stuknięciem dołącza do Teams, Zoom, Meet lub Webex.",
+  "hero_note": "Działa z Microsoft 365, Kalendarzem Google i kalendarzami na Twoim iPhonie.",
+  "cta_more": "Zobacz, jak to działa",
+  "pillars": [
+    [
+      "alarm",
+      "Alarm, którego nie przegapisz",
+      "Powiadomienie łatwo przeoczyć. Tickjoin włącza prawdziwy alarm 1 minutę przed spotkaniem z linkiem – nawet w trybie cichym i w trybie Skupienia."
+    ],
+    [
+      "join",
+      "Dołącz jednym stuknięciem",
+      "Link do spotkania znajdziemy za Ciebie – w zaproszeniach z Teams, Zoom, Google Meet i Webex. Dołącz z aplikacji, z alarmu, z widżetu lub z ekranu blokady."
+    ],
+    [
+      "calendar",
+      "Wszystkie Twoje kalendarze",
+      "Praca i życie prywatne obok siebie: Microsoft 365 – także konta służbowe chronione przez Intune – Kalendarz Google i iCloud."
+    ]
+  ],
+  "gallery_title": "Na dni, kiedy spotkania się piętrzą",
+  "gallery_text": "Od razu widzisz, co dalej, wychwytujesz kolizje, zanim nastąpią, i dostajesz przypomnienia dopasowane do każdego spotkania.",
+  "screens": [
+    [
+      "next",
+      "Następne spotkanie",
+      "Odliczanie do następnego spotkania, z tym, co z nim koliduje, i dużym przyciskiem Dołącz."
+    ],
+    [
+      "alarm",
+      "Alarm",
+      "Dzwoni nawet w trybie cichym. Dołącz prosto z alarmu."
+    ],
+    [
+      "agenda",
+      "Agenda",
+      "Tydzień jako lista lub kalendarz, z kolizjami obok siebie."
+    ],
+    [
+      "health",
+      "Kontrola stanu",
+      "Pokazuje, czy coś może zablokować przypomnienie – i jak to naprawić."
+    ]
+  ],
+  "features_title": "Wszystko wokół spotkania",
+  "features": [
+    [
+      "Kolizje na pierwszy rzut oka",
+      "Podwójna rezerwacja? Widzisz, które spotkania się nakładają, i możesz dołączyć do dowolnego z nich."
+    ],
+    [
+      "Profile przypomnień",
+      "Standardowy, Spokojny lub Bezpieczny – wybierz, z jakim wyprzedzeniem i czy ma to być powiadomienie, czy alarm."
+    ],
+    [
+      "Widżety i Aktywność na żywo",
+      "Odliczanie i Dołącz na ekranie początkowym, ekranie blokady i w Dynamic Island."
+    ],
+    [
+      "Ukryj to, co nieważne",
+      "Wstępne rezerwacje i czas na skupienie? Ukryj je i zobacz, kiedy zaczyna się ważne spotkanie."
+    ],
+    [
+      "Dźwięki na każdą okazję",
+      "Wybierz dźwięk alarmu albo pozwól mu zacząć cicho i narastać – idealne do open space’u."
+    ],
+    [
+      "Siri i centrum sterowania",
+      "„Dołącz do następnego spotkania” – przez Siri, Skróty lub przycisk w centrum sterowania."
+    ]
+  ],
+  "privacy_title": "Twój kalendarz zostaje na telefonie",
+  "privacy_points": [
+    [
+      "Tylko odczyt",
+      "Tickjoin nie może zmieniać, akceptować ani odrzucać spotkań i nigdy nie czyta Twojej poczty."
+    ],
+    [
+      "Bez serwerów pośrednich",
+      "Aplikacja łączy się bezpośrednio z Microsoft i Google. Nigdy nie otrzymujemy Twoich spotkań ani tokenów logowania."
+    ],
+    [
+      "Bez śledzenia",
+      "Bez analityki, bez reklam, bez sprzedawania danych. Nigdy."
+    ]
+  ],
+  "privacy_link": "Przeczytaj politykę prywatności",
+  "pricing_title": "Zacznij za darmo. Pro, gdy go potrzebujesz.",
+  "free_name": "Bezpłatna",
+  "free_price": "0 zł",
+  "free_points": [
+    "Jedno konto kalendarza",
+    "Powiadomienia z przyciskiem Dołącz",
+    "Widżet na ekranie początkowym"
+  ],
+  "pro_name": "Pro",
+  "pro_price": "99,99 zł / rok",
+  "pro_alt": "lub 14,99 zł / miesiąc · 199,99 zł jednorazowo",
+  "pro_trial": "14 dni za darmo",
+  "pro_points": [
+    "Alarmy, które przebijają się przez tryb cichy",
+    "Nieograniczona liczba kont – służbowe, prywatne, klientów",
+    "Aktywność na żywo i wszystkie widżety",
+    "Własne profile przypomnień"
+  ],
+  "it_title": "Wdrażacie w firmie?",
+  "it_text": "Tickjoin obsługuje zgodę administratora i ochronę aplikacji Intune. Wszystko, czego potrzebuje Twój dział IT, znajdziesz na jednej stronie.",
+  "it_link": "Informacje dla działu IT",
+  "footer_privacy": "Prywatność",
+  "footer_it": "Dla IT",
+  "language": "Język",
+  "shot_alt": "Zrzut ekranu Tickjoin:",
+  "cta_notify": "Powiadom mnie o premierze",
+  "notify_subject": "Daj mi znać, gdy Tickjoin będzie dostępny"
+}

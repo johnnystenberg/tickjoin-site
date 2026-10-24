@@ -1,0 +1,123 @@
+{
+  "lang": "fi",
+  "path": "/fi/",
+  "name": "Suomi",
+  "title": "Tickjoin – Älä enää koskaan myöhästy kokouksesta",
+  "description": "Tickjoin soittaa hälytyksen juuri ennen kokousta – myös äänettömässä tilassa – ja liittää sinut Teamsiin, Zoomiin, Meetiin tai Webexiin yhdellä napautuksella. iPhonelle.",
+  "badge": "Tulossa pian iPhonelle",
+  "hero_title": "Älä enää koskaan myöhästy kokouksesta.",
+  "hero_text": "Tickjoin soittaa hälytyksen juuri ennen kokousta – myös äänettömässä tilassa – ja liittää sinut Teamsiin, Zoomiin, Meetiin tai Webexiin yhdellä napautuksella.",
+  "hero_note": "Toimii Microsoft 365:n, Google Kalenterin ja iPhonesi kalenterien kanssa.",
+  "cta_more": "Katso, miten se toimii",
+  "pillars": [
+    [
+      "alarm",
+      "Hälytys, joka menee perille",
+      "Ilmoituksen ohittaa helposti. Tickjoin soittaa oikean hälytyksen minuuttia ennen kokouksia, joissa on linkki – myös äänettömässä tilassa ja Keskittymisen aikana."
+    ],
+    [
+      "join",
+      "Liity yhdellä napautuksella",
+      "Kokouslinkki löytyy puolestasi Teams-, Zoom-, Google Meet- ja Webex-kutsuista. Liity appista, hälytyksestä, widgetistä tai lukitusnäytöltä."
+    ],
+    [
+      "calendar",
+      "Kaikki kalenterisi",
+      "Työ ja vapaa-aika rinnakkain: Microsoft 365 – myös Intunella suojatut työtilit – Google Kalenteri ja iCloud."
+    ]
+  ],
+  "gallery_title": "Tehty päiviin, jolloin kokouksia kasautuu",
+  "gallery_text": "Näe yhdellä silmäyksellä, mitä on seuraavaksi, huomaa päällekkäisyydet ennen kuin ne osuvat kohdalle ja saa muistutus juuri niin kuin kukin kokous ansaitsee.",
+  "screens": [
+    [
+      "next",
+      "Seuraava kokous",
+      "Lähtölaskenta seuraavaan kokoukseen, päällekkäiset kokoukset ja iso Liity-painike."
+    ],
+    [
+      "alarm",
+      "Hälytys",
+      "Soi myös äänettömässä tilassa. Liity suoraan hälytyksestä."
+    ],
+    [
+      "agenda",
+      "Agenda",
+      "Viikko listana tai kalenterina, päällekkäiset kokoukset rinnakkain."
+    ],
+    [
+      "health",
+      "Kuntotarkastus",
+      "Näyttää, voiko jokin estää muistutuksen – ja miten sen korjaat."
+    ]
+  ],
+  "features_title": "Kaikki kokouksen ympäriltä",
+  "features": [
+    [
+      "Päällekkäisyydet yhdellä silmäyksellä",
+      "Tuplavaraus? Näet, mitkä kokoukset menevät päällekkäin, ja voit liittyä kumpaan tahansa."
+    ],
+    [
+      "Muistutusprofiilit",
+      "Vakio, Rauhallinen tai Varma – valitse ennakkoaika ja saatko ilmoituksen vai hälytyksen."
+    ],
+    [
+      "Widgetit ja Live-toiminto",
+      "Lähtölaskenta ja Liity Koti-valikossa, lukitusnäytöllä ja Dynamic Islandissa."
+    ],
+    [
+      "Piilota epäolennainen",
+      "Alustavia varauksia ja keskittymisaikaa? Piilota ne ja näe, milloin tärkeä kokous alkaa."
+    ],
+    [
+      "Sopivat äänet",
+      "Valitse hälytysääni tai anna sen alkaa hiljaa ja voimistua – avokonttoreihin."
+    ],
+    [
+      "Siri ja Ohjauskeskus",
+      "”Liity seuraavaan kokoukseen” – Sirillä, Pikakomennoilla tai Ohjauskeskuksen säätimellä."
+    ]
+  ],
+  "privacy_title": "Kalenterisi pysyy puhelimessasi",
+  "privacy_points": [
+    [
+      "Vain luku",
+      "Tickjoin ei voi muuttaa, hyväksyä tai hylätä kokouksia, eikä se koskaan lue sähköpostiasi."
+    ],
+    [
+      "Ei palvelimia välissä",
+      "Appi on suoraan yhteydessä Microsoftiin ja Googleen. Emme koskaan vastaanota kokouksiasi tai kirjautumistunnisteitasi."
+    ],
+    [
+      "Ei seurantaa",
+      "Ei analytiikkaa, ei mainoksia, ei datan myyntiä. Ei koskaan."
+    ]
+  ],
+  "privacy_link": "Lue tietosuojakäytäntö",
+  "pricing_title": "Aloita ilmaiseksi. Pro, kun tarvitset sitä.",
+  "free_name": "Ilmainen",
+  "free_price": "0 €",
+  "free_points": [
+    "Yksi kalenteritili",
+    "Ilmoitukset ja Liity-painike",
+    "Widget Koti-valikkoon"
+  ],
+  "pro_name": "Pro",
+  "pro_price": "22,99 € / vuosi",
+  "pro_alt": "tai 2,99 € / kk · 44,99 € kertamaksu",
+  "pro_trial": "14 päivää ilmaiseksi",
+  "pro_points": [
+    "Hälytykset, jotka kuuluvat äänettömässä tilassa",
+    "Rajattomasti tilejä – työ, oma, asiakkaat",
+    "Live-toiminto ja kaikki widgetit",
+    "Omat muistutusprofiilit"
+  ],
+  "it_title": "Otetaanko käyttöön työpaikalla?",
+  "it_text": "Tickjoin tukee ylläpitäjän hyväksyntää (admin consent) ja Intunen appisuojausta. Kaikki, mitä IT-osastonne tarvitsee, löytyy yhdeltä sivulta.",
+  "it_link": "Tietoa IT:lle",
+  "footer_privacy": "Tietosuoja",
+  "footer_it": "IT:lle",
+  "language": "Kieli",
+  "shot_alt": "Kuvakaappaus Tickjoinista:",
+  "cta_notify": "Kerro minulle julkaisusta",
+  "notify_subject": "Kerro minulle, kun Tickjoin julkaistaan"
+}

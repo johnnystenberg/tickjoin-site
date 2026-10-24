@@ -1,0 +1,123 @@
+{
+  "lang": "it",
+  "path": "/it-it/",
+  "name": "Italiano",
+  "title": "Tickjoin – Non perdere mai più una riunione",
+  "description": "Tickjoin fa suonare una sveglia poco prima della riunione – anche in modalità silenziosa – e ti fa partecipare a Teams, Zoom, Meet o Webex con un tocco. Per iPhone.",
+  "badge": "Presto su iPhone",
+  "hero_title": "Non perdere mai più una riunione.",
+  "hero_text": "Tickjoin fa suonare una sveglia poco prima della riunione – anche in modalità silenziosa – e ti fa partecipare a Teams, Zoom, Meet o Webex con un tocco.",
+  "hero_note": "Funziona con Microsoft 365, Google Calendar e i calendari del tuo iPhone.",
+  "cta_more": "Scopri come funziona",
+  "pillars": [
+    [
+      "alarm",
+      "Una sveglia che si fa sentire",
+      "Una notifica si perde facilmente. Tickjoin fa suonare una vera sveglia 1 minuto prima delle riunioni con link – anche in modalità silenziosa e con Full immersion attiva."
+    ],
+    [
+      "join",
+      "Partecipa con un tocco",
+      "Il link della riunione lo trova Tickjoin, negli inviti di Teams, Zoom, Google Meet e Webex. Partecipa dall’app, dalla sveglia, da un widget o dalla schermata di blocco."
+    ],
+    [
+      "calendar",
+      "Tutti i tuoi calendari",
+      "Lavoro e vita privata fianco a fianco: Microsoft 365 – compresi gli account di lavoro protetti da Intune –, Google Calendar e iCloud."
+    ]
+  ],
+  "gallery_title": "Pensata per le giornate piene di riunioni",
+  "gallery_text": "Vedi a colpo d’occhio cosa ti aspetta, individua le sovrapposizioni prima che accadano e ricevi il promemoria giusto per ogni riunione.",
+  "screens": [
+    [
+      "next",
+      "Prossima riunione",
+      "Il conto alla rovescia per la prossima riunione, con ciò che si sovrappone e un grande pulsante Partecipa."
+    ],
+    [
+      "alarm",
+      "La sveglia",
+      "Suona anche in modalità silenziosa. Partecipa direttamente dalla sveglia."
+    ],
+    [
+      "agenda",
+      "Agenda",
+      "La settimana come elenco o calendario, con le sovrapposizioni affiancate."
+    ],
+    [
+      "health",
+      "Check-up",
+      "Mostra se qualcosa potrebbe bloccare un promemoria – e come risolverlo."
+    ]
+  ],
+  "features_title": "Tutto intorno alla riunione",
+  "features": [
+    [
+      "Sovrapposizioni a colpo d’occhio",
+      "Doppia prenotazione? Vedi quali riunioni si sovrappongono e puoi partecipare a quella che preferisci."
+    ],
+    [
+      "Profili promemoria",
+      "Standard, Calmo o Sicuro – scegli quanto prima e se ricevere una notifica o una sveglia."
+    ],
+    [
+      "Widget e Attività in tempo reale",
+      "Conto alla rovescia e Partecipa nella schermata Home, nella schermata di blocco e nella Dynamic Island."
+    ],
+    [
+      "Nascondi ciò che non conta",
+      "Blocchi provvisori e tempo per concentrarti? Nascondili e vedi quando inizia la riunione importante."
+    ],
+    [
+      "Suoni su misura",
+      "Scegli un suono per la sveglia, oppure fallo partire piano e crescere – ideale negli open space."
+    ],
+    [
+      "Siri e Centro di Controllo",
+      "«Partecipa alla prossima riunione» – con Siri, Comandi Rapidi o un controllo nel Centro di Controllo."
+    ]
+  ],
+  "privacy_title": "Il tuo calendario resta sul telefono",
+  "privacy_points": [
+    [
+      "Sola lettura",
+      "Tickjoin non può modificare, accettare o rifiutare riunioni e non legge mai la tua email."
+    ],
+    [
+      "Nessun server in mezzo",
+      "L’app comunica direttamente con Microsoft e Google. Non riceviamo mai le tue riunioni né i tuoi token di accesso."
+    ],
+    [
+      "Nessun tracciamento",
+      "Niente analisi, niente pubblicità, nessun dato venduto. Mai."
+    ]
+  ],
+  "privacy_link": "Leggi l’informativa sulla privacy",
+  "pricing_title": "Gratis per iniziare. Pro quando ti serve.",
+  "free_name": "Gratuito",
+  "free_price": "0 €",
+  "free_points": [
+    "Un account calendario",
+    "Notifiche con Partecipa",
+    "Widget nella schermata Home"
+  ],
+  "pro_name": "Pro",
+  "pro_price": "22,99 € / anno",
+  "pro_alt": "oppure 2,99 € / mese · 44,99 € una tantum",
+  "pro_trial": "14 giorni gratis",
+  "pro_points": [
+    "Sveglie che superano la modalità silenziosa",
+    "Account illimitati – lavoro, personale, clienti",
+    "Attività in tempo reale e tutti i widget",
+    "Profili promemoria personalizzati"
+  ],
+  "it_title": "Da adottare in azienda?",
+  "it_text": "Tickjoin supporta l’approvazione dell’amministratore e la protezione delle app con Intune. Tutto ciò che serve al tuo reparto IT è in un’unica pagina.",
+  "it_link": "Informazioni per l’IT",
+  "footer_privacy": "Privacy",
+  "footer_it": "Per l’IT",
+  "language": "Lingua",
+  "shot_alt": "Screenshot di Tickjoin:",
+  "cta_notify": "Avvisami al lancio",
+  "notify_subject": "Avvisatemi quando esce Tickjoin"
+}

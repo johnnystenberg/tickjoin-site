@@ -11,14 +11,37 @@
   <link rel="icon" href="../assets/icon-180.png">
   <link rel="apple-touch-icon" href="../assets/icon-180.png">
   <link rel="alternate" hreflang="en" href="https://tickjoin.com/">
+  <link rel="alternate" hreflang="da" href="https://tickjoin.com/da/">
+  <link rel="alternate" hreflang="de" href="https://tickjoin.com/de/">
+  <link rel="alternate" hreflang="es" href="https://tickjoin.com/es/">
+  <link rel="alternate" hreflang="fi" href="https://tickjoin.com/fi/">
+  <link rel="alternate" hreflang="fr" href="https://tickjoin.com/fr/">
+  <link rel="alternate" hreflang="it" href="https://tickjoin.com/it-it/">
+  <link rel="alternate" hreflang="ja" href="https://tickjoin.com/ja/">
+  <link rel="alternate" hreflang="ko" href="https://tickjoin.com/ko/">
+  <link rel="alternate" hreflang="nb" href="https://tickjoin.com/nb/">
+  <link rel="alternate" hreflang="nl" href="https://tickjoin.com/nl/">
+  <link rel="alternate" hreflang="pl" href="https://tickjoin.com/pl/">
+  <link rel="alternate" hreflang="pt-BR" href="https://tickjoin.com/pt-br/">
   <link rel="alternate" hreflang="sv" href="https://tickjoin.com/sv/">
+  <link rel="alternate" hreflang="zh-Hant" href="https://tickjoin.com/zh-hant/">
   <link rel="alternate" hreflang="x-default" href="https://tickjoin.com/">
   <script>
-    // Första besöket i roten: svensk webbläsare går till /sv/. Ett eget val i språkväljaren sparas.
+    // Första besöket i roten: webbläsarens språk väljer sida om det finns. Ett eget val i språkväljaren sparas.
     (function () {
-      var key = "tickjoin-lang";
+      var key = "tickjoin-lang", paths = {"da":"/da/","de":"/de/","es":"/es/","fi":"/fi/","fr":"/fr/","it":"/it-it/","ja":"/ja/","ko":"/ko/","nb":"/nb/","nl":"/nl/","pl":"/pl/","pt-br":"/pt-br/","sv":"/sv/","zh-hant":"/zh-hant/","pt":"/pt-br/"};
       try {
-        if (false && !localStorage.getItem(key) && /^sv\b/i.test(navigator.language || "")) location.replace("/sv/");
+        if (false && !localStorage.getItem(key)) {
+          var wanted = navigator.languages || [navigator.language || ""];
+          for (var i = 0; i < wanted.length; i++) {
+            var tag = wanted[i].toLowerCase();
+            if (/^zh-(hant|tw|hk|mo)/.test(tag)) tag = "zh-hant";
+            else if (/^(no|nn)\b/.test(tag)) tag = "nb";
+            else if (!paths[tag]) tag = tag.split("-")[0];
+            if (tag === "en") break;
+            if (paths[tag]) { location.replace(paths[tag]); break; }
+          }
+        }
         document.addEventListener("click", function (event) {
           var link = event.target.closest && event.target.closest("[data-lang]");
           if (link) localStorage.setItem(key, link.getAttribute("data-lang"));
@@ -40,6 +63,9 @@
       }
     }
     * { box-sizing: border-box; }
+    /* Japanska och koreanska bryts mellan fraser, inte mitt i ord. */
+    :lang(ja) h1, :lang(ja) h2, :lang(ja) h3 { word-break: auto-phrase; }
+    :lang(ko) { word-break: keep-all; }
     html { scroll-behavior: smooth; }
     body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.5 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif; -webkit-font-smoothing: antialiased; }
     a { color: var(--tint); text-decoration: none; }
@@ -49,8 +75,15 @@
     .brand { display: flex; align-items: center; gap: 10px; color: var(--ink); font-weight: 700; font-size: 19px; }
     .brand img { width: 34px; height: 34px; border-radius: 8px; }
     .brand:hover { text-decoration: none; }
-    .langs { font-size: 15px; color: var(--ink2); }
-    .langs [aria-current] { color: var(--ink); font-weight: 600; pointer-events: none; }
+    .langs { position: relative; font-size: 15px; }
+    .langs summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 6px; color: var(--ink2); padding: 6px 10px; border-radius: 999px; }
+    .langs summary::-webkit-details-marker { display: none; }
+    .langs summary:hover, .langs[open] summary { background: var(--card); color: var(--ink); }
+    .langs summary svg { width: 18px; height: 18px; }
+    .langs .menu { position: absolute; right: 0; top: calc(100% + 6px); z-index: 10; background: var(--card); border-radius: 14px; box-shadow: var(--shadow); padding: 6px; display: grid; grid-template-columns: repeat(2, minmax(120px, 1fr)); min-width: 260px; }
+    .langs .menu a { padding: 8px 12px; border-radius: 8px; color: var(--ink); }
+    .langs .menu a:hover { background: var(--bg); text-decoration: none; }
+    footer [aria-current], .langs [aria-current] { color: var(--ink); font-weight: 600; pointer-events: none; }
 
     .hero { display: grid; grid-template-columns: 1.1fr .9fr; gap: 48px; align-items: center; padding: 40px 0 72px; }
     .badge { display: inline-block; background: var(--join-soft); color: var(--join); font-weight: 600; font-size: 15px; padding: 6px 12px; border-radius: 999px; margin-bottom: 16px; }
@@ -123,7 +156,10 @@
   <div class="wrap">
     <header class="top">
       <a class="brand" href="../"><img src="../assets/icon-180.png" alt="" width="34" height="34">Tickjoin</a>
-      <nav class="langs" aria-label="Språk"><a href="/" lang="en" data-lang="en">English</a> · <a href="/sv/" lang="sv" data-lang="sv" aria-current="page">Svenska</a></nav>
+      <details class="langs">
+        <summary aria-label="Språk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg>Svenska</summary>
+        <nav class="menu" aria-label="Språk"><a href="/" lang="en" data-lang="en">English</a><a href="/da/" lang="da" data-lang="da">Dansk</a><a href="/de/" lang="de" data-lang="de">Deutsch</a><a href="/es/" lang="es" data-lang="es">Español</a><a href="/fi/" lang="fi" data-lang="fi">Suomi</a><a href="/fr/" lang="fr" data-lang="fr">Français</a><a href="/it-it/" lang="it" data-lang="it">Italiano</a><a href="/ja/" lang="ja" data-lang="ja">日本語</a><a href="/ko/" lang="ko" data-lang="ko">한국어</a><a href="/nb/" lang="nb" data-lang="nb">Norsk</a><a href="/nl/" lang="nl" data-lang="nl">Nederlands</a><a href="/pl/" lang="pl" data-lang="pl">Polski</a><a href="/pt-br/" lang="pt-BR" data-lang="pt-BR">Português (Brasil)</a><a href="/sv/" lang="sv" data-lang="sv" aria-current="page">Svenska</a><a href="/zh-hant/" lang="zh-Hant" data-lang="zh-Hant">繁體中文</a></nav>
+      </details>
     </header>
 
     <main>
@@ -224,7 +260,7 @@
 
     <footer>
       <span>© 2026 JMS Software &amp; Consulting · <a href="/privacy/">Integritet</a> · <a href="/it/">För IT</a> · <a href="mailto:support@tickjoin.com">support@tickjoin.com</a></span>
-      <span>Språk: <a href="/" lang="en" data-lang="en">English</a> · <a href="/sv/" lang="sv" data-lang="sv" aria-current="page">Svenska</a></span>
+      <span>Språk: <a href="/" lang="en" data-lang="en">English</a> · <a href="/da/" lang="da" data-lang="da">Dansk</a> · <a href="/de/" lang="de" data-lang="de">Deutsch</a> · <a href="/es/" lang="es" data-lang="es">Español</a> · <a href="/fi/" lang="fi" data-lang="fi">Suomi</a> · <a href="/fr/" lang="fr" data-lang="fr">Français</a> · <a href="/it-it/" lang="it" data-lang="it">Italiano</a> · <a href="/ja/" lang="ja" data-lang="ja">日本語</a> · <a href="/ko/" lang="ko" data-lang="ko">한국어</a> · <a href="/nb/" lang="nb" data-lang="nb">Norsk</a> · <a href="/nl/" lang="nl" data-lang="nl">Nederlands</a> · <a href="/pl/" lang="pl" data-lang="pl">Polski</a> · <a href="/pt-br/" lang="pt-BR" data-lang="pt-BR">Português (Brasil)</a> · <a href="/sv/" lang="sv" data-lang="sv" aria-current="page">Svenska</a> · <a href="/zh-hant/" lang="zh-Hant" data-lang="zh-Hant">繁體中文</a></span>
     </footer>
   </div>
 </body>
