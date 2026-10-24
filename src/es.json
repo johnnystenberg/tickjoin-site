@@ -1,0 +1,123 @@
+{
+  "lang": "es",
+  "path": "/es/",
+  "name": "Español",
+  "title": "Tickjoin – No vuelvas a perderte una reunión",
+  "description": "Tickjoin hace sonar una alarma justo antes de tu reunión –incluso en modo silencio– y te une a Teams, Zoom, Meet o Webex con un toque. Para iPhone.",
+  "badge": "Muy pronto en iPhone",
+  "hero_title": "No vuelvas a perderte una reunión.",
+  "hero_text": "Tickjoin hace sonar una alarma justo antes de tu reunión –incluso en modo silencio– y te une a Teams, Zoom, Meet o Webex con un toque.",
+  "hero_note": "Compatible con Microsoft 365, Google Calendar y los calendarios de tu iPhone.",
+  "cta_more": "Descubre cómo funciona",
+  "pillars": [
+    [
+      "alarm",
+      "Una alarma que no pasa desapercibida",
+      "Una notificación se pasa por alto fácilmente. Tickjoin hace sonar una alarma de verdad 1 minuto antes de las reuniones con enlace, incluso en modo silencio y con Concentración activada."
+    ],
+    [
+      "join",
+      "Únete con un toque",
+      "Tickjoin encuentra el enlace por ti en las invitaciones de Teams, Zoom, Google Meet y Webex. Únete desde la app, la alarma, un widget o la pantalla bloqueada."
+    ],
+    [
+      "calendar",
+      "Todos tus calendarios",
+      "Trabajo y vida personal, juntos: Microsoft 365 (incluidas las cuentas de trabajo protegidas con Intune), Google Calendar e iCloud."
+    ]
+  ],
+  "gallery_title": "Pensada para los días llenos de reuniones",
+  "gallery_text": "Ve de un vistazo qué viene después, detecta solapamientos antes de que ocurran y recibe el recordatorio que cada reunión merece.",
+  "screens": [
+    [
+      "next",
+      "Próxima reunión",
+      "Cuenta regresiva hasta tu próxima reunión, con lo que se solapa y un gran botón Unirse."
+    ],
+    [
+      "alarm",
+      "La alarma",
+      "Suena incluso en modo silencio. Únete directamente desde la alarma."
+    ],
+    [
+      "agenda",
+      "Agenda",
+      "La semana como lista o calendario, con los solapamientos lado a lado."
+    ],
+    [
+      "health",
+      "Diagnóstico",
+      "Te avisa si algo podría impedir un recordatorio y cómo solucionarlo."
+    ]
+  ],
+  "features_title": "Todo lo que rodea a la reunión",
+  "features": [
+    [
+      "Solapamientos de un vistazo",
+      "¿Reuniones a la misma hora? Ves cuáles coinciden y puedes unirte a cualquiera."
+    ],
+    [
+      "Perfiles de recordatorio",
+      "Estándar, Tranquilo o Seguro: elige la antelación y si recibes una notificación o una alarma."
+    ],
+    [
+      "Widgets y Actividad en vivo",
+      "Cuenta regresiva y Unirse en la pantalla de inicio, la pantalla bloqueada y la Dynamic Island."
+    ],
+    [
+      "Oculta lo que no importa",
+      "¿Bloques provisionales y tiempo de concentración? Ocúltalos y ve cuándo empieza la reunión importante."
+    ],
+    [
+      "Sonidos a tu medida",
+      "Elige un sonido de alarma o deja que empiece suave y vaya subiendo, ideal para oficinas abiertas."
+    ],
+    [
+      "Siri y Centro de control",
+      "«Unirme a mi próxima reunión», con Siri, Atajos o un control del Centro de control."
+    ]
+  ],
+  "privacy_title": "Tu calendario se queda en tu teléfono",
+  "privacy_points": [
+    [
+      "Solo lectura",
+      "Tickjoin no puede modificar, aceptar ni rechazar reuniones, y nunca lee tu correo."
+    ],
+    [
+      "Sin servidores intermedios",
+      "La app habla directamente con Microsoft y Google. Nunca recibimos tus reuniones ni tus credenciales."
+    ],
+    [
+      "Sin rastreo",
+      "Sin analíticas, sin anuncios, sin venta de datos. Nunca."
+    ]
+  ],
+  "privacy_link": "Lee la política de privacidad",
+  "pricing_title": "Gratis para empezar. Pro cuando lo necesites.",
+  "free_name": "Gratis",
+  "free_price": "0 €",
+  "free_points": [
+    "Una cuenta de calendario",
+    "Notificaciones con Unirse",
+    "Widget en la pantalla de inicio"
+  ],
+  "pro_name": "Pro",
+  "pro_price": "22,99 € / año",
+  "pro_alt": "o 2,99 € / mes · 44,99 € pago único",
+  "pro_trial": "14 días gratis",
+  "pro_points": [
+    "Alarmas que atraviesan el modo silencio",
+    "Cuentas ilimitadas: trabajo, personal, clientes",
+    "Actividad en vivo y todos los widgets",
+    "Perfiles de recordatorio propios"
+  ],
+  "it_title": "¿La vais a implantar en la empresa?",
+  "it_text": "Tickjoin admite la aprobación del administrador y la protección de apps de Intune. Todo lo que tu departamento de TI necesita está en una sola página.",
+  "it_link": "Información para TI",
+  "footer_privacy": "Privacidad",
+  "footer_it": "Para TI",
+  "language": "Idioma",
+  "shot_alt": "Captura de pantalla de Tickjoin:",
+  "cta_notify": "Avísame del lanzamiento",
+  "notify_subject": "Avisadme cuando se lance Tickjoin"
+}

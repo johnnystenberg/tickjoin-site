@@ -1,0 +1,123 @@
+{
+  "lang": "nl",
+  "path": "/nl/",
+  "name": "Nederlands",
+  "title": "Tickjoin – Mis nooit meer een meeting",
+  "description": "Tickjoin laat vlak voor je meeting een alarm afgaan – zelfs in de stille modus – en laat je met één tik deelnemen via Teams, Zoom, Meet of Webex. Voor iPhone.",
+  "badge": "Binnenkort voor iPhone",
+  "hero_title": "Mis nooit meer een meeting.",
+  "hero_text": "Tickjoin laat vlak voor je meeting een alarm afgaan – zelfs in de stille modus – en laat je met één tik deelnemen via Teams, Zoom, Meet of Webex.",
+  "hero_note": "Werkt met Microsoft 365, Google Agenda en de agenda's op je iPhone.",
+  "cta_more": "Bekijk hoe het werkt",
+  "pillars": [
+    [
+      "alarm",
+      "Een alarm dat je niet mist",
+      "Een melding zie je makkelijk over het hoofd. Tickjoin laat 1 minuut voor meetings met een link een echt alarm afgaan – zelfs in de stille modus en met Focus aan."
+    ],
+    [
+      "join",
+      "Deelnemen met één tik",
+      "De meetinglink wordt voor je gevonden in uitnodigingen van Teams, Zoom, Google Meet en Webex. Neem deel vanuit de app, het alarm, een widget of het toegangsscherm."
+    ],
+    [
+      "calendar",
+      "Al je agenda's",
+      "Werk en privé naast elkaar: Microsoft 365 – ook met Intune beveiligde werkaccounts – Google Agenda en iCloud."
+    ]
+  ],
+  "gallery_title": "Gemaakt voor dagen vol meetings",
+  "gallery_text": "Zie in één oogopslag wat er komt, spot overlap voordat het gebeurt en krijg herinneringen zoals elke meeting verdient.",
+  "screens": [
+    [
+      "next",
+      "Volgende meeting",
+      "Aftellen naar je volgende meeting, met wat ermee overlapt en een grote Deelnemen-knop."
+    ],
+    [
+      "alarm",
+      "Het alarm",
+      "Gaat af, zelfs in de stille modus. Neem direct deel vanuit het alarm."
+    ],
+    [
+      "agenda",
+      "Planning",
+      "Je week als lijst of als agenda, met overlap naast elkaar."
+    ],
+    [
+      "health",
+      "Statuscheck",
+      "Laat zien of iets een herinnering kan tegenhouden – en hoe je dat oplost."
+    ]
+  ],
+  "features_title": "Alles rond de meeting",
+  "features": [
+    [
+      "Overlap in één oogopslag",
+      "Dubbel geboekt? Je ziet welke meetings botsen en kunt aan elk ervan deelnemen."
+    ],
+    [
+      "Herinneringsprofielen",
+      "Standaard, Rustig of Veilig – kies hoe ver vooraf en of je een melding of een alarm krijgt."
+    ],
+    [
+      "Widgets en Live Activity",
+      "Aftellen en Deelnemen op het beginscherm, het toegangsscherm en in het Dynamic Island."
+    ],
+    [
+      "Verberg wat niet telt",
+      "Voorlopige blokken en focustijd? Verberg ze en zie wanneer de belangrijke meeting begint."
+    ],
+    [
+      "Geluiden die passen",
+      "Kies een alarmgeluid, of laat het zacht beginnen en aanzwellen – handig in een open kantoor."
+    ],
+    [
+      "Siri en bedieningspaneel",
+      "'Deelnemen aan volgende meeting' – via Siri, Opdrachten of een regelaar in het bedieningspaneel."
+    ]
+  ],
+  "privacy_title": "Je agenda blijft op je telefoon",
+  "privacy_points": [
+    [
+      "Alleen lezen",
+      "Tickjoin kan geen meetings wijzigen, accepteren of weigeren, en leest nooit je e-mail."
+    ],
+    [
+      "Geen servers ertussen",
+      "De app praat rechtstreeks met Microsoft en Google. Wij ontvangen nooit je meetings of inlogtokens."
+    ],
+    [
+      "Geen tracking",
+      "Geen analytics, geen advertenties, geen verkochte gegevens. Nooit."
+    ]
+  ],
+  "privacy_link": "Lees het privacybeleid",
+  "pricing_title": "Gratis om te beginnen. Pro als je het nodig hebt.",
+  "free_name": "Gratis",
+  "free_price": "€ 0",
+  "free_points": [
+    "Eén agenda-account",
+    "Meldingen met Deelnemen",
+    "Widget op het beginscherm"
+  ],
+  "pro_name": "Pro",
+  "pro_price": "€ 22,99 / jaar",
+  "pro_alt": "of € 2,99 / maand · € 44,99 eenmalig",
+  "pro_trial": "14 dagen gratis",
+  "pro_points": [
+    "Alarmen die door de stille modus heen breken",
+    "Onbeperkt accounts – werk, privé, klanten",
+    "Live Activity en alle widgets",
+    "Eigen herinneringsprofielen"
+  ],
+  "it_title": "Uitrollen op het werk?",
+  "it_text": "Tickjoin ondersteunt goedkeuring door de beheerder (admin consent) en Intune-appbeveiliging. Alles wat je IT-afdeling nodig heeft, staat op één pagina.",
+  "it_link": "Informatie voor IT",
+  "footer_privacy": "Privacy",
+  "footer_it": "Voor IT",
+  "language": "Taal",
+  "shot_alt": "Screenshot van Tickjoin:",
+  "cta_notify": "Laat me weten wanneer het live gaat",
+  "notify_subject": "Laat me weten wanneer Tickjoin uitkomt"
+}

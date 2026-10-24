@@ -1,0 +1,123 @@
+{
+  "lang": "da",
+  "path": "/da/",
+  "name": "Dansk",
+  "title": "Tickjoin – Gå aldrig glip af et møde igen",
+  "description": "Tickjoin giver en alarm lige før mødet – også i lydløs tilstand – og lader dig deltage i Teams, Zoom, Meet eller Webex med ét tryk. Til iPhone.",
+  "badge": "Kommer snart til iPhone",
+  "hero_title": "Gå aldrig glip af et møde igen.",
+  "hero_text": "Tickjoin giver en alarm lige før mødet – også i lydløs tilstand – og lader dig deltage i Teams, Zoom, Meet eller Webex med ét tryk.",
+  "hero_note": "Virker med Microsoft 365, Google Kalender og kalenderne på din iPhone.",
+  "cta_more": "Se hvordan det virker",
+  "pillars": [
+    [
+      "alarm",
+      "En alarm, der når frem",
+      "En notifikation er nem at overse. Tickjoin ringer med en rigtig alarm 1 minut før møder med link – også i lydløs tilstand og med Fokus slået til."
+    ],
+    [
+      "join",
+      "Deltag med ét tryk",
+      "Mødelinket findes for dig i invitationer fra Teams, Zoom, Google Meet og Webex. Deltag fra appen, alarmen, en widget eller den låste skærm."
+    ],
+    [
+      "calendar",
+      "Alle dine kalendere",
+      "Arbejde og privat side om side: Microsoft 365 – også Intune-beskyttede arbejdskonti – Google Kalender og iCloud."
+    ]
+  ],
+  "gallery_title": "Lavet til dage, hvor møderne hober sig op",
+  "gallery_text": "Se, hvad der er det næste, med ét blik, opdag overlap, før de sker, og bliv påmindet, som hvert møde fortjener.",
+  "screens": [
+    [
+      "next",
+      "Næste møde",
+      "Nedtælling til næste møde, med det, der overlapper, og en stor Deltag-knap."
+    ],
+    [
+      "alarm",
+      "Alarmen",
+      "Ringer også i lydløs tilstand. Deltag direkte fra alarmen."
+    ],
+    [
+      "agenda",
+      "Agenda",
+      "Ugen som liste eller kalender, med overlap side om side."
+    ],
+    [
+      "health",
+      "Sundhedstjek",
+      "Viser, om noget kan stoppe en påmindelse – og hvordan du løser det."
+    ]
+  ],
+  "features_title": "Alt omkring mødet",
+  "features": [
+    [
+      "Overlap med ét blik",
+      "Dobbeltbooket? Du ser, hvilke møder der kolliderer, og kan deltage i hvilket som helst af dem."
+    ],
+    [
+      "Påmindelsesprofiler",
+      "Standard, Rolig eller Sikker – vælg hvor længe før, og om du får en notifikation eller en alarm."
+    ],
+    [
+      "Widgets og Live-aktivitet",
+      "Nedtælling og Deltag på hjemmeskærmen, den låste skærm og i Dynamic Island."
+    ],
+    [
+      "Skjul det, der ikke betyder noget",
+      "Foreløbige blokke og fokustid? Skjul dem, og se, hvornår det vigtige møde starter."
+    ],
+    [
+      "Lyde, der passer",
+      "Vælg en alarmlyd, eller lad den starte stille og stige – til åbne kontorer."
+    ],
+    [
+      "Siri og Kontrolcenter",
+      "“Deltag i næste møde” – med Siri, Genveje eller en kontrol i Kontrolcenter."
+    ]
+  ],
+  "privacy_title": "Din kalender bliver på telefonen",
+  "privacy_points": [
+    [
+      "Kun læsning",
+      "Tickjoin kan ikke ændre, acceptere eller afvise møder og læser aldrig din e-mail."
+    ],
+    [
+      "Ingen servere imellem",
+      "Appen taler direkte med Microsoft og Google. Vi modtager aldrig dine møder eller login-tokens."
+    ],
+    [
+      "Ingen sporing",
+      "Ingen analyse, ingen reklamer, ingen data, der sælges. Aldrig."
+    ]
+  ],
+  "privacy_link": "Læs privatlivspolitikken",
+  "pricing_title": "Gratis at starte. Pro, når du har brug for det.",
+  "free_name": "Gratis",
+  "free_price": "0 kr.",
+  "free_points": [
+    "Én kalenderkonto",
+    "Notifikationer med Deltag",
+    "Widget på hjemmeskærmen"
+  ],
+  "pro_name": "Pro",
+  "pro_price": "179 kr. / år",
+  "pro_alt": "eller 29 kr. / måned · 349 kr. én gang",
+  "pro_trial": "14 dage gratis",
+  "pro_points": [
+    "Alarmer, der bryder igennem lydløs tilstand",
+    "Ubegrænset antal konti – arbejde, privat, kunder",
+    "Live-aktivitet og alle widgets",
+    "Egne påmindelsesprofiler"
+  ],
+  "it_title": "Skal I rulle det ud på arbejdet?",
+  "it_text": "Tickjoin understøtter godkendelse fra administrator (admin consent) og appbeskyttelse med Intune. Alt, hvad jeres IT-afdeling har brug for, står på én side.",
+  "it_link": "Information til IT",
+  "footer_privacy": "Privatliv",
+  "footer_it": "Til IT",
+  "language": "Sprog",
+  "shot_alt": "Skærmbillede fra Tickjoin:",
+  "cta_notify": "Få besked ved lancering",
+  "notify_subject": "Giv mig besked, når Tickjoin lanceres"
+}

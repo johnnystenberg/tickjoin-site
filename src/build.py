@@ -31,11 +31,11 @@ def icon(name):
 
 def render(t, languages, template):
     lang = t["lang"]
-    shots = ROOT / "assets" / "screens" / lang
-    shot_lang = lang if shots.exists() else "en"
     base = "" if t["path"] == "/" else "../"
 
     def shot(name, alt, cls="phone"):
+        # Bilder som saknas på språket (alarmet tas på telefon) visas på engelska.
+        shot_lang = lang if (ROOT / "assets" / "screens" / lang / f"{name}.webp").exists() else "en"
         return (f'<div class="{cls}"><img src="{base}assets/screens/{shot_lang}/{name}.webp" '
                 f'alt="{esc(t["shot_alt"])} {esc(alt)}" width="590" height="1280" loading="lazy" decoding="async"></div>')
 
@@ -54,6 +54,13 @@ def render(t, languages, template):
     switcher = " · ".join(
         f'<a href="{l["path"]}" lang="{l["lang"]}" data-lang="{l["lang"]}"{current if l["lang"] == lang else ""}>'
         f'{esc(l["name"])}</a>' for l in languages)
+    menu = "".join(
+        f'<a href="{l["path"]}" lang="{l["lang"]}" data-lang="{l["lang"]}"{current if l["lang"] == lang else ""}>'
+        f'{esc(l["name"])}</a>' for l in languages)
+    targets = {l["lang"].lower(): l["path"] for l in languages if l["path"] != "/"}
+    if "pt-br" in targets:
+        targets.setdefault("pt", targets["pt-br"])  # Portugisiska från Portugal får hellre Brasilien än engelska.
+    paths = json.dumps(targets, separators=(",", ":"))
     hero_shot = shot("next", t["screens"][0][1], "phone hero-phone").replace(' loading="lazy"', ' fetchpriority="high"')
     notify = f'mailto:support@tickjoin.com?subject={esc(t["notify_subject"]).replace(" ", "%20")}'
 
@@ -73,7 +80,8 @@ def render(t, languages, template):
         "it_href": "/it/" if lang == "sv" else "/it/#english",
         "privacy_href": "/privacy/" if lang == "sv" else "/privacy/#english",
         "footer_privacy": esc(t["footer_privacy"]), "footer_it": esc(t["footer_it"]),
-        "language": esc(t["language"]), "switcher": switcher,
+        "language": esc(t["language"]), "switcher": switcher, "menu": menu, "paths": paths,
+        "current_name": esc(t["name"]),
     }
     out = template
     for key, value in values.items():
@@ -85,6 +93,8 @@ def render(t, languages, template):
 def main():
     template = (SRC / "template.html").read_text()
     texts = [json.loads(p.read_text()) for p in sorted(SRC.glob("*.json"))]
+    # /it/ är IT-sidan, så italienska ligger på /it-it/.
+    assert all(t["path"] not in ("/it/", "/privacy/") for t in texts), "språksidan krockar med en annan sida"
     texts.sort(key=lambda t: (t["path"] != "/", t["lang"]))
     for t in texts:
         target = ROOT / t["path"].strip("/") / "index.html" if t["path"] != "/" else ROOT / "index.html"

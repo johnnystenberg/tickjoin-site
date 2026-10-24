@@ -13,11 +13,21 @@
 {{alternates}}
   <link rel="alternate" hreflang="x-default" href="https://tickjoin.com/">
   <script>
-    // Första besöket i roten: svensk webbläsare går till /sv/. Ett eget val i språkväljaren sparas.
+    // Första besöket i roten: webbläsarens språk väljer sida om det finns. Ett eget val i språkväljaren sparas.
     (function () {
-      var key = "tickjoin-lang";
+      var key = "tickjoin-lang", paths = {{paths}};
       try {
-        if ({{redirect}} && !localStorage.getItem(key) && /^sv\b/i.test(navigator.language || "")) location.replace("/sv/");
+        if ({{redirect}} && !localStorage.getItem(key)) {
+          var wanted = navigator.languages || [navigator.language || ""];
+          for (var i = 0; i < wanted.length; i++) {
+            var tag = wanted[i].toLowerCase();
+            if (/^zh-(hant|tw|hk|mo)/.test(tag)) tag = "zh-hant";
+            else if (/^(no|nn)\b/.test(tag)) tag = "nb";
+            else if (!paths[tag]) tag = tag.split("-")[0];
+            if (tag === "en") break;
+            if (paths[tag]) { location.replace(paths[tag]); break; }
+          }
+        }
         document.addEventListener("click", function (event) {
           var link = event.target.closest && event.target.closest("[data-lang]");
           if (link) localStorage.setItem(key, link.getAttribute("data-lang"));
@@ -39,6 +49,9 @@
       }
     }
     * { box-sizing: border-box; }
+    /* Japanska och koreanska bryts mellan fraser, inte mitt i ord. */
+    :lang(ja) h1, :lang(ja) h2, :lang(ja) h3 { word-break: auto-phrase; }
+    :lang(ko) { word-break: keep-all; }
     html { scroll-behavior: smooth; }
     body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.5 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif; -webkit-font-smoothing: antialiased; }
     a { color: var(--tint); text-decoration: none; }
@@ -48,8 +61,15 @@
     .brand { display: flex; align-items: center; gap: 10px; color: var(--ink); font-weight: 700; font-size: 19px; }
     .brand img { width: 34px; height: 34px; border-radius: 8px; }
     .brand:hover { text-decoration: none; }
-    .langs { font-size: 15px; color: var(--ink2); }
-    .langs [aria-current] { color: var(--ink); font-weight: 600; pointer-events: none; }
+    .langs { position: relative; font-size: 15px; }
+    .langs summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 6px; color: var(--ink2); padding: 6px 10px; border-radius: 999px; }
+    .langs summary::-webkit-details-marker { display: none; }
+    .langs summary:hover, .langs[open] summary { background: var(--card); color: var(--ink); }
+    .langs summary svg { width: 18px; height: 18px; }
+    .langs .menu { position: absolute; right: 0; top: calc(100% + 6px); z-index: 10; background: var(--card); border-radius: 14px; box-shadow: var(--shadow); padding: 6px; display: grid; grid-template-columns: repeat(2, minmax(120px, 1fr)); min-width: 260px; }
+    .langs .menu a { padding: 8px 12px; border-radius: 8px; color: var(--ink); }
+    .langs .menu a:hover { background: var(--bg); text-decoration: none; }
+    footer [aria-current], .langs [aria-current] { color: var(--ink); font-weight: 600; pointer-events: none; }
 
     .hero { display: grid; grid-template-columns: 1.1fr .9fr; gap: 48px; align-items: center; padding: 40px 0 72px; }
     .badge { display: inline-block; background: var(--join-soft); color: var(--join); font-weight: 600; font-size: 15px; padding: 6px 12px; border-radius: 999px; margin-bottom: 16px; }
@@ -122,7 +142,10 @@
   <div class="wrap">
     <header class="top">
       <a class="brand" href="{{base}}"><img src="{{base}}assets/icon-180.png" alt="" width="34" height="34">Tickjoin</a>
-      <nav class="langs" aria-label="{{language}}">{{switcher}}</nav>
+      <details class="langs">
+        <summary aria-label="{{language}}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg>{{current_name}}</summary>
+        <nav class="menu" aria-label="{{language}}">{{menu}}</nav>
+      </details>
     </header>
 
     <main>
