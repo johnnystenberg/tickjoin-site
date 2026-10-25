@@ -79,6 +79,7 @@
     <li>Tilldela principen till samma användare eller grupper som era övriga appskyddsprinciper.</li>
   </ol>
   <p><strong>Android (kommer):</strong> appskyddsprinciper gäller per plattform. Skapa även en princip för <strong>Android</strong> på samma sätt och ange paketnamnet <code>com.tickjoin.app</code> som anpassad app. Utan den nekar villkorsstyrd åtkomst Android-appen med ”You can't get there from here”, även om iOS fungerar.</p>
+  <p><strong>Ett skyddat jobbkonto per Android-telefon:</strong> på Android delar alla appar med Intune (Outlook, Teams, Company Portal, Tickjoin) samma skyddade jobbkonto. Är ett annat organisationskonto redan skyddat på telefonen kan Tickjoin inte kopplas med ert konto där. På iPhone gäller det per app.</p>
   <p><strong>Viktigt:</strong> en princip som riktas mot <em>Alla appar</em> eller <em>Alla Microsoft-appar</em> omfattar inte Tickjoin. Den gäller bara Microsofts appar och listade partnerappar, och anpassade appar kan inte väljas i samma princip. Gör därför en separat princip för Tickjoin, eller lägg till den i en princip som redan riktas mot valda appar.</p>
 
   <h3>3. Undanta MAM-tjänsten i villkorsstyrd åtkomst</h3>
@@ -155,6 +156,7 @@
       <li>Assign the policy to the same users or groups as your other app protection policies.</li>
     </ol>
     <p><strong>Android (coming):</strong> app protection policies are per platform. Also create an <strong>Android</strong> policy the same way and enter the package name <code>com.tickjoin.app</code> as a custom app. Without it, Conditional Access blocks the Android app with “You can't get there from here”, even when iOS works.</p>
+    <p><strong>One protected work account per Android phone:</strong> on Android, all apps with Intune (Outlook, Teams, Company Portal, Tickjoin) share the same protected work account. If another organization's account is already protected on the phone, Tickjoin can't be connected with your account there. On iPhone it's per app.</p>
     <p><strong>Important:</strong> a policy targeted to <em>All apps</em> or <em>All Microsoft apps</em> does not cover Tickjoin. It only applies to Microsoft's apps and listed partner apps, and custom apps can't be selected in the same policy. Create a separate policy for Tickjoin, or add it to a policy that already targets selected apps.</p>
 
     <h3>3. Exclude the MAM service in Conditional Access</h3>
