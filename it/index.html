@@ -103,6 +103,16 @@
   </table>
 
 
+  <h2 id="mac">Tickjoin för Mac</h2>
+  <p>Mac-appen använder samma appregistrering och samma behörigheter. Intune App SDK finns inte för macOS, och villkorsstyrd åtkomst med <strong>Kräv appskyddsprincip</strong> kan bara riktas mot iOS och Android. Organisationer som kräver hanterade Mac-datorer använder i stället <strong>Kräv att enheten är markerad som kompatibel</strong> för macOS. Det fungerar när:</p>
+  <ol>
+    <li>Macen är registrerad i Intune med Företagsportalen och följer organisationens efterlevnadsprincip.</li>
+    <li>Microsofts Enterprise SSO-plugin är aktiverat med en MDM-profil (Extensible SSO, typ Redirect, <code>com.microsoft.CompanyPortalMac.ssoextension</code>), gärna med Platform SSO.</li>
+    <li><code>com.tickjoin.app</code> är tillåten i pluginet, om organisationen begränsar vilka appar som får använda det.</li>
+  </ol>
+  <p>Tickjoin loggar då in via pluginet utan extra steg. Utan plugin sker inloggningen på Microsofts webbsida, och konton som kräver kompatibel enhet nekas (AADSTS53000). Mötesdata sparas i appens sandlåda och skyddas av FileVault. Selektiv rensning från Intune finns inte för Mac-appar; utloggning i Tickjoin tar bort kontots möten och tokens.</p>
+  <p>Om användaren tystar påminnelser på sina andra enheter synkas bara enhetsstatus (namn, plattform, senast sedd, tyst till) via användarens privata iCloud, aldrig möten. Se <a href="/privacy/">Integritet</a>.</p>
+
   <h2>Återkalla godkännandet</h2>
   <p>I Microsoft Entra administrationscenter under <strong>Företagsprogram → Tickjoin → Behörigheter</strong> går det att återkalla godkännandet, eller ta bort appen helt under <strong>Egenskaper</strong>. Tickjoin slutar då synka jobbkontot på användarnas telefoner.</p>
 
@@ -179,6 +189,16 @@
       <tr><td>225</td><td>The user has an Intune license, but no app protection policy covers Tickjoin.</td><td>Add <code>com.tickjoin.app</code> as a custom app in a policy assigned to the user (step 2).</td></tr>
     </table>
 
+
+    <h2 id="mac-en">Tickjoin for Mac</h2>
+    <p>The Mac app uses the same app registration and the same permissions. The Intune App SDK isn't available for macOS, and Conditional Access with <strong>Require app protection policy</strong> can only target iOS and Android. Organizations that require managed Macs use <strong>Require device to be marked as compliant</strong> for macOS instead. This works when:</p>
+    <ol>
+      <li>The Mac is enrolled in Intune with Company Portal and meets the organization's compliance policy.</li>
+      <li>Microsoft's Enterprise SSO plug-in is enabled with an MDM profile (Extensible SSO, Redirect type, <code>com.microsoft.CompanyPortalMac.ssoextension</code>), preferably with Platform SSO.</li>
+      <li><code>com.tickjoin.app</code> is allowed in the plug-in, if the organization limits which apps may use it.</li>
+    </ol>
+    <p>Tickjoin then signs in through the plug-in without extra steps. Without the plug-in, sign-in happens on Microsoft's web page, and accounts that require a compliant device are blocked (AADSTS53000). Meeting data is stored in the app's sandbox and protected by FileVault. Intune selective wipe isn't available for Mac apps; signing out in Tickjoin deletes the account's meetings and tokens.</p>
+    <p>If the user silences reminders on their other devices, only device status (name, platform, last seen, silenced until) is synced through the user's private iCloud, never meetings. See <a href="/privacy/#english">Privacy</a>.</p>
 
     <h2>Revoking approval</h2>
     <p>In the Microsoft Entra admin center under <strong>Enterprise applications → Tickjoin → Permissions</strong> you can revoke consent, or delete the app under <strong>Properties</strong>. Tickjoin then stops syncing the work account on users' phones.</p>

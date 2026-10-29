@@ -34,7 +34,7 @@
   <nav><a href="/">Tickjoin</a> · <a href="/it/">För IT</a> · <a href="#english">English</a></nav>
 
   <h1>Integritet</h1>
-  <p>Den här sidan beskriver vilka behörigheter Tickjoin begär i Microsoft 365 och Google, vad appen gör med kalenderdata och hur åtkomsten återkallas. Senast uppdaterad 23 oktober 2026.</p>
+  <p>Den här sidan beskriver vilka behörigheter Tickjoin begär i Microsoft 365 och Google, vad appen gör med kalenderdata och hur åtkomsten återkallas. Senast uppdaterad 29 oktober 2026.</p>
 
   <h2>Kort sagt</h2>
   <ul>
@@ -74,6 +74,8 @@
   <ul>
     <li><strong>Möten</strong> för de kommande sju dagarna lagras i en lokal databas på telefonen, skyddad av iOS dataskydd.</li>
     <li><strong>Inloggningstokens</strong> hanteras av Microsofts inloggningsbibliotek (MSAL) och lagras i iOS nyckelring. För Google lagras en refresh-token i iOS nyckelring; åtkomsttoken finns bara i minnet.</li>
+    <li><strong>På Mac</strong> lagras möten och tokens på samma sätt i appens sandlåda, skyddad av macOS (FileVault) och macOS nyckelring.</li>
+    <li><strong>Tyst läge på flera enheter</strong> (iPhone och Mac): om användaren tystar påminnelser på sina andra enheter synkas enhetens namn, plattform, när den senast sågs och hur länge den är tyst, via användarens egen privata iCloud-databas. Möten och kalenderdata synkas aldrig. Vi har ingen åtkomst till användarens iCloud.</li>
     <li><strong>Inget</strong> skickas till JMS Software &amp; Consulting eller till tredje part.</li>
     <li>När användaren loggar ut ur ett konto i appen raderas tokens, möten och schemalagda alarm för kontot från telefonen. För Google-konton återkallas dessutom behörigheten hos Google.</li>
   </ul>
@@ -92,7 +94,7 @@
 
   <section class="lang" id="english" lang="en">
     <h1>Privacy</h1>
-    <p>This page describes the Microsoft 365 and Google permissions Tickjoin requests, what the app does with calendar data and how access is revoked. Last updated 23 October 2026.</p>
+    <p>This page describes the Microsoft 365 and Google permissions Tickjoin requests, what the app does with calendar data and how access is revoked. Last updated 29 October 2026.</p>
 
     <h2>In short</h2>
     <ul>
@@ -132,6 +134,8 @@
     <ul>
       <li><strong>Meetings</strong> for the next seven days are stored in a local database on the phone, protected by iOS Data Protection.</li>
       <li><strong>Sign-in tokens</strong> are handled by Microsoft's authentication library (MSAL) and stored in the iOS keychain. For Google, a refresh token is stored in the iOS keychain; the access token is only kept in memory.</li>
+      <li><strong>On Mac</strong>, meetings and tokens are stored the same way in the app's sandbox, protected by macOS (FileVault) and the macOS keychain.</li>
+      <li><strong>Quiet mode across devices</strong> (iPhone and Mac): if the user silences reminders on their other devices, each device's name, platform, when it was last seen and how long it is silenced are synced through the user's own private iCloud database. Meetings and calendar data are never synced. We have no access to the user's iCloud.</li>
       <li><strong>Nothing</strong> is sent to JMS Software &amp; Consulting or to any third party.</li>
       <li>Signing out of an account in the app deletes its tokens, meetings and scheduled alarms from the phone. For Google accounts, access is also revoked at Google.</li>
     </ul>
