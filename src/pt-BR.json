@@ -3,11 +3,11 @@
   "path": "/pt-br/",
   "name": "Português (Brasil)",
   "title": "Tickjoin – Nunca mais perca uma reunião",
-  "description": "O Tickjoin toca um alarme logo antes da reunião – mesmo no modo silencioso – e ingressa no Teams, Zoom, Meet ou Webex com um toque. Para iPhone.",
-  "badge": "Em breve para iPhone",
+  "description": "O Tickjoin toca um alarme logo antes da reunião – mesmo no modo silencioso – e ingressa no Teams, Zoom, Meet ou Webex com um toque. Para iPhone, Mac e Android.",
+  "badge": "Em breve para iPhone, Mac e Android",
   "hero_title": "Nunca mais perca uma reunião.",
   "hero_text": "O Tickjoin toca um alarme logo antes da reunião – mesmo no modo silencioso – e faz você ingressar no Teams, Zoom, Meet ou Webex com um toque.",
-  "hero_note": "Funciona com Microsoft 365, Google Agenda e os calendários do seu iPhone.",
+  "hero_note": "Funciona com Microsoft 365, Google Agenda e os calendários do seu iPhone ou Mac.",
   "cta_more": "Veja como funciona",
   "pillars": [
     [
@@ -24,6 +24,28 @@
       "calendar",
       "Todos os seus calendários",
       "Trabalho e vida pessoal lado a lado: Microsoft 365 – incluindo contas de trabalho protegidas pelo Intune – Google Agenda e iCloud."
+    ]
+  ],
+  "platforms_title": "Um app para o celular e o computador",
+  "platforms_text": "Os mesmos lembretes e o mesmo botão Ingressar no iPhone, no Mac e no Android. Com o Pro, o iPhone e o Mac ficam em sintonia pelo iCloud: desligue o alarme em um e ele silencia no outro.",
+  "platforms": [
+    [
+      "iphone",
+      "iPhone",
+      "O alarme fura o modo silencioso, com widgets, Atividade ao Vivo e Siri.",
+      "iOS 26 ou posterior"
+    ],
+    [
+      "mac",
+      "Mac",
+      "A próxima reunião e Ingressar na barra de menus, além do resto do dia, da Agenda e de uma janela de alarme antes de cada reunião.",
+      "macOS 26 ou posterior"
+    ],
+    [
+      "android",
+      "Android",
+      "O alarme toca mesmo no Não perturbe, e contas de trabalho protegidas pelo Intune são compatíveis.",
+      "Android 10 ou posterior"
     ]
   ],
   "gallery_title": "Feito para dias de agenda lotada",
@@ -77,7 +99,7 @@
       "“Ingressar na próxima reunião” – pela Siri, por Atalhos ou por um controle na Central de Controle."
     ]
   ],
-  "privacy_title": "Seu calendário fica no seu celular",
+  "privacy_title": "Seu calendário fica no seu dispositivo",
   "privacy_points": [
     [
       "Somente leitura",
@@ -116,6 +138,7 @@
   "it_link": "Informações para a TI",
   "footer_privacy": "Privacidade",
   "footer_it": "Para a TI",
+  "footer_support": "Suporte",
   "language": "Idioma",
   "shot_alt": "Captura de tela do Tickjoin:",
   "cta_notify": "Avise-me no lançamento",

@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Tickjoin – 이제 회의를 놓치지 마세요</title>
-  <meta name="description" content="Tickjoin은 회의 직전에 알람을 울려요. 무음 모드에서도 울리고, Teams, Zoom, Meet, Webex에 한 번의 탭으로 참가할 수 있어요. iPhone용.">
+  <meta name="description" content="Tickjoin은 회의 직전에 알람을 울려요. 무음 모드에서도 울리고, Teams, Zoom, Meet, Webex에 한 번의 탭으로 참가할 수 있어요. iPhone, Mac, Android용.">
   <meta property="og:title" content="Tickjoin – 이제 회의를 놓치지 마세요">
-  <meta property="og:description" content="Tickjoin은 회의 직전에 알람을 울려요. 무음 모드에서도 울리고, Teams, Zoom, Meet, Webex에 한 번의 탭으로 참가할 수 있어요. iPhone용.">
+  <meta property="og:description" content="Tickjoin은 회의 직전에 알람을 울려요. 무음 모드에서도 울리고, Teams, Zoom, Meet, Webex에 한 번의 탭으로 참가할 수 있어요. iPhone, Mac, Android용.">
   <meta property="og:image" content="https://tickjoin.com/assets/icon-512.png">
   <link rel="icon" href="../assets/icon-180.png">
   <link rel="apple-touch-icon" href="../assets/icon-180.png">
@@ -111,6 +111,21 @@
     .icon { width: 30px; height: 30px; color: var(--join); }
     .pillar:first-child .icon { color: var(--alarm); }
 
+    /* Plattformarna: bilderna får samma höjd, ramen följer bildens proportioner. */
+    .platforms { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .platform { display: flex; flex-direction: column; }
+    .platform .media { height: clamp(240px, 30vw, 340px); display: flex; align-items: flex-end; justify-content: center; margin-bottom: 12px; }
+    .platform .media > div { height: 100%; max-width: none; margin: 0; box-shadow: 0 14px 34px rgba(0,0,0,.18); }
+    .platform .media img { height: 100%; width: auto; }
+    .platform .phone { border-radius: 32px; padding: 6px; }
+    .platform .phone img { border-radius: 26px; }
+    .platform .phone.android { border-radius: 20px; }
+    .platform .phone.android img { border-radius: 14px; }
+    .screen { background: #0B0B0C; border-radius: 16px; padding: 7px; }
+    .screen img { display: block; border-radius: 9px; }
+    .platform p { color: var(--ink2); margin: 0; font-size: 16px; }
+    .platform .requires { margin-top: auto; padding-top: 12px; font-size: 14px; }
+
     .gallery { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(230px, 1fr); gap: 24px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 8px 16px 32px; margin: 0 -16px; }
     .gallery figure { margin: 0; scroll-snap-align: center; }
     .gallery .phone { max-width: 250px; border-radius: 44px; padding: 8px; }
@@ -145,7 +160,8 @@
     @media (max-width: 860px) {
       .hero { grid-template-columns: 1fr; gap: 40px; padding-top: 16px; }
       .hero-phone { transform: none; max-width: 280px; }
-      .pillars, .features { grid-template-columns: 1fr; }
+      .pillars, .features, .platforms { grid-template-columns: 1fr; }
+      .platform .media { height: min(340px, calc(118vw - 100px)); }
       .privacy { grid-template-columns: 1fr; padding: 28px; }
       .plans { grid-template-columns: 1fr; }
       section { padding: 48px 0; }
@@ -165,10 +181,10 @@
     <main>
       <div class="hero">
         <div>
-          <span class="badge">iPhone 출시 예정</span>
+          <span class="badge">iPhone, Mac, Android 출시 예정</span>
           <h1>이제 회의를 놓치지 마세요.</h1>
           <p class="lead">Tickjoin은 회의 직전에 알람을 울려요. 무음 모드에서도 울리고, Teams, Zoom, Meet, Webex에 한 번의 탭으로 참가할 수 있어요.</p>
-          <p class="note">Microsoft 365, Google 캘린더, iPhone의 캘린더와 함께 작동해요.</p>
+          <p class="note">Microsoft 365, Google 캘린더, iPhone이나 Mac의 캘린더와 함께 작동해요.</p>
           <div class="actions">
             <a class="button primary" href="mailto:support@tickjoin.com?subject=Tickjoin%20출시%20소식을%20알려%20주세요">출시 알림 받기</a>
             <a class="button secondary" href="#how">작동 방식 보기</a>
@@ -182,6 +198,16 @@
 <article class="pillar"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="6" width="13" height="12" rx="3"/><path d="m15.5 10.5 6-3.5v10l-6-3.5"/></svg><h3>한 번의 탭으로 참가</h3><p>Teams, Zoom, Google Meet, Webex 초대에서 회의 링크를 알아서 찾아 줘요. 앱, 알람, 위젯, 잠금 화면에서 바로 참가하세요.</p></article>
 <article class="pillar"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="16" rx="3"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4"/></svg><h3>모든 캘린더를 한곳에</h3><p>업무와 개인 일정을 나란히: Microsoft 365(Intune으로 보호되는 회사 계정 포함), Google 캘린더, iCloud.</p></article>
       </div>
+
+      <section id="platforms">
+        <h2>휴대폰에서도, 컴퓨터에서도</h2>
+        <p class="section-lead">iPhone, Mac, Android에서 같은 알림과 같은 참가 버튼을 써요. Pro에서는 iPhone과 Mac이 iCloud로 연결되어, 한쪽에서 알람을 끄면 다른 쪽도 조용해져요.</p>
+        <div class="platforms">
+<article class="card platform"><div class="media"><div class="phone"><img src="../assets/screens/ko/next.webp" alt="Tickjoin 스크린샷: iPhone" width="590" height="1280" loading="lazy" decoding="async"></div></div><h3>iPhone</h3><p>무음 모드도 뚫고 울리는 알람에 위젯, 실시간 현황, Siri까지.</p><p class="requires">iOS 26 이상</p></article>
+<article class="card platform"><div class="media"><div class="screen"><img src="../assets/screens/ko/mac.webp" alt="Tickjoin 스크린샷: Mac" width="590" height="801" loading="lazy" decoding="async"></div></div><h3>Mac</h3><p>메뉴 막대에 다음 회의와 참가 버튼, 남은 하루 일정, 일정 창, 회의 전 알람 창까지.</p><p class="requires">macOS 26 이상</p></article>
+<article class="card platform"><div class="media"><div class="phone android"><img src="../assets/screens/ko/android.webp" alt="Tickjoin 스크린샷: Android" width="590" height="1049" loading="lazy" decoding="async"></div></div><h3>Android</h3><p>방해 금지 모드에서도 알람이 울리고, Intune으로 보호되는 회사 계정도 지원해요.</p><p class="requires">Android 10 이상</p></article>
+        </div>
+      </section>
 
       <section id="how">
         <h2>회의가 몰리는 날을 위해</h2>
@@ -209,7 +235,7 @@
       <section>
         <div class="privacy">
           <div>
-            <h2>캘린더는 휴대폰에만 머물러요</h2>
+            <h2>캘린더는 기기에만 머물러요</h2>
             <p><a href="/privacy/#english">개인정보 처리방침 읽기 ›</a></p>
           </div>
           <ul>
@@ -259,7 +285,7 @@
     </main>
 
     <footer>
-      <span>© 2026 JMS Software &amp; Consulting · <a href="/privacy/#english">개인정보</a> · <a href="/it/#english">IT 관리자용</a> · <a href="mailto:support@tickjoin.com">support@tickjoin.com</a></span>
+      <span>© 2026 JMS Software &amp; Consulting · <a href="/privacy/#english">개인정보</a> · <a href="/it/#english">IT 관리자용</a> · <a href="/support/#english">지원</a> · <a href="mailto:support@tickjoin.com">support@tickjoin.com</a></span>
       <span>언어: <a href="/" lang="en" data-lang="en">English</a> · <a href="/da/" lang="da" data-lang="da">Dansk</a> · <a href="/de/" lang="de" data-lang="de">Deutsch</a> · <a href="/es/" lang="es" data-lang="es">Español</a> · <a href="/fi/" lang="fi" data-lang="fi">Suomi</a> · <a href="/fr/" lang="fr" data-lang="fr">Français</a> · <a href="/it-it/" lang="it" data-lang="it">Italiano</a> · <a href="/ja/" lang="ja" data-lang="ja">日本語</a> · <a href="/ko/" lang="ko" data-lang="ko" aria-current="page">한국어</a> · <a href="/nb/" lang="nb" data-lang="nb">Norsk</a> · <a href="/nl/" lang="nl" data-lang="nl">Nederlands</a> · <a href="/pl/" lang="pl" data-lang="pl">Polski</a> · <a href="/pt-br/" lang="pt-BR" data-lang="pt-BR">Português (Brasil)</a> · <a href="/sv/" lang="sv" data-lang="sv">Svenska</a> · <a href="/zh-hant/" lang="zh-Hant" data-lang="zh-Hant">繁體中文</a></span>
     </footer>
   </div>

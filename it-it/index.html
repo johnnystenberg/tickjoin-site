@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Tickjoin – Non perdere mai più una riunione</title>
-  <meta name="description" content="Tickjoin fa suonare una sveglia poco prima della riunione – anche in modalità silenziosa – e ti fa partecipare a Teams, Zoom, Meet o Webex con un tocco. Per iPhone.">
+  <meta name="description" content="Tickjoin fa suonare una sveglia poco prima della riunione – anche in modalità silenziosa – e ti fa partecipare a Teams, Zoom, Meet o Webex con un tocco. Per iPhone, Mac e Android.">
   <meta property="og:title" content="Tickjoin – Non perdere mai più una riunione">
-  <meta property="og:description" content="Tickjoin fa suonare una sveglia poco prima della riunione – anche in modalità silenziosa – e ti fa partecipare a Teams, Zoom, Meet o Webex con un tocco. Per iPhone.">
+  <meta property="og:description" content="Tickjoin fa suonare una sveglia poco prima della riunione – anche in modalità silenziosa – e ti fa partecipare a Teams, Zoom, Meet o Webex con un tocco. Per iPhone, Mac e Android.">
   <meta property="og:image" content="https://tickjoin.com/assets/icon-512.png">
   <link rel="icon" href="../assets/icon-180.png">
   <link rel="apple-touch-icon" href="../assets/icon-180.png">
@@ -111,6 +111,21 @@
     .icon { width: 30px; height: 30px; color: var(--join); }
     .pillar:first-child .icon { color: var(--alarm); }
 
+    /* Plattformarna: bilderna får samma höjd, ramen följer bildens proportioner. */
+    .platforms { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .platform { display: flex; flex-direction: column; }
+    .platform .media { height: clamp(240px, 30vw, 340px); display: flex; align-items: flex-end; justify-content: center; margin-bottom: 12px; }
+    .platform .media > div { height: 100%; max-width: none; margin: 0; box-shadow: 0 14px 34px rgba(0,0,0,.18); }
+    .platform .media img { height: 100%; width: auto; }
+    .platform .phone { border-radius: 32px; padding: 6px; }
+    .platform .phone img { border-radius: 26px; }
+    .platform .phone.android { border-radius: 20px; }
+    .platform .phone.android img { border-radius: 14px; }
+    .screen { background: #0B0B0C; border-radius: 16px; padding: 7px; }
+    .screen img { display: block; border-radius: 9px; }
+    .platform p { color: var(--ink2); margin: 0; font-size: 16px; }
+    .platform .requires { margin-top: auto; padding-top: 12px; font-size: 14px; }
+
     .gallery { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(230px, 1fr); gap: 24px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 8px 16px 32px; margin: 0 -16px; }
     .gallery figure { margin: 0; scroll-snap-align: center; }
     .gallery .phone { max-width: 250px; border-radius: 44px; padding: 8px; }
@@ -145,7 +160,8 @@
     @media (max-width: 860px) {
       .hero { grid-template-columns: 1fr; gap: 40px; padding-top: 16px; }
       .hero-phone { transform: none; max-width: 280px; }
-      .pillars, .features { grid-template-columns: 1fr; }
+      .pillars, .features, .platforms { grid-template-columns: 1fr; }
+      .platform .media { height: min(340px, calc(118vw - 100px)); }
       .privacy { grid-template-columns: 1fr; padding: 28px; }
       .plans { grid-template-columns: 1fr; }
       section { padding: 48px 0; }
@@ -165,10 +181,10 @@
     <main>
       <div class="hero">
         <div>
-          <span class="badge">Presto su iPhone</span>
+          <span class="badge">Presto su iPhone, Mac e Android</span>
           <h1>Non perdere mai più una riunione.</h1>
           <p class="lead">Tickjoin fa suonare una sveglia poco prima della riunione – anche in modalità silenziosa – e ti fa partecipare a Teams, Zoom, Meet o Webex con un tocco.</p>
-          <p class="note">Funziona con Microsoft 365, Google Calendar e i calendari del tuo iPhone.</p>
+          <p class="note">Funziona con Microsoft 365, Google Calendar e i calendari del tuo iPhone o Mac.</p>
           <div class="actions">
             <a class="button primary" href="mailto:support@tickjoin.com?subject=Avvisatemi%20quando%20esce%20Tickjoin">Avvisami al lancio</a>
             <a class="button secondary" href="#how">Scopri come funziona</a>
@@ -182,6 +198,16 @@
 <article class="pillar"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="6" width="13" height="12" rx="3"/><path d="m15.5 10.5 6-3.5v10l-6-3.5"/></svg><h3>Partecipa con un tocco</h3><p>Il link della riunione lo trova Tickjoin, negli inviti di Teams, Zoom, Google Meet e Webex. Partecipa dall’app, dalla sveglia, da un widget o dalla schermata di blocco.</p></article>
 <article class="pillar"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="16" rx="3"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4"/></svg><h3>Tutti i tuoi calendari</h3><p>Lavoro e vita privata fianco a fianco: Microsoft 365 – compresi gli account di lavoro protetti da Intune –, Google Calendar e iCloud.</p></article>
       </div>
+
+      <section id="platforms">
+        <h2>Un’app per il telefono e il computer</h2>
+        <p class="section-lead">Gli stessi promemoria e lo stesso pulsante Partecipa su iPhone, Mac e Android. Con Pro, iPhone e Mac restano allineati tramite iCloud: se spegni la sveglia su uno, tace anche sull’altro.</p>
+        <div class="platforms">
+<article class="card platform"><div class="media"><div class="phone"><img src="../assets/screens/it/next.webp" alt="Screenshot di Tickjoin: iPhone" width="590" height="1280" loading="lazy" decoding="async"></div></div><h3>iPhone</h3><p>La sveglia supera la modalità silenziosa, con widget, Attività in tempo reale e Siri.</p><p class="requires">iOS 26 o versioni successive</p></article>
+<article class="card platform"><div class="media"><div class="screen"><img src="../assets/screens/it/mac.webp" alt="Screenshot di Tickjoin: Mac" width="590" height="801" loading="lazy" decoding="async"></div></div><h3>Mac</h3><p>La prossima riunione e Partecipa nella barra dei menu, il resto della giornata, l’Agenda e una finestra di sveglia prima di ogni riunione.</p><p class="requires">macOS 26 o versioni successive</p></article>
+<article class="card platform"><div class="media"><div class="phone android"><img src="../assets/screens/it/android.webp" alt="Screenshot di Tickjoin: Android" width="590" height="1049" loading="lazy" decoding="async"></div></div><h3>Android</h3><p>La sveglia suona anche con Non disturbare, e gli account di lavoro protetti da Intune sono supportati.</p><p class="requires">Android 10 o versioni successive</p></article>
+        </div>
+      </section>
 
       <section id="how">
         <h2>Pensata per le giornate piene di riunioni</h2>
@@ -209,7 +235,7 @@
       <section>
         <div class="privacy">
           <div>
-            <h2>Il tuo calendario resta sul telefono</h2>
+            <h2>Il tuo calendario resta sul dispositivo</h2>
             <p><a href="/privacy/#english">Leggi l’informativa sulla privacy ›</a></p>
           </div>
           <ul>
@@ -259,7 +285,7 @@
     </main>
 
     <footer>
-      <span>© 2026 JMS Software &amp; Consulting · <a href="/privacy/#english">Privacy</a> · <a href="/it/#english">Per l’IT</a> · <a href="mailto:support@tickjoin.com">support@tickjoin.com</a></span>
+      <span>© 2026 JMS Software &amp; Consulting · <a href="/privacy/#english">Privacy</a> · <a href="/it/#english">Per l’IT</a> · <a href="/support/#english">Assistenza</a> · <a href="mailto:support@tickjoin.com">support@tickjoin.com</a></span>
       <span>Lingua: <a href="/" lang="en" data-lang="en">English</a> · <a href="/da/" lang="da" data-lang="da">Dansk</a> · <a href="/de/" lang="de" data-lang="de">Deutsch</a> · <a href="/es/" lang="es" data-lang="es">Español</a> · <a href="/fi/" lang="fi" data-lang="fi">Suomi</a> · <a href="/fr/" lang="fr" data-lang="fr">Français</a> · <a href="/it-it/" lang="it" data-lang="it" aria-current="page">Italiano</a> · <a href="/ja/" lang="ja" data-lang="ja">日本語</a> · <a href="/ko/" lang="ko" data-lang="ko">한국어</a> · <a href="/nb/" lang="nb" data-lang="nb">Norsk</a> · <a href="/nl/" lang="nl" data-lang="nl">Nederlands</a> · <a href="/pl/" lang="pl" data-lang="pl">Polski</a> · <a href="/pt-br/" lang="pt-BR" data-lang="pt-BR">Português (Brasil)</a> · <a href="/sv/" lang="sv" data-lang="sv">Svenska</a> · <a href="/zh-hant/" lang="zh-Hant" data-lang="zh-Hant">繁體中文</a></span>
     </footer>
   </div>

@@ -12,7 +12,16 @@ Statisk webbplats för Tickjoin, publicerad med GitHub Pages på tickjoin.com.
   - Skärmbilderna (590 px bred WebP) tas med `MarketingScreenshotsUITests` i Tickjoin-repot
     (`TEST_RUNNER_SCREENSHOT_LANG=de,fr,…`).
     Alarmet är taget på en telefon, med mötestiteln utbytt.
+  - Avsnittet om plattformar (iPhone, Mac, Android) visar `next.webp` i telefonram, `mac.webp` i skärmram och
+    `android.webp` i Android-ram. Mac- och Android-bilderna görs från butiksbilderna i Tickjoin-repot med
+    `src/platform-shots.sh <sökväg till Tickjoin-repot>`: Mac från `fastlane/screenshots-mac/<språk>/Mac-01-next.png`
+    (menyradsfönstret beskärs ut med lite skrivbord runt), Android från
+    `android/fastlane/metadata/android/<språk>/images/phoneScreenshots/01-next.png`. Båda blir 590 px breda.
+    Skriptet har tabellen över webbplatsens språk och butikernas språkkoder. Ändras bildernas mått: uppdatera
+    `PLATFORM_SHOTS` i `src/build.py`.
 - `privacy/` – integritet. `it/` – information för IT (appregistrering, godkännande, Intune).
+  `support/` – kontakt, krav per plattform och vanliga frågor. Alla tre är handskrivna, svenska först och engelska
+  under `#english`, och länkas från sidfoten på startsidan.
 - `.well-known/microsoft-identity-association.json` – verifierar tickjoin.com som publisher domain för Tickjoins Entra-app.
 - `.nojekyll` – krävs för att Pages ska publicera mappen `.well-known`.
 - `CNAME` – egen domän.

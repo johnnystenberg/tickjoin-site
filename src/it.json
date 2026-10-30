@@ -3,11 +3,11 @@
   "path": "/it-it/",
   "name": "Italiano",
   "title": "Tickjoin – Non perdere mai più una riunione",
-  "description": "Tickjoin fa suonare una sveglia poco prima della riunione – anche in modalità silenziosa – e ti fa partecipare a Teams, Zoom, Meet o Webex con un tocco. Per iPhone.",
-  "badge": "Presto su iPhone",
+  "description": "Tickjoin fa suonare una sveglia poco prima della riunione – anche in modalità silenziosa – e ti fa partecipare a Teams, Zoom, Meet o Webex con un tocco. Per iPhone, Mac e Android.",
+  "badge": "Presto su iPhone, Mac e Android",
   "hero_title": "Non perdere mai più una riunione.",
   "hero_text": "Tickjoin fa suonare una sveglia poco prima della riunione – anche in modalità silenziosa – e ti fa partecipare a Teams, Zoom, Meet o Webex con un tocco.",
-  "hero_note": "Funziona con Microsoft 365, Google Calendar e i calendari del tuo iPhone.",
+  "hero_note": "Funziona con Microsoft 365, Google Calendar e i calendari del tuo iPhone o Mac.",
   "cta_more": "Scopri come funziona",
   "pillars": [
     [
@@ -24,6 +24,28 @@
       "calendar",
       "Tutti i tuoi calendari",
       "Lavoro e vita privata fianco a fianco: Microsoft 365 – compresi gli account di lavoro protetti da Intune –, Google Calendar e iCloud."
+    ]
+  ],
+  "platforms_title": "Un’app per il telefono e il computer",
+  "platforms_text": "Gli stessi promemoria e lo stesso pulsante Partecipa su iPhone, Mac e Android. Con Pro, iPhone e Mac restano allineati tramite iCloud: se spegni la sveglia su uno, tace anche sull’altro.",
+  "platforms": [
+    [
+      "iphone",
+      "iPhone",
+      "La sveglia supera la modalità silenziosa, con widget, Attività in tempo reale e Siri.",
+      "iOS 26 o versioni successive"
+    ],
+    [
+      "mac",
+      "Mac",
+      "La prossima riunione e Partecipa nella barra dei menu, il resto della giornata, l’Agenda e una finestra di sveglia prima di ogni riunione.",
+      "macOS 26 o versioni successive"
+    ],
+    [
+      "android",
+      "Android",
+      "La sveglia suona anche con Non disturbare, e gli account di lavoro protetti da Intune sono supportati.",
+      "Android 10 o versioni successive"
     ]
   ],
   "gallery_title": "Pensata per le giornate piene di riunioni",
@@ -77,7 +99,7 @@
       "«Partecipa alla prossima riunione» – con Siri, Comandi Rapidi o un controllo nel Centro di Controllo."
     ]
   ],
-  "privacy_title": "Il tuo calendario resta sul telefono",
+  "privacy_title": "Il tuo calendario resta sul dispositivo",
   "privacy_points": [
     [
       "Sola lettura",
@@ -116,6 +138,7 @@
   "it_link": "Informazioni per l’IT",
   "footer_privacy": "Privacy",
   "footer_it": "Per l’IT",
+  "footer_support": "Assistenza",
   "language": "Lingua",
   "shot_alt": "Screenshot di Tickjoin:",
   "cta_notify": "Avvisami al lancio",

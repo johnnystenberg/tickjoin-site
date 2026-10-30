@@ -3,11 +3,11 @@
   "path": "/ko/",
   "name": "한국어",
   "title": "Tickjoin – 이제 회의를 놓치지 마세요",
-  "description": "Tickjoin은 회의 직전에 알람을 울려요. 무음 모드에서도 울리고, Teams, Zoom, Meet, Webex에 한 번의 탭으로 참가할 수 있어요. iPhone용.",
-  "badge": "iPhone 출시 예정",
+  "description": "Tickjoin은 회의 직전에 알람을 울려요. 무음 모드에서도 울리고, Teams, Zoom, Meet, Webex에 한 번의 탭으로 참가할 수 있어요. iPhone, Mac, Android용.",
+  "badge": "iPhone, Mac, Android 출시 예정",
   "hero_title": "이제 회의를 놓치지 마세요.",
   "hero_text": "Tickjoin은 회의 직전에 알람을 울려요. 무음 모드에서도 울리고, Teams, Zoom, Meet, Webex에 한 번의 탭으로 참가할 수 있어요.",
-  "hero_note": "Microsoft 365, Google 캘린더, iPhone의 캘린더와 함께 작동해요.",
+  "hero_note": "Microsoft 365, Google 캘린더, iPhone이나 Mac의 캘린더와 함께 작동해요.",
   "cta_more": "작동 방식 보기",
   "pillars": [
     [
@@ -24,6 +24,28 @@
       "calendar",
       "모든 캘린더를 한곳에",
       "업무와 개인 일정을 나란히: Microsoft 365(Intune으로 보호되는 회사 계정 포함), Google 캘린더, iCloud."
+    ]
+  ],
+  "platforms_title": "휴대폰에서도, 컴퓨터에서도",
+  "platforms_text": "iPhone, Mac, Android에서 같은 알림과 같은 참가 버튼을 써요. Pro에서는 iPhone과 Mac이 iCloud로 연결되어, 한쪽에서 알람을 끄면 다른 쪽도 조용해져요.",
+  "platforms": [
+    [
+      "iphone",
+      "iPhone",
+      "무음 모드도 뚫고 울리는 알람에 위젯, 실시간 현황, Siri까지.",
+      "iOS 26 이상"
+    ],
+    [
+      "mac",
+      "Mac",
+      "메뉴 막대에 다음 회의와 참가 버튼, 남은 하루 일정, 일정 창, 회의 전 알람 창까지.",
+      "macOS 26 이상"
+    ],
+    [
+      "android",
+      "Android",
+      "방해 금지 모드에서도 알람이 울리고, Intune으로 보호되는 회사 계정도 지원해요.",
+      "Android 10 이상"
     ]
   ],
   "gallery_title": "회의가 몰리는 날을 위해",
@@ -77,7 +99,7 @@
       "“다음 회의 참가” – Siri, 단축어 또는 제어 센터에서."
     ]
   ],
-  "privacy_title": "캘린더는 휴대폰에만 머물러요",
+  "privacy_title": "캘린더는 기기에만 머물러요",
   "privacy_points": [
     [
       "읽기 전용",
@@ -116,6 +138,7 @@
   "it_link": "IT 관리자를 위한 정보",
   "footer_privacy": "개인정보",
   "footer_it": "IT 관리자용",
+  "footer_support": "지원",
   "language": "언어",
   "shot_alt": "Tickjoin 스크린샷:",
   "cta_notify": "출시 알림 받기",

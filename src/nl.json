@@ -3,11 +3,11 @@
   "path": "/nl/",
   "name": "Nederlands",
   "title": "Tickjoin – Mis nooit meer een meeting",
-  "description": "Tickjoin laat vlak voor je meeting een alarm afgaan – zelfs in de stille modus – en laat je met één tik deelnemen via Teams, Zoom, Meet of Webex. Voor iPhone.",
-  "badge": "Binnenkort voor iPhone",
+  "description": "Tickjoin laat vlak voor je meeting een alarm afgaan – zelfs in de stille modus – en laat je met één tik deelnemen via Teams, Zoom, Meet of Webex. Voor iPhone, Mac en Android.",
+  "badge": "Binnenkort voor iPhone, Mac en Android",
   "hero_title": "Mis nooit meer een meeting.",
   "hero_text": "Tickjoin laat vlak voor je meeting een alarm afgaan – zelfs in de stille modus – en laat je met één tik deelnemen via Teams, Zoom, Meet of Webex.",
-  "hero_note": "Werkt met Microsoft 365, Google Agenda en de agenda's op je iPhone.",
+  "hero_note": "Werkt met Microsoft 365, Google Agenda en de agenda's op je iPhone of Mac.",
   "cta_more": "Bekijk hoe het werkt",
   "pillars": [
     [
@@ -24,6 +24,28 @@
       "calendar",
       "Al je agenda's",
       "Werk en privé naast elkaar: Microsoft 365 – ook met Intune beveiligde werkaccounts – Google Agenda en iCloud."
+    ]
+  ],
+  "platforms_title": "Eén app voor je telefoon en je computer",
+  "platforms_text": "Dezelfde herinneringen en dezelfde Deelnemen-knop op iPhone, Mac en Android. Met Pro lopen iPhone en Mac in de pas via iCloud: zet je het alarm op de een uit, dan wordt het ook op de ander stil.",
+  "platforms": [
+    [
+      "iphone",
+      "iPhone",
+      "Het alarm breekt door de stille modus heen, met widgets, Live Activity en Siri.",
+      "iOS 26 of nieuwer"
+    ],
+    [
+      "mac",
+      "Mac",
+      "Je volgende meeting en Deelnemen in de menubalk, plus de rest van de dag, de Planning en een alarmvenster voor elke meeting.",
+      "macOS 26 of nieuwer"
+    ],
+    [
+      "android",
+      "Android",
+      "Het alarm gaat ook af met Niet storen aan, en met Intune beveiligde werkaccounts worden ondersteund.",
+      "Android 10 of nieuwer"
     ]
   ],
   "gallery_title": "Gemaakt voor dagen vol meetings",
@@ -77,7 +99,7 @@
       "'Deelnemen aan volgende meeting' – via Siri, Opdrachten of een regelaar in het bedieningspaneel."
     ]
   ],
-  "privacy_title": "Je agenda blijft op je telefoon",
+  "privacy_title": "Je agenda blijft op je apparaat",
   "privacy_points": [
     [
       "Alleen lezen",
@@ -116,6 +138,7 @@
   "it_link": "Informatie voor IT",
   "footer_privacy": "Privacy",
   "footer_it": "Voor IT",
+  "footer_support": "Support",
   "language": "Taal",
   "shot_alt": "Screenshot van Tickjoin:",
   "cta_notify": "Laat me weten wanneer het live gaat",

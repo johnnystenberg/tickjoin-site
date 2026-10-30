@@ -3,11 +3,11 @@
   "path": "/sv/",
   "name": "Svenska",
   "title": "Tickjoin – Missa aldrig ett möte igen",
-  "description": "Tickjoin ger ett alarm strax före mötet – även i tyst läge – och ansluter till Teams, Zoom, Meet eller Webex med ett tryck. För iPhone.",
-  "badge": "Kommer snart till iPhone",
+  "description": "Tickjoin ger ett alarm strax före mötet – även i tyst läge – och ansluter till Teams, Zoom, Meet eller Webex med ett tryck. För iPhone, Mac och Android.",
+  "badge": "Kommer snart till iPhone, Mac och Android",
   "hero_title": "Missa aldrig ett möte igen.",
   "hero_text": "Tickjoin ger ett alarm strax före mötet – även i tyst läge – och ansluter dig till Teams, Zoom, Meet eller Webex med ett tryck.",
-  "hero_note": "Fungerar med Microsoft 365, Google Kalender och kalendrarna på din iPhone.",
+  "hero_note": "Fungerar med Microsoft 365, Google Kalender och kalendrarna på din iPhone eller Mac.",
   "cta_more": "Se hur det fungerar",
   "pillars": [
     [
@@ -24,6 +24,28 @@
       "calendar",
       "Alla dina kalendrar",
       "Jobb och privat sida vid sida: Microsoft 365 – även Intune-skyddade jobbkonton – Google Kalender och iCloud."
+    ]
+  ],
+  "platforms_title": "En app för telefonen och datorn",
+  "platforms_text": "Samma påminnelser och samma Anslut-knapp på iPhone, Mac och Android. Med Pro håller iPhone och Mac ihop via iCloud: stänger du av alarmet på den ena tystnar det på den andra.",
+  "platforms": [
+    [
+      "iphone",
+      "iPhone",
+      "Alarmet bryter igenom tyst läge, med widgetar, Live Activity och Siri.",
+      "iOS 26 eller senare"
+    ],
+    [
+      "mac",
+      "Mac",
+      "Nästa möte och Anslut i menyraden, resten av dagen, Agenda och ett alarmfönster före mötet.",
+      "macOS 26 eller senare"
+    ],
+    [
+      "android",
+      "Android",
+      "Alarmet ringer även i Stör ej, och Intune-skyddade jobbkonton fungerar.",
+      "Android 10 eller senare"
     ]
   ],
   "gallery_title": "Gjord för dagar när mötena hopar sig",
@@ -77,7 +99,7 @@
       "”Anslut till nästa möte” – med Siri, Genvägar eller en kontroll i Kontrollcenter."
     ]
   ],
-  "privacy_title": "Din kalender stannar på telefonen",
+  "privacy_title": "Din kalender stannar på din enhet",
   "privacy_points": [
     [
       "Bara läsning",
@@ -116,6 +138,7 @@
   "it_link": "Information för IT",
   "footer_privacy": "Integritet",
   "footer_it": "För IT",
+  "footer_support": "Support",
   "language": "Språk",
   "shot_alt": "Skärmbild från Tickjoin:",
   "cta_notify": "Få besked vid lansering",

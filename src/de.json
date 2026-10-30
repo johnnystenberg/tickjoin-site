@@ -3,11 +3,11 @@
   "path": "/de/",
   "name": "Deutsch",
   "title": "Tickjoin – Nie wieder ein Meeting verpassen",
-  "description": "Tickjoin weckt dich mit einem Alarm kurz vor dem Meeting – auch im Stummmodus – und du nimmst mit einem Tippen an Teams, Zoom, Meet oder Webex teil. Für das iPhone.",
-  "badge": "Bald für das iPhone",
+  "description": "Tickjoin weckt dich mit einem Alarm kurz vor dem Meeting – auch im Stummmodus – und du nimmst mit einem Tippen an Teams, Zoom, Meet oder Webex teil. Für iPhone, Mac und Android.",
+  "badge": "Bald für iPhone, Mac und Android",
   "hero_title": "Nie wieder ein Meeting verpassen.",
   "hero_text": "Tickjoin gibt kurz vor dem Meeting einen Alarm – auch im Stummmodus – und du nimmst mit einem Tippen an Teams, Zoom, Meet oder Webex teil.",
-  "hero_note": "Funktioniert mit Microsoft 365, Google Kalender und den Kalendern auf deinem iPhone.",
+  "hero_note": "Funktioniert mit Microsoft 365, Google Kalender und den Kalendern auf deinem iPhone oder Mac.",
   "cta_more": "So funktioniert’s",
   "pillars": [
     [
@@ -24,6 +24,28 @@
       "calendar",
       "Alle deine Kalender",
       "Beruflich und privat nebeneinander: Microsoft 365 – auch Intune-geschützte Arbeitskonten –, Google Kalender und iCloud."
+    ]
+  ],
+  "platforms_title": "Eine App für Smartphone und Computer",
+  "platforms_text": "Dieselben Erinnerungen und dieselbe Teilnehmen-Taste auf iPhone, Mac und Android. Mit Pro bleiben iPhone und Mac über iCloud im Takt: Schaltest du den Alarm auf einem Gerät aus, verstummt er auch auf dem anderen.",
+  "platforms": [
+    [
+      "iphone",
+      "iPhone",
+      "Der Alarm durchbricht den Stummmodus, dazu Widgets, Live-Aktivität und Siri.",
+      "iOS 26 oder neuer"
+    ],
+    [
+      "mac",
+      "Mac",
+      "Nächstes Meeting und Teilnehmen in der Menüleiste, dazu der Rest des Tages, die Agenda und ein Alarmfenster vor jedem Meeting.",
+      "macOS 26 oder neuer"
+    ],
+    [
+      "android",
+      "Android",
+      "Der Alarm klingelt auch bei „Bitte nicht stören“, und Intune-geschützte Arbeitskonten werden unterstützt.",
+      "Android 10 oder neuer"
     ]
   ],
   "gallery_title": "Für Tage voller Meetings",
@@ -77,7 +99,7 @@
       "„Am nächsten Meeting teilnehmen“ – per Siri, Kurzbefehl oder Steuerelement im Kontrollzentrum."
     ]
   ],
-  "privacy_title": "Dein Kalender bleibt auf deinem iPhone",
+  "privacy_title": "Dein Kalender bleibt auf deinem Gerät",
   "privacy_points": [
     [
       "Nur Lesezugriff",
@@ -116,6 +138,7 @@
   "it_link": "Informationen für die IT",
   "footer_privacy": "Datenschutz",
   "footer_it": "Für die IT",
+  "footer_support": "Support",
   "language": "Sprache",
   "shot_alt": "Tickjoin-Bildschirmfoto:",
   "cta_notify": "Zum Start benachrichtigen",

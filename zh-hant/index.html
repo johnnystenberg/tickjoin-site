@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Tickjoin – 再也不錯過任何會議</title>
-  <meta name="description" content="Tickjoin 會在會議開始前響起鬧鐘，即使在靜音模式下也一樣，點一下就能加入 Teams、Zoom、Meet 或 Webex。適用於 iPhone。">
+  <meta name="description" content="Tickjoin 會在會議開始前響起鬧鐘，即使在靜音模式下也一樣，點一下就能加入 Teams、Zoom、Meet 或 Webex。適用於 iPhone、Mac 和 Android。">
   <meta property="og:title" content="Tickjoin – 再也不錯過任何會議">
-  <meta property="og:description" content="Tickjoin 會在會議開始前響起鬧鐘，即使在靜音模式下也一樣，點一下就能加入 Teams、Zoom、Meet 或 Webex。適用於 iPhone。">
+  <meta property="og:description" content="Tickjoin 會在會議開始前響起鬧鐘，即使在靜音模式下也一樣，點一下就能加入 Teams、Zoom、Meet 或 Webex。適用於 iPhone、Mac 和 Android。">
   <meta property="og:image" content="https://tickjoin.com/assets/icon-512.png">
   <link rel="icon" href="../assets/icon-180.png">
   <link rel="apple-touch-icon" href="../assets/icon-180.png">
@@ -111,6 +111,21 @@
     .icon { width: 30px; height: 30px; color: var(--join); }
     .pillar:first-child .icon { color: var(--alarm); }
 
+    /* Plattformarna: bilderna får samma höjd, ramen följer bildens proportioner. */
+    .platforms { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .platform { display: flex; flex-direction: column; }
+    .platform .media { height: clamp(240px, 30vw, 340px); display: flex; align-items: flex-end; justify-content: center; margin-bottom: 12px; }
+    .platform .media > div { height: 100%; max-width: none; margin: 0; box-shadow: 0 14px 34px rgba(0,0,0,.18); }
+    .platform .media img { height: 100%; width: auto; }
+    .platform .phone { border-radius: 32px; padding: 6px; }
+    .platform .phone img { border-radius: 26px; }
+    .platform .phone.android { border-radius: 20px; }
+    .platform .phone.android img { border-radius: 14px; }
+    .screen { background: #0B0B0C; border-radius: 16px; padding: 7px; }
+    .screen img { display: block; border-radius: 9px; }
+    .platform p { color: var(--ink2); margin: 0; font-size: 16px; }
+    .platform .requires { margin-top: auto; padding-top: 12px; font-size: 14px; }
+
     .gallery { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(230px, 1fr); gap: 24px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 8px 16px 32px; margin: 0 -16px; }
     .gallery figure { margin: 0; scroll-snap-align: center; }
     .gallery .phone { max-width: 250px; border-radius: 44px; padding: 8px; }
@@ -145,7 +160,8 @@
     @media (max-width: 860px) {
       .hero { grid-template-columns: 1fr; gap: 40px; padding-top: 16px; }
       .hero-phone { transform: none; max-width: 280px; }
-      .pillars, .features { grid-template-columns: 1fr; }
+      .pillars, .features, .platforms { grid-template-columns: 1fr; }
+      .platform .media { height: min(340px, calc(118vw - 100px)); }
       .privacy { grid-template-columns: 1fr; padding: 28px; }
       .plans { grid-template-columns: 1fr; }
       section { padding: 48px 0; }
@@ -165,10 +181,10 @@
     <main>
       <div class="hero">
         <div>
-          <span class="badge">即將登陸 iPhone</span>
+          <span class="badge">即將登陸 iPhone、Mac 和 Android</span>
           <h1>再也不錯過任何會議。</h1>
           <p class="lead">Tickjoin 會在會議開始前響起鬧鐘，即使在靜音模式下也一樣，點一下就能加入 Teams、Zoom、Meet 或 Webex。</p>
-          <p class="note">支援 Microsoft 365、Google 日曆，以及你 iPhone 上的行事曆。</p>
+          <p class="note">支援 Microsoft 365、Google 日曆，以及你 iPhone 或 Mac 上的行事曆。</p>
           <div class="actions">
             <a class="button primary" href="mailto:support@tickjoin.com?subject=Tickjoin%20上市時請通知我">上市時通知我</a>
             <a class="button secondary" href="#how">看看如何運作</a>
@@ -182,6 +198,16 @@
 <article class="pillar"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="6" width="13" height="12" rx="3"/><path d="m15.5 10.5 6-3.5v10l-6-3.5"/></svg><h3>點一下就加入</h3><p>自動從 Teams、Zoom、Google Meet 和 Webex 的邀請中找出會議連結。從 App、鬧鐘、小工具或鎖定畫面都能直接加入。</p></article>
 <article class="pillar"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="16" rx="3"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4"/></svg><h3>所有行事曆集中一處</h3><p>工作與私人行程並列：Microsoft 365（包括受 Intune 保護的工作帳號）、Google 日曆和 iCloud。</p></article>
       </div>
+
+      <section id="platforms">
+        <h2>手機和電腦都能用</h2>
+        <p class="section-lead">在 iPhone、Mac 和 Android 上，都有同樣的提醒和同樣的「加入」按鈕。使用 Pro 時，iPhone 和 Mac 會透過 iCloud 保持同步：在其中一台關掉鬧鐘，另一台也會安靜下來。</p>
+        <div class="platforms">
+<article class="card platform"><div class="media"><div class="phone"><img src="../assets/screens/zh-Hant/next.webp" alt="Tickjoin 截圖： iPhone" width="590" height="1280" loading="lazy" decoding="async"></div></div><h3>iPhone</h3><p>突破靜音模式的鬧鐘，還有小工具、即時動態和 Siri。</p><p class="requires">iOS 26 或以上版本</p></article>
+<article class="card platform"><div class="media"><div class="screen"><img src="../assets/screens/zh-Hant/mac.webp" alt="Tickjoin 截圖： Mac" width="590" height="801" loading="lazy" decoding="async"></div></div><h3>Mac</h3><p>選單列顯示下一場會議和「加入」按鈕，還有今天剩下的行程、議程，以及會議前的鬧鐘視窗。</p><p class="requires">macOS 26 或以上版本</p></article>
+<article class="card platform"><div class="media"><div class="phone android"><img src="../assets/screens/zh-Hant/android.webp" alt="Tickjoin 截圖： Android" width="590" height="1049" loading="lazy" decoding="async"></div></div><h3>Android</h3><p>開啟勿擾模式時鬧鐘照樣響，也支援受 Intune 保護的工作帳號。</p><p class="requires">Android 10 或以上版本</p></article>
+        </div>
+      </section>
 
       <section id="how">
         <h2>專為會議接連不斷的日子打造</h2>
@@ -209,7 +235,7 @@
       <section>
         <div class="privacy">
           <div>
-            <h2>你的行事曆只留在手機上</h2>
+            <h2>你的行事曆只留在裝置上</h2>
             <p><a href="/privacy/#english">閱讀隱私權政策 ›</a></p>
           </div>
           <ul>
@@ -259,7 +285,7 @@
     </main>
 
     <footer>
-      <span>© 2026 JMS Software &amp; Consulting · <a href="/privacy/#english">隱私權</a> · <a href="/it/#english">IT 專區</a> · <a href="mailto:support@tickjoin.com">support@tickjoin.com</a></span>
+      <span>© 2026 JMS Software &amp; Consulting · <a href="/privacy/#english">隱私權</a> · <a href="/it/#english">IT 專區</a> · <a href="/support/#english">支援</a> · <a href="mailto:support@tickjoin.com">support@tickjoin.com</a></span>
       <span>語言: <a href="/" lang="en" data-lang="en">English</a> · <a href="/da/" lang="da" data-lang="da">Dansk</a> · <a href="/de/" lang="de" data-lang="de">Deutsch</a> · <a href="/es/" lang="es" data-lang="es">Español</a> · <a href="/fi/" lang="fi" data-lang="fi">Suomi</a> · <a href="/fr/" lang="fr" data-lang="fr">Français</a> · <a href="/it-it/" lang="it" data-lang="it">Italiano</a> · <a href="/ja/" lang="ja" data-lang="ja">日本語</a> · <a href="/ko/" lang="ko" data-lang="ko">한국어</a> · <a href="/nb/" lang="nb" data-lang="nb">Norsk</a> · <a href="/nl/" lang="nl" data-lang="nl">Nederlands</a> · <a href="/pl/" lang="pl" data-lang="pl">Polski</a> · <a href="/pt-br/" lang="pt-BR" data-lang="pt-BR">Português (Brasil)</a> · <a href="/sv/" lang="sv" data-lang="sv">Svenska</a> · <a href="/zh-hant/" lang="zh-Hant" data-lang="zh-Hant" aria-current="page">繁體中文</a></span>
     </footer>
   </div>

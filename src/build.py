@@ -18,6 +18,12 @@ ICONS = {
     "join": '<rect x="2.5" y="6" width="13" height="12" rx="3"/><path d="m15.5 10.5 6-3.5v10l-6-3.5"/>',
     "calendar": '<rect x="3" y="4.5" width="18" height="16" rx="3"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4"/>',
 }
+# Plattformskorten: bild, ram och bildens storlek. Mac- och Android-bilderna görs med src/platform-shots.sh.
+PLATFORM_SHOTS = {
+    "iphone": ("next", "phone", (590, 1280)),
+    "mac": ("mac", "screen", (590, 801)),
+    "android": ("android", "phone android", (590, 1049)),
+}
 
 
 def esc(value):
@@ -33,14 +39,22 @@ def render(t, languages, template):
     lang = t["lang"]
     base = "" if t["path"] == "/" else "../"
 
-    def shot(name, alt, cls="phone"):
+    def shot(name, alt, cls="phone", size=(590, 1280)):
         # Bilder som saknas på språket (alarmet tas på telefon) visas på engelska.
         shot_lang = lang if (ROOT / "assets" / "screens" / lang / f"{name}.webp").exists() else "en"
+        width, height = size
         return (f'<div class="{cls}"><img src="{base}assets/screens/{shot_lang}/{name}.webp" '
-                f'alt="{esc(t["shot_alt"])} {esc(alt)}" width="590" height="1280" loading="lazy" decoding="async"></div>')
+                f'alt="{esc(t["shot_alt"])} {esc(alt)}" width="{width}" height="{height}" loading="lazy" decoding="async"></div>')
 
     pillars = "\n".join(
         f'<article class="pillar">{icon(i)}<h3>{esc(h)}</h3><p>{esc(p)}</p></article>' for i, h, p in t["pillars"])
+
+    def platform(key, name, text, requires):
+        image, cls, size = PLATFORM_SHOTS[key]
+        return (f'<article class="card platform"><div class="media">{shot(image, name, cls, size)}</div>'
+                f'<h3>{esc(name)}</h3><p>{esc(text)}</p><p class="requires">{esc(requires)}</p></article>')
+
+    platforms = "\n".join(platform(*p) for p in t["platforms"])
     gallery = "\n".join(
         f'<figure>{shot(n, h)}<figcaption><strong>{esc(h)}</strong>{esc(p)}</figcaption></figure>'
         for n, h, p in t["screens"])
@@ -70,6 +84,7 @@ def render(t, languages, template):
         "badge": esc(t["badge"]), "hero_title": esc(t["hero_title"]), "hero_text": esc(t["hero_text"]),
         "hero_note": esc(t["hero_note"]), "cta_notify": esc(t["cta_notify"]), "notify": notify,
         "cta_more": esc(t["cta_more"]), "hero_shot": hero_shot, "pillars": pillars,
+        "platforms_title": esc(t["platforms_title"]), "platforms_text": esc(t["platforms_text"]), "platforms": platforms,
         "gallery_title": esc(t["gallery_title"]), "gallery_text": esc(t["gallery_text"]), "gallery": gallery,
         "features_title": esc(t["features_title"]), "features": features,
         "privacy_title": esc(t["privacy_title"]), "privacy": privacy, "privacy_link": esc(t["privacy_link"]),
@@ -79,7 +94,9 @@ def render(t, languages, template):
         "it_title": esc(t["it_title"]), "it_text": esc(t["it_text"]), "it_link": esc(t["it_link"]),
         "it_href": "/it/" if lang == "sv" else "/it/#english",
         "privacy_href": "/privacy/" if lang == "sv" else "/privacy/#english",
+        "support_href": "/support/" if lang == "sv" else "/support/#english",
         "footer_privacy": esc(t["footer_privacy"]), "footer_it": esc(t["footer_it"]),
+        "footer_support": esc(t["footer_support"]),
         "language": esc(t["language"]), "switcher": switcher, "menu": menu, "paths": paths,
         "current_name": esc(t["name"]),
     }
@@ -94,7 +111,7 @@ def main():
     template = (SRC / "template.html").read_text()
     texts = [json.loads(p.read_text()) for p in sorted(SRC.glob("*.json"))]
     # /it/ är IT-sidan, så italienska ligger på /it-it/.
-    assert all(t["path"] not in ("/it/", "/privacy/") for t in texts), "språksidan krockar med en annan sida"
+    assert all(t["path"] not in ("/it/", "/privacy/", "/support/") for t in texts), "språksidan krockar med en annan sida"
     texts.sort(key=lambda t: (t["path"] != "/", t["lang"]))
     for t in texts:
         target = ROOT / t["path"].strip("/") / "index.html" if t["path"] != "/" else ROOT / "index.html"

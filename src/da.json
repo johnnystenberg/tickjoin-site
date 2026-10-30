@@ -3,11 +3,11 @@
   "path": "/da/",
   "name": "Dansk",
   "title": "Tickjoin – Gå aldrig glip af et møde igen",
-  "description": "Tickjoin giver en alarm lige før mødet – også i lydløs tilstand – og lader dig deltage i Teams, Zoom, Meet eller Webex med ét tryk. Til iPhone.",
-  "badge": "Kommer snart til iPhone",
+  "description": "Tickjoin giver en alarm lige før mødet – også i lydløs tilstand – og lader dig deltage i Teams, Zoom, Meet eller Webex med ét tryk. Til iPhone, Mac og Android.",
+  "badge": "Kommer snart til iPhone, Mac og Android",
   "hero_title": "Gå aldrig glip af et møde igen.",
   "hero_text": "Tickjoin giver en alarm lige før mødet – også i lydløs tilstand – og lader dig deltage i Teams, Zoom, Meet eller Webex med ét tryk.",
-  "hero_note": "Virker med Microsoft 365, Google Kalender og kalenderne på din iPhone.",
+  "hero_note": "Virker med Microsoft 365, Google Kalender og kalenderne på din iPhone eller Mac.",
   "cta_more": "Se hvordan det virker",
   "pillars": [
     [
@@ -24,6 +24,28 @@
       "calendar",
       "Alle dine kalendere",
       "Arbejde og privat side om side: Microsoft 365 – også Intune-beskyttede arbejdskonti – Google Kalender og iCloud."
+    ]
+  ],
+  "platforms_title": "Én app til telefonen og computeren",
+  "platforms_text": "De samme påmindelser og den samme Deltag-knap på iPhone, Mac og Android. Med Pro holder iPhone og Mac trit via iCloud: Slår du alarmen fra på den ene, bliver den stille på den anden.",
+  "platforms": [
+    [
+      "iphone",
+      "iPhone",
+      "Alarmen bryder igennem lydløs tilstand, med widgets, Live-aktivitet og Siri.",
+      "iOS 26 eller nyere"
+    ],
+    [
+      "mac",
+      "Mac",
+      "Næste møde og Deltag i menulinjen, resten af dagen, Agenda og et alarmvindue før mødet.",
+      "macOS 26 eller nyere"
+    ],
+    [
+      "android",
+      "Android",
+      "Alarmen ringer igennem Forstyr ikke, og Intune-beskyttede arbejdskonti understøttes.",
+      "Android 10 eller nyere"
     ]
   ],
   "gallery_title": "Lavet til dage, hvor møderne hober sig op",
@@ -77,7 +99,7 @@
       "“Deltag i næste møde” – med Siri, Genveje eller en kontrol i Kontrolcenter."
     ]
   ],
-  "privacy_title": "Din kalender bliver på telefonen",
+  "privacy_title": "Din kalender bliver på din enhed",
   "privacy_points": [
     [
       "Kun læsning",
@@ -116,6 +138,7 @@
   "it_link": "Information til IT",
   "footer_privacy": "Privatliv",
   "footer_it": "Til IT",
+  "footer_support": "Support",
   "language": "Sprog",
   "shot_alt": "Skærmbillede fra Tickjoin:",
   "cta_notify": "Få besked ved lancering",

@@ -3,11 +3,11 @@
   "path": "/fr/",
   "name": "Français",
   "title": "Tickjoin – Ne manquez plus jamais une réunion",
-  "description": "Tickjoin déclenche une alarme juste avant votre réunion – même en mode silencieux – et vous permet de rejoindre Teams, Zoom, Meet ou Webex d’un seul toucher. Pour iPhone.",
-  "badge": "Bientôt sur iPhone",
+  "description": "Tickjoin déclenche une alarme juste avant votre réunion – même en mode silencieux – et vous permet de rejoindre Teams, Zoom, Meet ou Webex d’un seul toucher. Pour iPhone, Mac et Android.",
+  "badge": "Bientôt sur iPhone, Mac et Android",
   "hero_title": "Ne manquez plus jamais une réunion.",
   "hero_text": "Tickjoin déclenche une alarme juste avant votre réunion – même en mode silencieux – et vous fait rejoindre Teams, Zoom, Meet ou Webex d’un seul toucher.",
-  "hero_note": "Compatible avec Microsoft 365, Google Agenda et les calendriers de votre iPhone.",
+  "hero_note": "Compatible avec Microsoft 365, Google Agenda et les calendriers de votre iPhone ou Mac.",
   "cta_more": "Découvrir le fonctionnement",
   "pillars": [
     [
@@ -24,6 +24,28 @@
       "calendar",
       "Tous vos calendriers",
       "Pro et perso côte à côte : Microsoft 365 – y compris les comptes professionnels protégés par Intune –, Google Agenda et iCloud."
+    ]
+  ],
+  "platforms_title": "Une app pour votre téléphone et votre ordinateur",
+  "platforms_text": "Les mêmes rappels et le même bouton Rejoindre sur iPhone, Mac et Android. Avec Pro, l’iPhone et le Mac restent synchronisés via iCloud : arrêtez l’alarme sur l’un, elle se tait sur l’autre.",
+  "platforms": [
+    [
+      "iphone",
+      "iPhone",
+      "L’alarme passe outre le mode silencieux, avec widgets, Activité en direct et Siri.",
+      "iOS 26 ou version ultérieure"
+    ],
+    [
+      "mac",
+      "Mac",
+      "Votre prochaine réunion et Rejoindre dans la barre des menus, le reste de la journée, l’Agenda et une fenêtre d’alarme avant chaque réunion.",
+      "macOS 26 ou version ultérieure"
+    ],
+    [
+      "android",
+      "Android",
+      "L’alarme sonne même en mode Ne pas déranger, et les comptes professionnels protégés par Intune sont pris en charge.",
+      "Android 10 ou version ultérieure"
     ]
   ],
   "gallery_title": "Pensé pour les journées chargées en réunions",
@@ -77,7 +99,7 @@
       "« Rejoindre ma prochaine réunion » – avec Siri, Raccourcis ou une commande du centre de contrôle."
     ]
   ],
-  "privacy_title": "Votre calendrier reste sur votre téléphone",
+  "privacy_title": "Votre calendrier reste sur votre appareil",
   "privacy_points": [
     [
       "Lecture seule",
@@ -116,6 +138,7 @@
   "it_link": "Informations pour le service informatique",
   "footer_privacy": "Confidentialité",
   "footer_it": "Service informatique",
+  "footer_support": "Assistance",
   "language": "Langue",
   "shot_alt": "Capture d’écran de Tickjoin :",
   "cta_notify": "Être prévenu du lancement",

@@ -3,11 +3,11 @@
   "path": "/zh-hant/",
   "name": "繁體中文",
   "title": "Tickjoin – 再也不錯過任何會議",
-  "description": "Tickjoin 會在會議開始前響起鬧鐘，即使在靜音模式下也一樣，點一下就能加入 Teams、Zoom、Meet 或 Webex。適用於 iPhone。",
-  "badge": "即將登陸 iPhone",
+  "description": "Tickjoin 會在會議開始前響起鬧鐘，即使在靜音模式下也一樣，點一下就能加入 Teams、Zoom、Meet 或 Webex。適用於 iPhone、Mac 和 Android。",
+  "badge": "即將登陸 iPhone、Mac 和 Android",
   "hero_title": "再也不錯過任何會議。",
   "hero_text": "Tickjoin 會在會議開始前響起鬧鐘，即使在靜音模式下也一樣，點一下就能加入 Teams、Zoom、Meet 或 Webex。",
-  "hero_note": "支援 Microsoft 365、Google 日曆，以及你 iPhone 上的行事曆。",
+  "hero_note": "支援 Microsoft 365、Google 日曆，以及你 iPhone 或 Mac 上的行事曆。",
   "cta_more": "看看如何運作",
   "pillars": [
     [
@@ -24,6 +24,28 @@
       "calendar",
       "所有行事曆集中一處",
       "工作與私人行程並列：Microsoft 365（包括受 Intune 保護的工作帳號）、Google 日曆和 iCloud。"
+    ]
+  ],
+  "platforms_title": "手機和電腦都能用",
+  "platforms_text": "在 iPhone、Mac 和 Android 上，都有同樣的提醒和同樣的「加入」按鈕。使用 Pro 時，iPhone 和 Mac 會透過 iCloud 保持同步：在其中一台關掉鬧鐘，另一台也會安靜下來。",
+  "platforms": [
+    [
+      "iphone",
+      "iPhone",
+      "突破靜音模式的鬧鐘，還有小工具、即時動態和 Siri。",
+      "iOS 26 或以上版本"
+    ],
+    [
+      "mac",
+      "Mac",
+      "選單列顯示下一場會議和「加入」按鈕，還有今天剩下的行程、議程，以及會議前的鬧鐘視窗。",
+      "macOS 26 或以上版本"
+    ],
+    [
+      "android",
+      "Android",
+      "開啟勿擾模式時鬧鐘照樣響，也支援受 Intune 保護的工作帳號。",
+      "Android 10 或以上版本"
     ]
   ],
   "gallery_title": "專為會議接連不斷的日子打造",
@@ -77,7 +99,7 @@
       "「加入下一場會議」——透過 Siri、捷徑或控制中心的控制項目。"
     ]
   ],
-  "privacy_title": "你的行事曆只留在手機上",
+  "privacy_title": "你的行事曆只留在裝置上",
   "privacy_points": [
     [
       "唯讀",
@@ -116,6 +138,7 @@
   "it_link": "給 IT 管理員的資訊",
   "footer_privacy": "隱私權",
   "footer_it": "IT 專區",
+  "footer_support": "支援",
   "language": "語言",
   "shot_alt": "Tickjoin 截圖：",
   "cta_notify": "上市時通知我",

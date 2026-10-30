@@ -3,11 +3,11 @@
   "path": "/fi/",
   "name": "Suomi",
   "title": "Tickjoin – Älä enää koskaan myöhästy kokouksesta",
-  "description": "Tickjoin soittaa hälytyksen juuri ennen kokousta – myös äänettömässä tilassa – ja liittää sinut Teamsiin, Zoomiin, Meetiin tai Webexiin yhdellä napautuksella. iPhonelle.",
-  "badge": "Tulossa pian iPhonelle",
+  "description": "Tickjoin soittaa hälytyksen juuri ennen kokousta – myös äänettömässä tilassa – ja liittää sinut Teamsiin, Zoomiin, Meetiin tai Webexiin yhdellä napautuksella. iPhonelle, Macille ja Androidille.",
+  "badge": "Tulossa pian iPhonelle, Macille ja Androidille",
   "hero_title": "Älä enää koskaan myöhästy kokouksesta.",
   "hero_text": "Tickjoin soittaa hälytyksen juuri ennen kokousta – myös äänettömässä tilassa – ja liittää sinut Teamsiin, Zoomiin, Meetiin tai Webexiin yhdellä napautuksella.",
-  "hero_note": "Toimii Microsoft 365:n, Google Kalenterin ja iPhonesi kalenterien kanssa.",
+  "hero_note": "Toimii Microsoft 365:n, Google Kalenterin ja iPhonesi tai Macisi kalenterien kanssa.",
   "cta_more": "Katso, miten se toimii",
   "pillars": [
     [
@@ -24,6 +24,28 @@
       "calendar",
       "Kaikki kalenterisi",
       "Työ ja vapaa-aika rinnakkain: Microsoft 365 – myös Intunella suojatut työtilit – Google Kalenteri ja iCloud."
+    ]
+  ],
+  "platforms_title": "Yksi sovellus puhelimeen ja tietokoneeseen",
+  "platforms_text": "Samat muistutukset ja sama Liity-painike iPhonessa, Macissa ja Androidissa. Pro-versiossa iPhone ja Mac pysyvät tahdissa iCloudin kautta: kun sammutat hälytyksen yhdessä, se hiljenee myös toisessa.",
+  "platforms": [
+    [
+      "iphone",
+      "iPhone",
+      "Hälytys kuuluu myös äänettömässä tilassa, ja mukana ovat widgetit, Live-toiminto ja Siri.",
+      "iOS 26 tai uudempi"
+    ],
+    [
+      "mac",
+      "Mac",
+      "Seuraava kokous ja Liity valikkorivillä, loppupäivän kokoukset, Agenda ja hälytysikkuna ennen kokousta.",
+      "macOS 26 tai uudempi"
+    ],
+    [
+      "android",
+      "Android",
+      "Hälytys soi myös Älä häiritse -tilassa, ja Intunella suojatut työtilit ovat tuettuja.",
+      "Android 10 tai uudempi"
     ]
   ],
   "gallery_title": "Tehty päiviin, jolloin kokouksia kasautuu",
@@ -77,7 +99,7 @@
       "”Liity seuraavaan kokoukseen” – Sirillä, Pikakomennoilla tai Ohjauskeskuksen säätimellä."
     ]
   ],
-  "privacy_title": "Kalenterisi pysyy puhelimessasi",
+  "privacy_title": "Kalenterisi pysyy laitteellasi",
   "privacy_points": [
     [
       "Vain luku",
@@ -116,6 +138,7 @@
   "it_link": "Tietoa IT:lle",
   "footer_privacy": "Tietosuoja",
   "footer_it": "IT:lle",
+  "footer_support": "Tuki",
   "language": "Kieli",
   "shot_alt": "Kuvakaappaus Tickjoinista:",
   "cta_notify": "Kerro minulle julkaisusta",

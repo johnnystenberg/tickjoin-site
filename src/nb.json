@@ -3,11 +3,11 @@
   "path": "/nb/",
   "name": "Norsk",
   "title": "Tickjoin – Gå aldri glipp av et møte igjen",
-  "description": "Tickjoin gir en alarm rett før møtet – også i lydløs modus – og lar deg bli med i Teams, Zoom, Meet eller Webex med ett trykk. For iPhone.",
-  "badge": "Kommer snart til iPhone",
+  "description": "Tickjoin gir en alarm rett før møtet – også i lydløs modus – og lar deg bli med i Teams, Zoom, Meet eller Webex med ett trykk. For iPhone, Mac og Android.",
+  "badge": "Kommer snart til iPhone, Mac og Android",
   "hero_title": "Gå aldri glipp av et møte igjen.",
   "hero_text": "Tickjoin gir en alarm rett før møtet – også i lydløs modus – og lar deg bli med i Teams, Zoom, Meet eller Webex med ett trykk.",
-  "hero_note": "Fungerer med Microsoft 365, Google Kalender og kalenderne på iPhonen din.",
+  "hero_note": "Fungerer med Microsoft 365, Google Kalender og kalenderne på iPhonen eller Macen din.",
   "cta_more": "Se hvordan det fungerer",
   "pillars": [
     [
@@ -24,6 +24,28 @@
       "calendar",
       "Alle kalenderne dine",
       "Jobb og privat side om side: Microsoft 365 – også Intune-beskyttede jobbkontoer – Google Kalender og iCloud."
+    ]
+  ],
+  "platforms_title": "Én app for telefonen og datamaskinen",
+  "platforms_text": "De samme påminnelsene og den samme Bli med-knappen på iPhone, Mac og Android. Med Pro holder iPhone og Mac takten via iCloud: Slår du av alarmen på den ene, blir det stille på den andre.",
+  "platforms": [
+    [
+      "iphone",
+      "iPhone",
+      "Alarmen bryter gjennom lydløs modus, med widgeter, Live-aktivitet og Siri.",
+      "iOS 26 eller nyere"
+    ],
+    [
+      "mac",
+      "Mac",
+      "Neste møte og Bli med i menylinjen, resten av dagen, Agenda og et alarmvindu før møtet.",
+      "macOS 26 eller nyere"
+    ],
+    [
+      "android",
+      "Android",
+      "Alarmen ringer gjennom Ikke forstyrr, og Intune-beskyttede jobbkontoer støttes.",
+      "Android 10 eller nyere"
     ]
   ],
   "gallery_title": "Laget for dager når møtene hoper seg opp",
@@ -77,7 +99,7 @@
       "«Bli med i neste møte» – med Siri, Snarveier eller en kontroll i Kontrollsenter."
     ]
   ],
-  "privacy_title": "Kalenderen din blir på telefonen",
+  "privacy_title": "Kalenderen din blir på enheten",
   "privacy_points": [
     [
       "Bare lesing",
@@ -116,6 +138,7 @@
   "it_link": "Informasjon for IT",
   "footer_privacy": "Personvern",
   "footer_it": "For IT",
+  "footer_support": "Støtte",
   "language": "Språk",
   "shot_alt": "Skjermbilde fra Tickjoin:",
   "cta_notify": "Få beskjed ved lansering",

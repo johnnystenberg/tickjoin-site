@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tickjoin – support</title>
+  <meta name="description" content="Hjälp med Tickjoin: kontakt, krav för iPhone, Mac och Android och svar på vanliga frågor om alarm, inloggning och prenumeration.">
+  <link rel="icon" href="/assets/icon-180.png">
+  <style>
+    :root { --bg: #F2F2F7; --card: #FFFFFF; --ink: #000000; --ink2: rgba(60,60,67,.66); --sep: rgba(60,60,67,.14); --tint: #007AFF; }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg: #000000; --card: #1C1C1E; --ink: #FFFFFF; --ink2: rgba(235,235,245,.62); --sep: rgba(84,84,88,.6); --tint: #0A84FF; }
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+    main { max-width: 720px; margin: 0 auto; padding: 48px 16px 72px; }
+    h1 { font-size: 34px; line-height: 1.15; margin: 0 0 8px; }
+    h2 { font-size: 22px; margin: 40px 0 8px; }
+    h3 { font-size: 18px; margin: 24px 0 6px; }
+    p, li { color: var(--ink2); }
+    strong { color: var(--ink); }
+    a { color: var(--tint); }
+    table { width: 100%; border-collapse: collapse; background: var(--card); border-radius: 16px; overflow: hidden; margin: 12px 0; }
+    th, td { text-align: left; padding: 12px 14px; border-bottom: 1px solid var(--sep); vertical-align: top; font-size: 15px; }
+    th { color: var(--ink); }
+    td { color: var(--ink2); }
+    tr:last-child td { border-bottom: 0; }
+    .lang { margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--sep); }
+    nav { font-size: 15px; margin-bottom: 32px; }
+    /* Vanliga frågor: en fråga per rad, svaret fälls ut. */
+    details { background: var(--card); border-radius: 16px; margin: 10px 0; }
+    summary { cursor: pointer; padding: 14px 16px; font-weight: 600; color: var(--ink); list-style: none; display: flex; justify-content: space-between; gap: 12px; }
+    summary::-webkit-details-marker { display: none; }
+    summary::after { content: "+"; color: var(--ink2); font-weight: 400; }
+    details[open] summary::after { content: "–"; }
+    details > :not(summary) { margin: 0 16px 10px; }
+    details > :last-child { margin-bottom: 0; }
+    details[open] { padding-bottom: 14px; }
+    details ul { padding-left: 20px; }
+    .contact { background: var(--card); border-radius: 16px; padding: 16px; margin: 12px 0; }
+    .contact p { margin: 0; }
+    .contact p + p { margin-top: 8px; }
+  </style>
+</head>
+<body>
+<main>
+  <nav><a href="/">Tickjoin</a> · <a href="/privacy/">Integritet</a> · <a href="/it/">För IT</a> · <a href="#english">English</a></nav>
+
+  <h1>Support</h1>
+  <p>Hjälp med Tickjoin på iPhone, Mac och Android. Hittar du inte svaret här är du välkommen att skriva till oss.</p>
+
+  <h2 id="kontakt">Kontakt</h2>
+  <div class="contact">
+    <p>E-post: <a href="mailto:support@tickjoin.com">support@tickjoin.com</a></p>
+    <p>Vi svarar inom ett par arbetsdagar. Gäller det ett problem: skriv gärna vilken version av appen du har och vilken enhet och systemversion du använder.</p>
+  </div>
+
+  <h2 id="plattformar">Plattformar och krav</h2>
+  <table>
+    <tr><th>Enhet</th><th>Kräver</th></tr>
+    <tr><td>iPhone</td><td>iOS 26 eller senare</td></tr>
+    <tr><td>Mac</td><td>macOS 26 eller senare</td></tr>
+    <tr><td>Android</td><td>Android 10 eller senare</td></tr>
+  </table>
+
+  <h2 id="fragor">Vanliga frågor</h2>
+
+  <details id="alarm">
+    <summary>Alarmet ringde inte, eller jag fick ingen påminnelse</summary>
+    <p>Öppna <strong>Hälsokoll</strong> i appen. Den visar allt som kan stoppa en påminnelse och hur du åtgärdar det, till exempel:</p>
+    <ul>
+      <li>notiser som är avstängda för Tickjoin</li>
+      <li>behörighet för alarm som saknas</li>
+      <li>batterioptimering som hindrar appen på Android</li>
+      <li>en kalender som inte har synkats på ett tag</li>
+    </ul>
+    <p>I gratisversionen får du en notis före mötet. Alarmet som ringer även i tyst läge ingår i Pro.</p>
+  </details>
+
+  <details id="inloggning">
+    <summary>Jag kan inte logga in med mitt jobbkonto (”Behöver godkännande av administratör”)</summary>
+    <p>Många organisationer kräver att IT godkänner appar som läser kalendern. Be din IT-avdelning godkänna Tickjoin; allt de behöver finns på sidan <a href="/it/">Information för IT</a>.</p>
+  </details>
+
+  <details id="anslut">
+    <summary>Anslut-knappen syns inte på ett möte</summary>
+    <p>Tickjoin visar Anslut när inbjudan innehåller en länk till Teams, Zoom, Google Meet eller Webex. Saknas knappen har mötet ingen länk som appen känner igen, till exempel om länken bara finns i en bilaga eller om mötet hålls i ett annat verktyg.</p>
+  </details>
+
+  <details id="enheter">
+    <summary>Jag får påminnelser på flera enheter samtidigt</summary>
+    <p>Med Pro kan iPhone och Mac hålla ihop via ditt iCloud:</p>
+    <ul>
+      <li><strong>Tysta påminnelser</strong> tystar dina andra enheter en stund, till exempel när du sitter vid datorn.</li>
+      <li><strong>Larmen följer aktiv enhet</strong> låter alarmet ringa på den enhet du använder. Stänger du av ett alarm på den ena tystnar det på den andra.</li>
+    </ul>
+    <p>Det fungerar mellan iPhone och Mac som är inloggade på samma iCloud-konto.</p>
+  </details>
+
+  <details id="prenumeration">
+    <summary>Prenumeration, återställa köp och återbetalning</summary>
+    <ul>
+      <li><strong>Återställa köp:</strong> öppna <strong>Inställningar</strong> i appen och välj <strong>Återställ köp</strong>.</li>
+      <li><strong>Ändra eller säga upp:</strong> på iPhone och Mac i App Store (inställningarna för ditt Apple-konto → <strong>Prenumerationer</strong>), på Android i Google Play (<strong>Betalningar och prenumerationer</strong>).</li>
+      <li><strong>Återbetalning:</strong> sköts av Apple eller Google, som tog betalt. Vi kan tyvärr inte göra återbetalningar själva.</li>
+    </ul>
+  </details>
+
+  <details id="radera">
+    <summary>Hur raderar jag mina uppgifter?</summary>
+    <p>Ta bort dina konton i appen och radera sedan appen. Tickjoin har inga servrar som lagrar dina möten, så då finns inget kvar hos oss. Använder du Tysta påminnelser ligger enhetsuppgifter i ditt privata iCloud; dem tar du bort i iCloud-inställningarna. Mer om det på <a href="/privacy/">integritetssidan</a>.</p>
+  </details>
+
+  <h2>Mer information</h2>
+  <ul>
+    <li><a href="/privacy/">Integritet</a> – vad appen läser och var det lagras.</li>
+    <li><a href="/it/">Information för IT</a> – godkännande för organisationen och Intune.</li>
+  </ul>
+
+  <section class="lang" id="english" lang="en">
+    <h1>Support</h1>
+    <p>Help with Tickjoin on iPhone, Mac and Android. If you can't find the answer here, just write to us.</p>
+
+    <h2 id="contact">Contact</h2>
+    <div class="contact">
+      <p>Email: <a href="mailto:support@tickjoin.com">support@tickjoin.com</a></p>
+      <p>We reply within a couple of working days. If you're reporting a problem, please include your app version and your device and system version.</p>
+    </div>
+
+    <h2 id="platforms">Platforms and requirements</h2>
+    <table>
+      <tr><th>Device</th><th>Requires</th></tr>
+      <tr><td>iPhone</td><td>iOS 26 or later</td></tr>
+      <tr><td>Mac</td><td>macOS 26 or later</td></tr>
+      <tr><td>Android</td><td>Android 10 or later</td></tr>
+    </table>
+
+    <h2 id="faq">Frequently asked questions</h2>
+
+    <details id="alarm-en">
+      <summary>The alarm didn't ring, or I got no reminder</summary>
+      <p>Open <strong>Health Check</strong> in the app. It shows anything that could stop a reminder and how to fix it, for example:</p>
+      <ul>
+        <li>notifications turned off for Tickjoin</li>
+        <li>a missing alarm permission</li>
+        <li>battery optimization holding the app back on Android</li>
+        <li>a calendar that hasn't synced in a while</li>
+      </ul>
+      <p>The free version gives you a notification before the meeting. The alarm that rings even in Silent Mode is part of Pro.</p>
+    </details>
+
+    <details id="sign-in">
+      <summary>I can't sign in with my work account ("Need admin approval")</summary>
+      <p>Many organizations require IT to approve apps that read calendars. Ask your IT department to approve Tickjoin; everything they need is on the <a href="/it/#english">Information for IT</a> page.</p>
+    </details>
+
+    <details id="join">
+      <summary>The Join button is missing on a meeting</summary>
+      <p>Tickjoin shows Join when the invitation contains a Teams, Zoom, Google Meet or Webex link. If the button is missing, the meeting has no link the app recognizes, for example when the link is only in an attachment or the meeting uses another tool.</p>
+    </details>
+
+    <details id="devices">
+      <summary>I get reminders on several devices at once</summary>
+      <p>With Pro, iPhone and Mac stay in step through your iCloud:</p>
+      <ul>
+        <li><strong>Silence Reminders</strong> silences your other devices for a while, for example when you're at your computer.</li>
+        <li><strong>Alerts Follow Active Device</strong> lets the alarm ring on the device you're using. Stop an alarm on one and it goes quiet on the other.</li>
+      </ul>
+      <p>This works between an iPhone and a Mac signed in to the same iCloud account.</p>
+    </details>
+
+    <details id="subscription">
+      <summary>Subscription, restoring purchases and refunds</summary>
+      <ul>
+        <li><strong>Restore purchases:</strong> open <strong>Settings</strong> in the app and choose <strong>Restore Purchases</strong>.</li>
+        <li><strong>Change or cancel:</strong> on iPhone and Mac in the App Store (your Apple Account settings → <strong>Subscriptions</strong>), on Android in Google Play (<strong>Payments &amp; subscriptions</strong>).</li>
+        <li><strong>Refunds:</strong> handled by Apple or Google, who took the payment. Unfortunately we can't issue refunds ourselves.</li>
+      </ul>
+    </details>
+
+    <details id="delete">
+      <summary>How do I delete my data?</summary>
+      <p>Remove your accounts in the app, then delete the app. Tickjoin has no servers that store your meetings, so nothing is left with us. If you use Silence Reminders, device details are kept in your private iCloud; you can remove them in iCloud settings. More on the <a href="/privacy/#english">privacy page</a>.</p>
+    </details>
+
+    <h2>More information</h2>
+    <ul>
+      <li><a href="/privacy/#english">Privacy</a> – what the app reads and where it's stored.</li>
+      <li><a href="/it/#english">Information for IT</a> – approval for your organization and Intune.</li>
+    </ul>
+  </section>
+</main>
+</body>
+</html>
