@@ -3,11 +3,11 @@
   "path": "/",
   "name": "English",
   "title": "Tickjoin – Never miss a meeting again",
-  "description": "Tickjoin sounds an alarm right before your meeting – even in Silent Mode – and joins Teams, Zoom, Meet or Webex with one tap. For iPhone.",
-  "badge": "Coming soon to iPhone",
+  "description": "Tickjoin sounds an alarm right before your meeting – even in Silent Mode – and joins Teams, Zoom, Meet or Webex with one tap. For iPhone, Mac and Android.",
+  "badge": "Coming soon to iPhone, Mac and Android",
   "hero_title": "Never miss a meeting again.",
   "hero_text": "Tickjoin sounds an alarm right before your meeting – even in Silent Mode – and joins Teams, Zoom, Meet or Webex with one tap.",
-  "hero_note": "Works with Microsoft 365, Google Calendar and the calendars on your iPhone.",
+  "hero_note": "Works with Microsoft 365, Google Calendar and the calendars on your iPhone or Mac.",
   "cta_more": "See how it works",
   "pillars": [
     [
@@ -24,6 +24,28 @@
       "calendar",
       "All your calendars",
       "Work and personal side by side: Microsoft 365 – including Intune-protected work accounts – Google Calendar and iCloud."
+    ]
+  ],
+  "platforms_title": "One app for your phone and your computer",
+  "platforms_text": "The same reminders and the same Join button on iPhone, Mac and Android. With Pro, iPhone and Mac stay in step through iCloud: stop the alarm on one and it goes quiet on the other.",
+  "platforms": [
+    [
+      "iphone",
+      "iPhone",
+      "The alarm breaks through Silent Mode, with widgets, Live Activity and Siri.",
+      "iOS 26 or later"
+    ],
+    [
+      "mac",
+      "Mac",
+      "Your next meeting and Join in the menu bar, plus the rest of the day, Agenda and an alarm window before each meeting.",
+      "macOS 26 or later"
+    ],
+    [
+      "android",
+      "Android",
+      "The alarm rings through Do Not Disturb, and Intune-protected work accounts are supported.",
+      "Android 10 or later"
     ]
   ],
   "gallery_title": "Made for days when meetings pile up",
@@ -116,6 +138,7 @@
   "it_link": "Information for IT",
   "footer_privacy": "Privacy",
   "footer_it": "For IT",
+  "footer_support": "Support",
   "language": "Language",
   "shot_alt": "Tickjoin screenshot:",
   "cta_notify": "Get notified at launch",

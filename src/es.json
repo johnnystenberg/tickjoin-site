@@ -3,11 +3,11 @@
   "path": "/es/",
   "name": "Español",
   "title": "Tickjoin – No vuelvas a perderte una reunión",
-  "description": "Tickjoin hace sonar una alarma justo antes de tu reunión –incluso en modo silencio– y te une a Teams, Zoom, Meet o Webex con un toque. Para iPhone.",
-  "badge": "Muy pronto en iPhone",
+  "description": "Tickjoin hace sonar una alarma justo antes de tu reunión –incluso en modo silencio– y te une a Teams, Zoom, Meet o Webex con un toque. Para iPhone, Mac y Android.",
+  "badge": "Muy pronto en iPhone, Mac y Android",
   "hero_title": "No vuelvas a perderte una reunión.",
   "hero_text": "Tickjoin hace sonar una alarma justo antes de tu reunión –incluso en modo silencio– y te une a Teams, Zoom, Meet o Webex con un toque.",
-  "hero_note": "Compatible con Microsoft 365, Google Calendar y los calendarios de tu iPhone.",
+  "hero_note": "Compatible con Microsoft 365, Google Calendar y los calendarios de tu iPhone o Mac.",
   "cta_more": "Descubre cómo funciona",
   "pillars": [
     [
@@ -24,6 +24,28 @@
       "calendar",
       "Todos tus calendarios",
       "Trabajo y vida personal, juntos: Microsoft 365 (incluidas las cuentas de trabajo protegidas con Intune), Google Calendar e iCloud."
+    ]
+  ],
+  "platforms_title": "Una app, en el teléfono y en el escritorio",
+  "platforms_text": "Los mismos recordatorios y el mismo botón Unirse en iPhone, Mac y Android. Con Pro, el iPhone y el Mac se coordinan a través de iCloud: si apagas la alarma en uno, se silencia en el otro.",
+  "platforms": [
+    [
+      "iphone",
+      "iPhone",
+      "La alarma atraviesa el modo silencio, con widgets, Actividad en vivo y Siri.",
+      "iOS 26 o posterior"
+    ],
+    [
+      "mac",
+      "Mac",
+      "Tu próxima reunión y Unirse en la barra de menús, además del resto del día, la agenda y una ventana de alarma antes de cada reunión.",
+      "macOS 26 o posterior"
+    ],
+    [
+      "android",
+      "Android",
+      "La alarma suena incluso con No molestar, y admite cuentas de trabajo protegidas con Intune.",
+      "Android 10 o posterior"
     ]
   ],
   "gallery_title": "Pensada para los días llenos de reuniones",
@@ -116,6 +138,7 @@
   "it_link": "Información para TI",
   "footer_privacy": "Privacidad",
   "footer_it": "Para TI",
+  "footer_support": "Soporte",
   "language": "Idioma",
   "shot_alt": "Captura de pantalla de Tickjoin:",
   "cta_notify": "Avísame del lanzamiento",

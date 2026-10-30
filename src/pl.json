@@ -3,11 +3,11 @@
   "path": "/pl/",
   "name": "Polski",
   "title": "Tickjoin – Już nigdy nie przegapisz spotkania",
-  "description": "Tickjoin włącza alarm tuż przed spotkaniem – nawet w trybie cichym – i jednym stuknięciem dołącza do Teams, Zoom, Meet lub Webex. Na iPhone’a.",
-  "badge": "Wkrótce na iPhone’a",
+  "description": "Tickjoin włącza alarm tuż przed spotkaniem – nawet w trybie cichym – i jednym stuknięciem dołącza do Teams, Zoom, Meet lub Webex. Na iPhone’a, Maca i Androida.",
+  "badge": "Wkrótce na iPhone’a, Maca i Androida",
   "hero_title": "Już nigdy nie przegapisz spotkania.",
   "hero_text": "Tickjoin włącza alarm tuż przed spotkaniem – nawet w trybie cichym – i jednym stuknięciem dołącza do Teams, Zoom, Meet lub Webex.",
-  "hero_note": "Działa z Microsoft 365, Kalendarzem Google i kalendarzami na Twoim iPhonie.",
+  "hero_note": "Działa z Microsoft 365, Kalendarzem Google i kalendarzami na Twoim iPhonie lub Macu.",
   "cta_more": "Zobacz, jak to działa",
   "pillars": [
     [
@@ -24,6 +24,28 @@
       "calendar",
       "Wszystkie Twoje kalendarze",
       "Praca i życie prywatne obok siebie: Microsoft 365 – także konta służbowe chronione przez Intune – Kalendarz Google i iCloud."
+    ]
+  ],
+  "platforms_title": "Jedna aplikacja na telefon i komputer",
+  "platforms_text": "Te same przypomnienia i ten sam przycisk Dołącz na iPhonie, Macu i Androidzie. Z Pro iPhone i Mac współpracują przez iCloud: gdy wyłączysz alarm na jednym, ucichnie też na drugim.",
+  "platforms": [
+    [
+      "iphone",
+      "iPhone",
+      "Alarm przebija się przez tryb cichy, a do tego widżety, Aktywność na żywo i Siri.",
+      "iOS 26 lub nowszy"
+    ],
+    [
+      "mac",
+      "Mac",
+      "Następne spotkanie i Dołącz na pasku menu, reszta dnia, Agenda i okno alarmu przed każdym spotkaniem.",
+      "macOS 26 lub nowszy"
+    ],
+    [
+      "android",
+      "Android",
+      "Alarm dzwoni nawet w trybie Nie przeszkadzać, a konta służbowe chronione przez Intune są obsługiwane.",
+      "Android 10 lub nowszy"
     ]
   ],
   "gallery_title": "Na dni, kiedy spotkania się piętrzą",
@@ -116,6 +138,7 @@
   "it_link": "Informacje dla działu IT",
   "footer_privacy": "Prywatność",
   "footer_it": "Dla IT",
+  "footer_support": "Pomoc",
   "language": "Język",
   "shot_alt": "Zrzut ekranu Tickjoin:",
   "cta_notify": "Powiadom mnie o premierze",

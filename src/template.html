@@ -97,6 +97,21 @@
     .icon { width: 30px; height: 30px; color: var(--join); }
     .pillar:first-child .icon { color: var(--alarm); }
 
+    /* Plattformarna: bilderna får samma höjd, ramen följer bildens proportioner. */
+    .platforms { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .platform { display: flex; flex-direction: column; }
+    .platform .media { height: clamp(240px, 30vw, 340px); display: flex; align-items: flex-end; justify-content: center; margin-bottom: 12px; }
+    .platform .media > div { height: 100%; max-width: none; margin: 0; box-shadow: 0 14px 34px rgba(0,0,0,.18); }
+    .platform .media img { height: 100%; width: auto; }
+    .platform .phone { border-radius: 32px; padding: 6px; }
+    .platform .phone img { border-radius: 26px; }
+    .platform .phone.android { border-radius: 20px; }
+    .platform .phone.android img { border-radius: 14px; }
+    .screen { background: #0B0B0C; border-radius: 16px; padding: 7px; }
+    .screen img { display: block; border-radius: 9px; }
+    .platform p { color: var(--ink2); margin: 0; font-size: 16px; }
+    .platform .requires { margin-top: auto; padding-top: 12px; font-size: 14px; }
+
     .gallery { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(230px, 1fr); gap: 24px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 8px 16px 32px; margin: 0 -16px; }
     .gallery figure { margin: 0; scroll-snap-align: center; }
     .gallery .phone { max-width: 250px; border-radius: 44px; padding: 8px; }
@@ -131,7 +146,8 @@
     @media (max-width: 860px) {
       .hero { grid-template-columns: 1fr; gap: 40px; padding-top: 16px; }
       .hero-phone { transform: none; max-width: 280px; }
-      .pillars, .features { grid-template-columns: 1fr; }
+      .pillars, .features, .platforms { grid-template-columns: 1fr; }
+      .platform .media { height: min(340px, calc(118vw - 100px)); }
       .privacy { grid-template-columns: 1fr; padding: 28px; }
       .plans { grid-template-columns: 1fr; }
       section { padding: 48px 0; }
@@ -166,6 +182,14 @@
       <div class="pillars">
 {{pillars}}
       </div>
+
+      <section id="platforms">
+        <h2>{{platforms_title}}</h2>
+        <p class="section-lead">{{platforms_text}}</p>
+        <div class="platforms">
+{{platforms}}
+        </div>
+      </section>
 
       <section id="how">
         <h2>{{gallery_title}}</h2>
@@ -228,7 +252,7 @@
     </main>
 
     <footer>
-      <span>© 2026 JMS Software &amp; Consulting · <a href="{{privacy_href}}">{{footer_privacy}}</a> · <a href="{{it_href}}">{{footer_it}}</a> · <a href="mailto:support@tickjoin.com">support@tickjoin.com</a></span>
+      <span>© 2026 JMS Software &amp; Consulting · <a href="{{privacy_href}}">{{footer_privacy}}</a> · <a href="{{it_href}}">{{footer_it}}</a> · <a href="{{support_href}}">{{footer_support}}</a> · <a href="mailto:support@tickjoin.com">support@tickjoin.com</a></span>
       <span>{{language}}: {{switcher}}</span>
     </footer>
   </div>
