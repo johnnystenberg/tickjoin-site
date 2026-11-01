@@ -34,7 +34,7 @@
   <nav><a href="/">Tickjoin</a> · <a href="/it/">För IT</a> · <a href="/support/">Support</a> · <a href="#english">English</a></nav>
 
   <h1>Integritet</h1>
-  <p>Den här sidan beskriver vilka behörigheter Tickjoin begär i Microsoft 365 och Google, vad appen gör med kalenderdata och hur åtkomsten återkallas. Senast uppdaterad 29 oktober 2026.</p>
+  <p>Den här sidan beskriver vilka behörigheter Tickjoin begär i Microsoft 365 och Google, vad appen gör med kalenderdata och hur åtkomsten återkallas. Senast uppdaterad 1 november 2026.</p>
 
   <h2>Kort sagt</h2>
   <ul>
@@ -70,6 +70,25 @@
     <li>aldrig används för att träna AI- eller maskininlärningsmodeller.</li>
   </ul>
 
+  <h2 id="google-delning">Delning, överföring och utlämnande av data från Google</h2>
+  <p>Tickjoin delar inte, överför inte och lämnar inte ut data från Google till någon. Det gäller både rådata och sammanställd eller anonymiserad data.</p>
+  <ul>
+    <li><strong>Ingen server:</strong> appen hämtar kalendern direkt från Google Calendar API till användarens enhet. Ingen data från Google skickas till JMS Software &amp; Consulting, som utvecklar Tickjoin, eller till någon annan.</li>
+    <li><strong>Inga tredje parter:</strong> appen innehåller inga SDK:er för analys, reklam eller felrapportering, och ingen underleverantör tar emot data från Google.</li>
+    <li><strong>Ingen försäljning:</strong> data från Google säljs aldrig och lämnas aldrig till dataförmedlare, annonsörer eller AI-tjänster.</li>
+    <li><strong>Utlämnande enligt lag:</strong> eftersom vi aldrig tar emot eller lagrar data från Google har vi ingen sådan data att lämna ut, inte heller till myndigheter.</li>
+    <li>Den enda överföringen sker mellan användarens enhet och Google, och den sker för att användaren själv har gett Tickjoin behörighet.</li>
+  </ul>
+
+  <h2 id="google-skydd">Så skyddas data från Google</h2>
+  <ul>
+    <li><strong>Kryptering under överföring:</strong> all kommunikation med Google sker över HTTPS (TLS). Inloggningen sker med OAuth 2.0 och PKCE i systemets egen inloggningsruta, så appen ser aldrig användarens lösenord.</li>
+    <li><strong>Kryptering i lagring:</strong> möten lagras bara lokalt i appens skyddade lagring och krypteras av operativsystemet (iOS dataskydd, på Mac FileVault). Refresh-token lagras krypterad i systemets nyckelring; åtkomsttoken finns bara i minnet.</li>
+    <li><strong>Minsta möjliga behörighet:</strong> appen begär bara läsbehörighet till kalendern (<code>calendar.readonly</code>) och kan inte ändra eller radera något hos Google. Mötesbeskrivningen läses bara för att hitta möteslänken och sparas inte.</li>
+    <li><strong>Ingen mänsklig åtkomst:</strong> eftersom data aldrig lämnar enheten kan ingen hos oss läsa den.</li>
+    <li><strong>Lagringstid och radering:</strong> appen sparar bara de kommande sju dagarnas möten. När användaren loggar ut kontot raderas möten och tokens från enheten och behörigheten återkallas hos Google. När appen tas bort raderas all data från enheten.</li>
+  </ul>
+
   <h2>Vad som lagras och var</h2>
   <ul>
     <li><strong>Möten</strong> för de kommande sju dagarna lagras i en lokal databas på telefonen, skyddad av iOS dataskydd.</li>
@@ -94,7 +113,7 @@
 
   <section class="lang" id="english" lang="en">
     <h1>Privacy</h1>
-    <p>This page describes the Microsoft 365 and Google permissions Tickjoin requests, what the app does with calendar data and how access is revoked. Last updated 29 October 2026.</p>
+    <p>This page describes the Microsoft 365 and Google permissions Tickjoin requests, what the app does with calendar data and how access is revoked. Last updated 1 November 2026.</p>
 
     <h2>In short</h2>
     <ul>
@@ -128,6 +147,25 @@
       <li>is never used for advertising and never sold,</li>
       <li>is never read by humans,</li>
       <li>is never used to train AI or machine learning models.</li>
+    </ul>
+
+    <h2 id="google-sharing">Sharing, transfer and disclosure of Google user data</h2>
+    <p>Tickjoin does not share, transfer or disclose Google user data with anyone. This applies to raw data as well as aggregated or anonymized data.</p>
+    <ul>
+      <li><strong>No server:</strong> the app fetches the calendar directly from the Google Calendar API to the user's device. No Google user data is sent to JMS Software &amp; Consulting, the developer of Tickjoin, or to anyone else.</li>
+      <li><strong>No third parties:</strong> the app contains no analytics, advertising or crash-reporting SDKs, and no service provider receives Google user data.</li>
+      <li><strong>No sale:</strong> Google user data is never sold and never provided to data brokers, advertisers or AI services.</li>
+      <li><strong>Legal disclosure:</strong> since we never receive or store Google user data, we have no such data to disclose, including to authorities.</li>
+      <li>The only transfer is between the user's device and Google, and it happens because the user has granted Tickjoin access.</li>
+    </ul>
+
+    <h2 id="google-protection">How Google user data is protected</h2>
+    <ul>
+      <li><strong>Encryption in transit:</strong> all communication with Google uses HTTPS (TLS). Sign-in uses OAuth 2.0 with PKCE in the system's own sign-in sheet, so the app never sees the user's password.</li>
+      <li><strong>Encryption at rest:</strong> meetings are stored only locally in the app's protected storage and are encrypted by the operating system (iOS Data Protection; FileVault on Mac). The refresh token is stored encrypted in the system keychain; the access token is only kept in memory.</li>
+      <li><strong>Least privilege:</strong> the app only requests read access to the calendar (<code>calendar.readonly</code>) and cannot change or delete anything at Google. The event description is only read to find the meeting link and is not stored.</li>
+      <li><strong>No human access:</strong> because the data never leaves the device, no one on our side can read it.</li>
+      <li><strong>Retention and deletion:</strong> the app only keeps meetings for the next seven days. When the user signs out of the account, its meetings and tokens are deleted from the device and access is revoked at Google. Deleting the app deletes all its data from the device.</li>
     </ul>
 
     <h2>What is stored and where</h2>
