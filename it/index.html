@@ -82,10 +82,7 @@
   <p><strong>Ett skyddat jobbkonto per Android-telefon:</strong> på Android delar alla appar med Intune (Outlook, Teams, Company Portal, Tickjoin) samma skyddade jobbkonto. Är ett annat organisationskonto redan skyddat på telefonen kan Tickjoin inte kopplas med ert konto där. På iPhone gäller det per app.</p>
   <p><strong>Viktigt:</strong> en princip som riktas mot <em>Alla appar</em> eller <em>Alla Microsoft-appar</em> omfattar inte Tickjoin. Den gäller bara Microsofts appar och listade partnerappar, och anpassade appar kan inte väljas i samma princip. Gör därför en separat princip för Tickjoin, eller lägg till den i en princip som redan riktas mot valda appar.</p>
 
-  <h3>3. Undanta MAM-tjänsten i villkorsstyrd åtkomst</h3>
-  <p>Om en princip för villkorsstyrd åtkomst med <em>Require app protection policy</em> gäller <em>Alla resurser</em>: undanta <strong>Microsoft Mobile Application Management</strong> och <strong>Microsoft Mobile Application Management Backend</strong> under <strong>Målresurser → Exkludera</strong>. Intune App SDK hämtar sin token mot MAM-tjänsten innan appen är registrerad, och utan undantaget blockeras registreringen av appar som inte är Microsofts med meddelandet att klientappen inte är tillgänglig för användning med appskyddsprinciper. Microsofts egna appar påverkas inte av undantaget.</p>
-
-  <h3>4. Användarna</h3>
+  <h3>3. Användarna</h3>
   <ul>
     <li>Användarna behöver en Intune-licens och Microsoft Authenticator på telefonen.</li>
     <li>I Tickjoin: <strong>Inställningar → Lägg till konto → Microsoft 365</strong>. Appen registreras hos Intune vid inloggningen och kan starta om en gång.</li>
@@ -98,7 +95,7 @@
   <p>I Tickjoin under <strong>Inställningar → Debug → Inloggningslogg</strong> finns rader som börjar med <code>Intune:</code>. Vanliga statuskoder:</p>
   <table>
     <tr><th>Status</th><th>Betyder</th><th>Åtgärd</th></tr>
-    <tr><td>203</td><td>Intune App SDK fick ingen token för MAM-tjänsten.</td><td>Undanta MAM-tjänsten i villkorsstyrd åtkomst (steg 3) och kontrollera att appen är godkänd (steg 1).</td></tr>
+    <tr><td>203</td><td>Intune App SDK fick ingen token för MAM-tjänsten.</td><td>Kontrollera att appen är godkänd för organisationen, inklusive behörigheten för Microsoft Mobile Application Management (steg 1).</td></tr>
     <tr><td>225</td><td>Användaren har Intune-licens men ingen appskyddsprincip omfattar Tickjoin.</td><td>Lägg till <code>com.tickjoin.app</code> som anpassad app i en princip som tilldelas användaren (steg 2).</td></tr>
   </table>
 
@@ -169,10 +166,7 @@
     <p><strong>One protected work account per Android phone:</strong> on Android, all apps with Intune (Outlook, Teams, Company Portal, Tickjoin) share the same protected work account. If another organization's account is already protected on the phone, Tickjoin can't be connected with your account there. On iPhone it's per app.</p>
     <p><strong>Important:</strong> a policy targeted to <em>All apps</em> or <em>All Microsoft apps</em> does not cover Tickjoin. It only applies to Microsoft's apps and listed partner apps, and custom apps can't be selected in the same policy. Create a separate policy for Tickjoin, or add it to a policy that already targets selected apps.</p>
 
-    <h3>3. Exclude the MAM service in Conditional Access</h3>
-    <p>If a Conditional Access policy with <em>Require app protection policy</em> applies to <em>All resources</em>: exclude <strong>Microsoft Mobile Application Management</strong> and <strong>Microsoft Mobile Application Management Backend</strong> under <strong>Target resources → Exclude</strong>. The Intune App SDK requests its token for the MAM service before the app is registered, and without the exclusion, registration of non-Microsoft apps is blocked with a message that the client app isn't available for use with app protection policies. Microsoft's own apps are not affected by the exclusion.</p>
-
-    <h3>4. Users</h3>
+    <h3>3. Users</h3>
     <ul>
       <li>Users need an Intune license and Microsoft Authenticator on the phone.</li>
       <li>In Tickjoin: <strong>Settings → Add Account → Microsoft 365</strong>. The app registers with Intune when signing in and may restart once.</li>
@@ -185,7 +179,7 @@
     <p>In Tickjoin under <strong>Settings → Debug → Sign-in Log</strong>, lines starting with <code>Intune:</code> show registration and policy status. Common status codes:</p>
     <table>
       <tr><th>Status</th><th>Meaning</th><th>Action</th></tr>
-      <tr><td>203</td><td>The Intune App SDK got no token for the MAM service.</td><td>Exclude the MAM service in Conditional Access (step 3) and check that the app is approved (step 1).</td></tr>
+      <tr><td>203</td><td>The Intune App SDK got no token for the MAM service.</td><td>Check that the app is approved for your organization, including the Microsoft Mobile Application Management permission (step 1).</td></tr>
       <tr><td>225</td><td>The user has an Intune license, but no app protection policy covers Tickjoin.</td><td>Add <code>com.tickjoin.app</code> as a custom app in a policy assigned to the user (step 2).</td></tr>
     </table>
 
