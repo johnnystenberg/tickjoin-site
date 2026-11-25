@@ -4,11 +4,10 @@
   "name": "English",
   "title": "Tickjoin – Never miss a meeting again",
   "description": "Tickjoin sounds an alarm right before your meeting – even in Silent Mode – and joins Teams, Zoom, Meet or Webex with one tap. For iPhone, Mac and Android.",
-  "badge": "Coming soon to iPhone, Mac and Android",
+  "badge": "Out now on Android – coming soon to iPhone and Mac",
   "hero_title": "Never miss a meeting again.",
   "hero_text": "Tickjoin sounds an alarm right before your meeting – even in Silent Mode – and joins Teams, Zoom, Meet or Webex with one tap.",
   "hero_note": "Works with Microsoft 365, Google Calendar and the calendars on your iPhone or Mac.",
-  "cta_more": "See how it works",
   "pillars": [
     [
       "alarm",
@@ -141,6 +140,7 @@
   "footer_support": "Support",
   "language": "Language",
   "shot_alt": "Tickjoin screenshot:",
-  "cta_notify": "Get notified at launch",
-  "notify_subject": "Tell me when Tickjoin launches"
+  "cta_play": "Get it on Google Play",
+  "cta_notify": "Notify me for iPhone and Mac",
+  "notify_subject": "Tell me when Tickjoin is on iPhone and Mac"
 }

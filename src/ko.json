@@ -4,11 +4,10 @@
   "name": "한국어",
   "title": "Tickjoin – 이제 회의를 놓치지 마세요",
   "description": "Tickjoin은 회의 직전에 알람을 울려요. 무음 모드에서도 울리고, Teams, Zoom, Meet, Webex에 한 번의 탭으로 참가할 수 있어요. iPhone, Mac, Android용.",
-  "badge": "iPhone, Mac, Android 출시 예정",
+  "badge": "Android 출시 – iPhone, Mac 곧 출시",
   "hero_title": "이제 회의를 놓치지 마세요.",
   "hero_text": "Tickjoin은 회의 직전에 알람을 울려요. 무음 모드에서도 울리고, Teams, Zoom, Meet, Webex에 한 번의 탭으로 참가할 수 있어요.",
   "hero_note": "Microsoft 365, Google 캘린더, iPhone이나 Mac의 캘린더와 함께 작동해요.",
-  "cta_more": "작동 방식 보기",
   "pillars": [
     [
       "alarm",
@@ -141,6 +140,7 @@
   "footer_support": "지원",
   "language": "언어",
   "shot_alt": "Tickjoin 스크린샷:",
-  "cta_notify": "출시 알림 받기",
-  "notify_subject": "Tickjoin 출시 소식을 알려 주세요"
+  "cta_play": "Google Play에서 다운로드",
+  "cta_notify": "iPhone, Mac 출시 알림 받기",
+  "notify_subject": "Tickjoin이 iPhone과 Mac에 출시되면 알려 주세요"
 }

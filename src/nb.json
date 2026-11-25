@@ -4,11 +4,10 @@
   "name": "Norsk",
   "title": "Tickjoin – Gå aldri glipp av et møte igjen",
   "description": "Tickjoin gir en alarm rett før møtet – også i lydløs modus – og lar deg bli med i Teams, Zoom, Meet eller Webex med ett trykk. For iPhone, Mac og Android.",
-  "badge": "Kommer snart til iPhone, Mac og Android",
+  "badge": "Ute nå for Android – snart til iPhone og Mac",
   "hero_title": "Gå aldri glipp av et møte igjen.",
   "hero_text": "Tickjoin gir en alarm rett før møtet – også i lydløs modus – og lar deg bli med i Teams, Zoom, Meet eller Webex med ett trykk.",
   "hero_note": "Fungerer med Microsoft 365, Google Kalender og kalenderne på iPhonen eller Macen din.",
-  "cta_more": "Se hvordan det fungerer",
   "pillars": [
     [
       "alarm",
@@ -141,6 +140,7 @@
   "footer_support": "Støtte",
   "language": "Språk",
   "shot_alt": "Skjermbilde fra Tickjoin:",
-  "cta_notify": "Få beskjed ved lansering",
-  "notify_subject": "Gi meg beskjed når Tickjoin lanseres"
+  "cta_play": "Last ned på Google Play",
+  "cta_notify": "Få beskjed for iPhone og Mac",
+  "notify_subject": "Gi meg beskjed når Tickjoin kommer til iPhone og Mac"
 }

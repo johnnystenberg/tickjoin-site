@@ -4,11 +4,10 @@
   "name": "Suomi",
   "title": "Tickjoin – Älä enää koskaan myöhästy kokouksesta",
   "description": "Tickjoin soittaa hälytyksen juuri ennen kokousta – myös äänettömässä tilassa – ja liittää sinut Teamsiin, Zoomiin, Meetiin tai Webexiin yhdellä napautuksella. iPhonelle, Macille ja Androidille.",
-  "badge": "Tulossa pian iPhonelle, Macille ja Androidille",
+  "badge": "Nyt Androidille – pian iPhonelle ja Macille",
   "hero_title": "Älä enää koskaan myöhästy kokouksesta.",
   "hero_text": "Tickjoin soittaa hälytyksen juuri ennen kokousta – myös äänettömässä tilassa – ja liittää sinut Teamsiin, Zoomiin, Meetiin tai Webexiin yhdellä napautuksella.",
   "hero_note": "Toimii Microsoft 365:n, Google Kalenterin ja iPhonesi tai Macisi kalenterien kanssa.",
-  "cta_more": "Katso, miten se toimii",
   "pillars": [
     [
       "alarm",
@@ -141,6 +140,7 @@
   "footer_support": "Tuki",
   "language": "Kieli",
   "shot_alt": "Kuvakaappaus Tickjoinista:",
-  "cta_notify": "Kerro minulle julkaisusta",
-  "notify_subject": "Kerro minulle, kun Tickjoin julkaistaan"
+  "cta_play": "Hanki Google Playsta",
+  "cta_notify": "Kerro, kun se tulee iPhonelle ja Macille",
+  "notify_subject": "Kertokaa, kun Tickjoin tulee iPhonelle ja Macille"
 }

@@ -4,11 +4,10 @@
   "name": "繁體中文",
   "title": "Tickjoin – 再也不錯過任何會議",
   "description": "Tickjoin 會在會議開始前響起鬧鐘，即使在靜音模式下也一樣，點一下就能加入 Teams、Zoom、Meet 或 Webex。適用於 iPhone、Mac 和 Android。",
-  "badge": "即將登陸 iPhone、Mac 和 Android",
+  "badge": "Android 版現已推出 – iPhone 和 Mac 版即將登場",
   "hero_title": "再也不錯過任何會議。",
   "hero_text": "Tickjoin 會在會議開始前響起鬧鐘，即使在靜音模式下也一樣，點一下就能加入 Teams、Zoom、Meet 或 Webex。",
   "hero_note": "支援 Microsoft 365、Google 日曆，以及你 iPhone 或 Mac 上的行事曆。",
-  "cta_more": "看看如何運作",
   "pillars": [
     [
       "alarm",
@@ -141,6 +140,7 @@
   "footer_support": "支援",
   "language": "語言",
   "shot_alt": "Tickjoin 截圖：",
-  "cta_notify": "上市時通知我",
-  "notify_subject": "Tickjoin 上市時請通知我"
+  "cta_play": "立即前往 Google Play 下載",
+  "cta_notify": "iPhone 和 Mac 版推出時通知我",
+  "notify_subject": "Tickjoin 推出 iPhone 和 Mac 版時請通知我"
 }

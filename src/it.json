@@ -4,11 +4,10 @@
   "name": "Italiano",
   "title": "Tickjoin – Non perdere mai più una riunione",
   "description": "Tickjoin fa suonare una sveglia poco prima della riunione – anche in modalità silenziosa – e ti fa partecipare a Teams, Zoom, Meet o Webex con un tocco. Per iPhone, Mac e Android.",
-  "badge": "Presto su iPhone, Mac e Android",
+  "badge": "Ora su Android – presto su iPhone e Mac",
   "hero_title": "Non perdere mai più una riunione.",
   "hero_text": "Tickjoin fa suonare una sveglia poco prima della riunione – anche in modalità silenziosa – e ti fa partecipare a Teams, Zoom, Meet o Webex con un tocco.",
   "hero_note": "Funziona con Microsoft 365, Google Calendar e i calendari del tuo iPhone o Mac.",
-  "cta_more": "Scopri come funziona",
   "pillars": [
     [
       "alarm",
@@ -141,6 +140,7 @@
   "footer_support": "Assistenza",
   "language": "Lingua",
   "shot_alt": "Screenshot di Tickjoin:",
-  "cta_notify": "Avvisami al lancio",
-  "notify_subject": "Avvisatemi quando esce Tickjoin"
+  "cta_play": "Disponibile su Google Play",
+  "cta_notify": "Avvisami per iPhone e Mac",
+  "notify_subject": "Avvisatemi quando Tickjoin arriva su iPhone e Mac"
 }
