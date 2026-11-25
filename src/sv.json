@@ -4,11 +4,10 @@
   "name": "Svenska",
   "title": "Tickjoin – Missa aldrig ett möte igen",
   "description": "Tickjoin ger ett alarm strax före mötet – även i tyst läge – och ansluter till Teams, Zoom, Meet eller Webex med ett tryck. För iPhone, Mac och Android.",
-  "badge": "Kommer snart till iPhone, Mac och Android",
+  "badge": "Ute nu för Android – snart till iPhone och Mac",
   "hero_title": "Missa aldrig ett möte igen.",
   "hero_text": "Tickjoin ger ett alarm strax före mötet – även i tyst läge – och ansluter dig till Teams, Zoom, Meet eller Webex med ett tryck.",
   "hero_note": "Fungerar med Microsoft 365, Google Kalender och kalendrarna på din iPhone eller Mac.",
-  "cta_more": "Se hur det fungerar",
   "pillars": [
     [
       "alarm",
@@ -141,6 +140,7 @@
   "footer_support": "Support",
   "language": "Språk",
   "shot_alt": "Skärmbild från Tickjoin:",
-  "cta_notify": "Få besked vid lansering",
-  "notify_subject": "Meddela mig när Tickjoin släpps"
+  "cta_play": "Ladda ned på Google Play",
+  "cta_notify": "Få besked för iPhone och Mac",
+  "notify_subject": "Meddela mig när Tickjoin finns för iPhone och Mac"
 }

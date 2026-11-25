@@ -4,11 +4,10 @@
   "name": "Español",
   "title": "Tickjoin – No vuelvas a perderte una reunión",
   "description": "Tickjoin hace sonar una alarma justo antes de tu reunión –incluso en modo silencio– y te une a Teams, Zoom, Meet o Webex con un toque. Para iPhone, Mac y Android.",
-  "badge": "Muy pronto en iPhone, Mac y Android",
+  "badge": "Ya disponible en Android – muy pronto en iPhone y Mac",
   "hero_title": "No vuelvas a perderte una reunión.",
   "hero_text": "Tickjoin hace sonar una alarma justo antes de tu reunión –incluso en modo silencio– y te une a Teams, Zoom, Meet o Webex con un toque.",
   "hero_note": "Compatible con Microsoft 365, Google Calendar y los calendarios de tu iPhone o Mac.",
-  "cta_more": "Descubre cómo funciona",
   "pillars": [
     [
       "alarm",
@@ -141,6 +140,7 @@
   "footer_support": "Soporte",
   "language": "Idioma",
   "shot_alt": "Captura de pantalla de Tickjoin:",
-  "cta_notify": "Avísame del lanzamiento",
-  "notify_subject": "Avisadme cuando se lance Tickjoin"
+  "cta_play": "Disponible en Google Play",
+  "cta_notify": "Avísame para iPhone y Mac",
+  "notify_subject": "Avisadme cuando Tickjoin llegue a iPhone y Mac"
 }

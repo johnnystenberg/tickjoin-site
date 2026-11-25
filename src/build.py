@@ -26,6 +26,10 @@ PLATFORM_SHOTS = {
 }
 
 
+# Tickjoin i Google Play. iPhone och Mac är inte släppta än, så knappen bredvid ber om besked för dem.
+PLAY_URL = "https://play.google.com/store/apps/details?id=com.tickjoin.app"
+
+
 def esc(value):
     return html.escape(value, quote=True)
 
@@ -83,7 +87,7 @@ def render(t, languages, template):
         "base": base, "redirect": "true" if t["path"] == "/" else "false",
         "badge": esc(t["badge"]), "hero_title": esc(t["hero_title"]), "hero_text": esc(t["hero_text"]),
         "hero_note": esc(t["hero_note"]), "cta_notify": esc(t["cta_notify"]), "notify": notify,
-        "cta_more": esc(t["cta_more"]), "hero_shot": hero_shot, "pillars": pillars,
+        "cta_play": esc(t["cta_play"]), "play": PLAY_URL, "hero_shot": hero_shot, "pillars": pillars,
         "platforms_title": esc(t["platforms_title"]), "platforms_text": esc(t["platforms_text"]), "platforms": platforms,
         "gallery_title": esc(t["gallery_title"]), "gallery_text": esc(t["gallery_text"]), "gallery": gallery,
         "features_title": esc(t["features_title"]), "features": features,

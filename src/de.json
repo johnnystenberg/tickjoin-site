@@ -4,11 +4,10 @@
   "name": "Deutsch",
   "title": "Tickjoin – Nie wieder ein Meeting verpassen",
   "description": "Tickjoin weckt dich mit einem Alarm kurz vor dem Meeting – auch im Stummmodus – und du nimmst mit einem Tippen an Teams, Zoom, Meet oder Webex teil. Für iPhone, Mac und Android.",
-  "badge": "Bald für iPhone, Mac und Android",
+  "badge": "Jetzt für Android – bald für iPhone und Mac",
   "hero_title": "Nie wieder ein Meeting verpassen.",
   "hero_text": "Tickjoin gibt kurz vor dem Meeting einen Alarm – auch im Stummmodus – und du nimmst mit einem Tippen an Teams, Zoom, Meet oder Webex teil.",
   "hero_note": "Funktioniert mit Microsoft 365, Google Kalender und den Kalendern auf deinem iPhone oder Mac.",
-  "cta_more": "So funktioniert’s",
   "pillars": [
     [
       "alarm",
@@ -141,6 +140,7 @@
   "footer_support": "Support",
   "language": "Sprache",
   "shot_alt": "Tickjoin-Bildschirmfoto:",
-  "cta_notify": "Zum Start benachrichtigen",
-  "notify_subject": "Sag mir Bescheid, wenn Tickjoin erscheint"
+  "cta_play": "Jetzt bei Google Play",
+  "cta_notify": "Für iPhone und Mac benachrichtigen",
+  "notify_subject": "Sagt mir Bescheid, wenn Tickjoin für iPhone und Mac erscheint"
 }

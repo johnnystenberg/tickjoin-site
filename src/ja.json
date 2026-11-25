@@ -4,11 +4,10 @@
   "name": "日本語",
   "title": "Tickjoin – もう会議に遅れない",
   "description": "Tickjoinは会議の直前にアラームを鳴らします。消音モードでも鳴り、Teams、Zoom、Meet、Webexにワンタップで参加できます。iPhone、Mac、Android用。",
-  "badge": "iPhone、Mac、Android向けに近日公開",
+  "badge": "Android版を公開中 – iPhone、Mac版も近日公開",
   "hero_title": "もう、会議に遅れない。",
   "hero_text": "Tickjoinは会議の直前にアラームでお知らせ。消音モードでもしっかり鳴り、Teams、Zoom、Meet、Webexにワンタップで参加できます。",
   "hero_note": "Microsoft 365、Googleカレンダー、iPhoneやMacのカレンダーに対応しています。",
-  "cta_more": "使い方を見る",
   "pillars": [
     [
       "alarm",
@@ -141,6 +140,7 @@
   "footer_support": "サポート",
   "language": "言語",
   "shot_alt": "Tickjoinのスクリーンショット：",
-  "cta_notify": "リリース時に通知を受け取る",
-  "notify_subject": "Tickjoinのリリース時にお知らせください"
+  "cta_play": "Google Play で手に入れよう",
+  "cta_notify": "iPhone・Mac版の公開時に通知",
+  "notify_subject": "Tickjoin の iPhone・Mac 版が公開されたら知らせてください"
 }

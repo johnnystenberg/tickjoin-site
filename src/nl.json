@@ -4,11 +4,10 @@
   "name": "Nederlands",
   "title": "Tickjoin – Mis nooit meer een meeting",
   "description": "Tickjoin laat vlak voor je meeting een alarm afgaan – zelfs in de stille modus – en laat je met één tik deelnemen via Teams, Zoom, Meet of Webex. Voor iPhone, Mac en Android.",
-  "badge": "Binnenkort voor iPhone, Mac en Android",
+  "badge": "Nu op Android – binnenkort op iPhone en Mac",
   "hero_title": "Mis nooit meer een meeting.",
   "hero_text": "Tickjoin laat vlak voor je meeting een alarm afgaan – zelfs in de stille modus – en laat je met één tik deelnemen via Teams, Zoom, Meet of Webex.",
   "hero_note": "Werkt met Microsoft 365, Google Agenda en de agenda's op je iPhone of Mac.",
-  "cta_more": "Bekijk hoe het werkt",
   "pillars": [
     [
       "alarm",
@@ -141,6 +140,7 @@
   "footer_support": "Support",
   "language": "Taal",
   "shot_alt": "Screenshot van Tickjoin:",
-  "cta_notify": "Laat me weten wanneer het live gaat",
-  "notify_subject": "Laat me weten wanneer Tickjoin uitkomt"
+  "cta_play": "Ontdek het op Google Play",
+  "cta_notify": "Laat me weten voor iPhone en Mac",
+  "notify_subject": "Laat me weten wanneer Tickjoin op iPhone en Mac verschijnt"
 }

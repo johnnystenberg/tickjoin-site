@@ -4,11 +4,10 @@
   "name": "Polski",
   "title": "Tickjoin – Już nigdy nie przegapisz spotkania",
   "description": "Tickjoin włącza alarm tuż przed spotkaniem – nawet w trybie cichym – i jednym stuknięciem dołącza do Teams, Zoom, Meet lub Webex. Na iPhone’a, Maca i Androida.",
-  "badge": "Wkrótce na iPhone’a, Maca i Androida",
+  "badge": "Już na Androida – wkrótce na iPhone’a i Maca",
   "hero_title": "Już nigdy nie przegapisz spotkania.",
   "hero_text": "Tickjoin włącza alarm tuż przed spotkaniem – nawet w trybie cichym – i jednym stuknięciem dołącza do Teams, Zoom, Meet lub Webex.",
   "hero_note": "Działa z Microsoft 365, Kalendarzem Google i kalendarzami na Twoim iPhonie lub Macu.",
-  "cta_more": "Zobacz, jak to działa",
   "pillars": [
     [
       "alarm",
@@ -141,6 +140,7 @@
   "footer_support": "Pomoc",
   "language": "Język",
   "shot_alt": "Zrzut ekranu Tickjoin:",
-  "cta_notify": "Powiadom mnie o premierze",
-  "notify_subject": "Daj mi znać, gdy Tickjoin będzie dostępny"
+  "cta_play": "Pobierz z Google Play",
+  "cta_notify": "Powiadom mnie o wersji na iPhone’a i Maca",
+  "notify_subject": "Dajcie znać, gdy Tickjoin będzie na iPhone’a i Maca"
 }
