@@ -19,6 +19,7 @@ Statisk webbplats för Tickjoin, publicerad med GitHub Pages på tickjoin.com.
     `android/fastlane/metadata/android/<språk>/images/phoneScreenshots/01-next.png`. Båda blir 590 px breda.
     Skriptet har tabellen över webbplatsens språk och butikernas språkkoder. Ändras bildernas mått: uppdatera
     `PLATFORM_SHOTS` i `src/build.py`.
+- `terms/` – användarvillkor (länkas från butikerna och sidhuvudet på de handskrivna sidorna).
 - `privacy/` – integritet. `it/` – information för IT (appregistrering, godkännande, Intune).
   `support/` – kontakt, krav per plattform och vanliga frågor. Alla tre är handskrivna, svenska först och engelska
   under `#english`, och länkas från sidfoten på startsidan.
